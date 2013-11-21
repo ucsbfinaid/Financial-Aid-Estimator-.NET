@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation.EfcCalculation", "Ucsb.Sa.FinAid.AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj", "{1D25A148-DCE5-4F30-8F6E-744325ACF88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test", "Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test.csproj", "{B7777A16-AC88-404D-B14F-AE1E739A7EA9}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7777A16-AC88-404D-B14F-AE1E739A7EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7777A16-AC88-404D-B14F-AE1E739A7EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7777A16-AC88-404D-B14F-AE1E739A7EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7777A16-AC88-404D-B14F-AE1E739A7EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
