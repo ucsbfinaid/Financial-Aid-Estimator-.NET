@@ -8,7 +8,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
     /// <summary>
     /// Total Allowances calculator
     /// </summary>
-    public class ExactAllowanceCalculator
+    public class AllowanceCalculator
     {
         private readonly AllowanceCalculatorConstants _constants;
 
@@ -16,7 +16,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
         /// Constructs a new Total Allowances calculator
         /// </summary>
         /// <param name="constants">Constants used in the calculation of Total Allowances</param>
-        public ExactAllowanceCalculator(AllowanceCalculatorConstants constants)
+        public AllowanceCalculator(AllowanceCalculatorConstants constants)
         {
             _constants = constants;
         }
