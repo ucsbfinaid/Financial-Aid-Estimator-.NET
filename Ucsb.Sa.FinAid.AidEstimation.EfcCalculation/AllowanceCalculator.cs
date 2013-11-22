@@ -97,6 +97,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
 
             switch (role)
             {
+                // For Parents and Independent Students With Dependents, use the "Parent" State Tax Allowance chart
                 case EfcCalculationRole.Parent:
                 case EfcCalculationRole.IndependentStudentWithDependents:
                     if (totalIncome < _constants.StateTaxAllowanceIncomeThreshold)
@@ -112,6 +113,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                     }
                     break;
 
+                // For Dependent Students and Independent Students Without Dependents, use the "Student" State Tax Allowance chart
                 case EfcCalculationRole.DependentStudent:
                 case EfcCalculationRole.IndependentStudentWithoutDependents:
                     stateTaxAllowance =
@@ -172,15 +174,18 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                 case EfcCalculationRole.IndependentStudentWithDependents:
                 case EfcCalculationRole.Parent:
 
-                    int[,] incomeProtectionAllowances = (role == EfcCalculationRole.Parent) ?
-                        _constants.DependentParentIncomeProtectionAllowances
-                            : _constants.IndependentWithDependentsIncomeProtectionAllowances;
-                    int additionalStudentAllowance = (role == EfcCalculationRole.Parent) ?
-                        _constants.DependentAdditionalStudentAllowance
-                            : _constants.IndependentAdditionalStudentAllowance;
-                    int additionalFamilyAllowance = (role == EfcCalculationRole.Parent) ?
-                        _constants.DependentAdditionalFamilyAllowance
-                            : _constants.IndependentAdditionalFamilyAllowance;
+                    // Determine the appropriate charts to use for Income Protection Allowance values
+                    int[,] incomeProtectionAllowances = (role == EfcCalculationRole.Parent)
+                        ? _constants.DependentParentIncomeProtectionAllowances
+                        : _constants.IndependentWithDependentsIncomeProtectionAllowances;
+
+                    int additionalStudentAllowance = (role == EfcCalculationRole.Parent)
+                        ? _constants.DependentAdditionalStudentAllowance
+                        : _constants.IndependentAdditionalStudentAllowance;
+
+                    int additionalFamilyAllowance = (role == EfcCalculationRole.Parent)
+                        ? _constants.DependentAdditionalFamilyAllowance
+                        : _constants.IndependentAdditionalFamilyAllowance;
 
                     // If number of children in the household exceeds table range, add additionalFamilyAllowance
                     // for each additional child
@@ -264,7 +269,10 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                 return 0;
             }
 
-            IEnumerable<HouseholdMember> incomeEarners = employablePersons.Where(ep => ep.IsWorking).OrderBy(ie => ie);
+            IEnumerable<HouseholdMember> incomeEarners
+                = employablePersons
+                    .Where(ep => ep.IsWorking)
+                    .OrderBy(ie => ie.WorkIncome);
 
             // Not all of the employable persons are working
             if (incomeEarners.Count() != employablePersons.Count())
@@ -272,7 +280,8 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                 return 0;
             }
 
-            double lowestIncome = incomeEarners.OrderBy(ie => ie.WorkIncome).First().WorkIncome;
+            // Use the lesser of the incomes for the calculation
+            double lowestIncome = incomeEarners.First().WorkIncome;
             double adjustedLowestIncome = (lowestIncome * _constants.EmploymentExpensePercent);
 
             double employmentExpenseAllowance = adjustedLowestIncome > _constants.EmploymentExpenseMaximum
