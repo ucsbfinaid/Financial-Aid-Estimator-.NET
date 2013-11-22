@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="AaiContributionCalculator.cs" />
     <Compile Include="AllowanceCalculator.cs" />
+    <Compile Include="AssetContributionCalculator.cs" />
     <Compile Include="Constants\AaiContributionCalculatorConstants.cs" />
     <Compile Include="Constants\AllowanceCalculatorConstants.cs" />
+    <Compile Include="Constants\AssetContributionCalculatorConstants.cs" />
     <Compile Include="Constants\IncomeCalculatorConstants.cs" />
     <Compile Include="EfcCalculationRole.cs" />
     <Compile Include="HouseholdMember.cs" />

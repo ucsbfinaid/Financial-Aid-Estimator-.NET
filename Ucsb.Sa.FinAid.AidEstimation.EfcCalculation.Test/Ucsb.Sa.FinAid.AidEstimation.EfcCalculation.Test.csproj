@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="AaiContributionCalculatorTests.cs" />
     <Compile Include="AllowanceCalculatorTests.cs" />
+    <Compile Include="AssetContributionCalculatorTests.cs" />
     <Compile Include="IncomeCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
