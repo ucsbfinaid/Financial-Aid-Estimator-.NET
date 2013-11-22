@@ -53,6 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AaiContributionCalculatorTests.cs" />
     <Compile Include="AllowanceCalculatorTests.cs" />
     <Compile Include="IncomeCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
