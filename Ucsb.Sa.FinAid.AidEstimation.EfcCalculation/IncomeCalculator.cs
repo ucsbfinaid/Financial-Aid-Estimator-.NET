@@ -35,6 +35,8 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
             double untaxedIncomeAndBenefits,
             double additionalFinancialInfo)
         {
+            // If tax filers, Taxable Income is equal to Adjusted Gross Income; otherwise, it's equal to
+            // Income Earned From Work
             double totalIncome = areTaxFilers
                 ? CalculateAdjustedGrossIncome(agi)
                 : CalculateIncomeEarnedFromWork(workIncome);
@@ -96,6 +98,8 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
         {
             double availableIncome = Math.Round(totalIncome - totalAllowances, MidpointRounding.AwayFromZero);
 
+            // The available income for Dependent Students and Independent Students Without Depends is
+            // multiplied by an assessment percent
             if (role == EfcCalculationRole.DependentStudent || role == EfcCalculationRole.IndependentStudentWithoutDependents)
             {
                 return availableIncome < 0
