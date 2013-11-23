@@ -42,18 +42,24 @@
   <ItemGroup>
     <Compile Include="AaiContributionCalculator.cs" />
     <Compile Include="AllowanceCalculator.cs" />
+    <Compile Include="Arguments\DependentEfcCalculatorArguments.cs" />
+    <Compile Include="Arguments\IndependentEfcCalculatorArguments.cs" />
     <Compile Include="AssetContributionCalculator.cs" />
     <Compile Include="Constants\AaiContributionCalculatorConstants.cs" />
     <Compile Include="Constants\AllowanceCalculatorConstants.cs" />
     <Compile Include="Constants\AssetContributionCalculatorConstants.cs" />
+    <Compile Include="Constants\EfcCalculatorConstants.cs" />
     <Compile Include="Constants\IncomeCalculatorConstants.cs" />
     <Compile Include="EfcCalculationRole.cs" />
+    <Compile Include="EfcCalculator.cs" />
+    <Compile Include="EfcProfile.cs" />
     <Compile Include="HouseholdMember.cs" />
     <Compile Include="IncomeCalculator.cs" />
     <Compile Include="MaritalStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitedStatesStateOrTerritory.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
