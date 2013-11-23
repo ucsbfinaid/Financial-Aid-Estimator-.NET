@@ -11,12 +11,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         [TestInitialize]
         public void Init()
         {
-            AaiContributionCalculatorConstants constants = new AaiContributionCalculatorConstants();
-
-            constants.AaiContributionBases = new[] { 0, 3366, 4341, 5472, 6798, 8358 };
-            constants.AaiContributionPercents = new double[] { 22, 25, 29, 34, 40, 47 };
-            constants.AaiContributionRanges = new[] { -3409, 15300, 19200, 23100, 27000, 30900 };
-
+            AaiContributionCalculatorConstants constants = TestConstantsFactory.GetAaiContributionCalculatorConstants();
             _aaiContributionCalculator = new AaiContributionCalculator(constants);
         }
 

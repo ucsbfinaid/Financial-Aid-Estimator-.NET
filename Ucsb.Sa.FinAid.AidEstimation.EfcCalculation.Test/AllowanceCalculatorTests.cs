@@ -12,64 +12,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         [TestInitialize]
         public void Init()
         {
-            AllowanceCalculatorConstants constants = new AllowanceCalculatorConstants();
-
-            constants.StateTaxAllowanceIncomeThreshold = 15000;
-
-            constants.ParentStateTaxAllowancePercents = new[]
-            {
-                2, 3, 2, 2, 4, 4, 8, 2, 5, 8, 5, 7, 2, 3, 6, 2, 4, 5, 5, 4, 5, 5, 5, 3, 6, 2, 8,
-                7, 2, 5, 6, 3, 5, 5, 5, 3, 5, 9, 3, 9, 6, 3, 2, 6, 4, 7, 2, 5, 2, 7, 5, 2, 2, 3,
-                5, 6, 2, 6, 4, 3, 7, 2
-            };
-
-            constants.StudentStateTaxAllowancePercents = new[]
-            {
-                2, 2, 0, 2, 2, 3, 5, 2, 3, 5, 3, 5, 2, 1, 3, 2, 3, 3, 2, 3, 3, 3, 4, 2, 4, 2, 6,
-                4, 2, 3, 4, 3, 3, 3, 3, 1, 1, 4, 2, 6, 4, 1, 2, 3, 3, 5, 2, 3, 2, 4, 3, 1, 1, 1,
-                3, 3, 2, 4, 1, 2, 4, 1
-            };
-
-            constants.SocialSecurityTaxIncomeThreshold = 110100;
-            constants.SocialSecurityLowPercent = 0.0765;
-            constants.SocialSecurityHighPercent = 0.0145;
-            constants.SocialSecurityHighBase = 8422.65;
-
-            constants.EmploymentExpensePercent = 0.35;
-            constants.EmploymentExpenseMaximum = 3900;
-
-            constants.DependentParentIncomeProtectionAllowances = new[,]
-            {
-                { 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0 },
-                { 0, 17100, 14170, 0, 0, 0 },
-                { 0, 21290, 18380, 15450, 0, 0 },
-                { 0, 26290, 23370, 20460, 17530, 0 },
-                { 0, 31020, 28100, 25190, 22260, 19350 },
-                { 0, 36290, 33360, 30450, 27530, 24620 }
-            };
-
-            constants.IndependentWithDependentsIncomeProtectionAllowances = new[,]
-            {
-                { 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0 },
-                { 0, 24150, 20020, 0, 0, 0 },
-                { 0, 30070, 25960, 21830, 0, 0 },
-                { 0, 37130, 33010, 28900, 24760, 0 },
-                { 0, 43810, 39670, 35570, 31450, 27340 },
-                { 0, 51230, 47110, 43020, 38870, 34770 }
-            };
-
-            constants.DependentAdditionalStudentAllowance = 2910;
-            constants.DependentAdditionalFamilyAllowance = 4100;
-
-            constants.IndependentAdditionalStudentAllowance = 4110;
-            constants.IndependentAdditionalFamilyAllowance = 5780;
-
-            constants.DependentStudentIncomeProtectionAllowance = 6130;
-            constants.SingleIndependentWithoutDependentsIncomeProtectionAllowance = 9540;
-            constants.MarriedIndependentWithoutDependentsIncomeProtectionAllowance = 15290;
-
+            AllowanceCalculatorConstants constants = TestConstantsFactory.GetAllowanceCalculatorConstants();
             _allowanceCalculator = new AllowanceCalculator(constants);
         }
 

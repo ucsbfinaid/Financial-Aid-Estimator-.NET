@@ -11,11 +11,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         [TestInitialize]
         public void Init()
         {
-            IncomeCalculatorConstants constants = new IncomeCalculatorConstants
-            {
-                AiAssessmentPercent = 0.5
-            };
-
+            IncomeCalculatorConstants constants = TestConstantsFactory.GetIncomeCalculatorConstants();
             _incomeCalculator = new IncomeCalculator(constants);
         }
 
