@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test")]
+[assembly: AssemblyTitle("Ucsb.Sa.FinAid.AidEstimation.Utility")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("The Regents of the University of California")]
-[assembly: AssemblyProduct("Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test")]
+[assembly: AssemblyProduct("Ucsb.Sa.FinAid.AidEstimation.Utility")]
 [assembly: AssemblyCopyright("Copyright © 2013 The Regents of the University of California")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("79a6b721-2a72-4399-95d2-f36192e9ae45")]
+[assembly: Guid("73fc54a5-b60d-44f3-aee2-724c89cd01e5")]
 
 // Version information for an assembly consists of the following four values:
 //

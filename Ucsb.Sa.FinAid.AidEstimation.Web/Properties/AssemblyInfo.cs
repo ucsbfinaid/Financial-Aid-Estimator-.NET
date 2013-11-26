@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("The Regents of the University of California")]
-[assembly: AssemblyProduct("Ucsb.Sa.FinAid.AidEstimation.EfcCalculation")]
+[assembly: AssemblyProduct("Ucsb.Sa.FinAid.AidEstimation.Web")]
 [assembly: AssemblyCopyright("Copyright © 2013 The Regents of the University of California")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
