@@ -78,6 +78,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj">
+      <Project>{1d25a148-dce5-4f30-8f6e-744325acf88f}</Project>
+      <Name>Ucsb.Sa.FinAid.AidEstimation.EfcCalculation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
