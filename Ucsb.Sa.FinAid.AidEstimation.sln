@@ -13,6 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation.Utility.Test", "Ucsb.Sa.FinAid.AidEstimation.Utility.Test\Ucsb.Sa.FinAid.AidEstimation.Utility.Test.csproj", "{D655EAC2-5A3B-4E4A-9191-AF4787546DAB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Constants", "Constants", "{B8D5B662-461C-445F-9E15-F9CDC914846E}"
+	ProjectSection(SolutionItems) = preProject
+		Constants\EfcCalculationConstants.1011.xml = Constants\EfcCalculationConstants.1011.xml
+		Constants\EfcCalculationConstants.1112.xml = Constants\EfcCalculationConstants.1112.xml
+		Constants\EfcCalculationConstants.1213.xml = Constants\EfcCalculationConstants.1213.xml
+		Constants\EfcCalculationConstants.1314.xml = Constants\EfcCalculationConstants.1314.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

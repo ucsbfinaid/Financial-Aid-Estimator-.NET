@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<constants>
+
+  <!-- 2010-2011: Table A1 -->
+  <constant name="StateTaxAllowanceIncomeThreshold">
+    <value>15000</value>
+  </constant>
+
+  <!-- 2010-2011: Table A1, first column -->
+  <constant name="ParentStateTaxAllowancePercents">
+    <values>
+      <value id="Other">3</value>
+      <value id="Alabama">3</value>
+      <value id="Alaska">2</value>
+      <value id="AmericanSamoa">3</value>
+      <value id="Arizona">4</value>
+      <value id="Arkansas">4</value>
+      <value id="California">9</value>
+      <value id="CanadaAndCanadianProvinces">3</value>
+      <value id="Colorado">5</value>
+      <value id="Connecticut">8</value>
+      <value id="Delaware">5</value>
+      <value id="DistrictOfColumbia">7</value>
+      <value id="FederatedStatesOfMicronesia">3</value>
+      <value id="Florida">4</value>
+      <value id="Georgia">5</value>
+      <value id="Guam">3</value>
+      <value id="Hawaii">5</value>
+      <value id="Idaho">5</value>
+      <value id="Illinois">6</value>
+      <value id="Indiana">4</value>
+      <value id="Iowa">5</value>
+      <value id="Kansas">5</value>
+      <value id="Kentucky">5</value>
+      <value id="Louisiana">3</value>
+      <value id="Maine">6</value>
+      <value id="MarshallIslands">3</value>
+      <value id="Maryland">8</value>
+      <value id="Massachusetts">7</value>
+      <value id="Mexico">3</value>
+      <value id="Michigan">5</value>
+      <value id="Minnesota">6</value>
+      <value id="Mississippi">3</value>
+      <value id="Missouri">5</value>
+      <value id="Montana">5</value>
+      <value id="Nebraska">5</value>
+      <value id="Nevada">3</value>
+      <value id="NewHampshire">5</value>
+      <value id="NewJersey">9</value>
+      <value id="NewMexico">3</value>
+      <value id="NewYork">10</value>
+      <value id="NorthCarolina">6</value>
+      <value id="NorthDakota">3</value>
+      <value id="NorthernMarianaIslands">3</value>
+      <value id="Ohio">6</value>
+      <value id="Oklahoma">4</value>
+      <value id="Oregon">7</value>
+      <value id="Palau">3</value>
+      <value id="Pennsylvania">5</value>
+      <value id="PuertoRico">3</value>
+      <value id="RhodeIsland">7</value>
+      <value id="SouthCarolina">5</value>
+      <value id="SouthDakota">2</value>
+      <value id="Tennessee">2</value>
+      <value id="Texas">3</value>
+      <value id="Utah">5</value>
+      <value id="Vermont">6</value>
+      <value id="VirginIslands">3</value>
+      <value id="Virginia">7</value>
+      <value id="Washington">3</value>
+      <value id="WestVirginia">3</value>
+      <value id="Wisconsin">7</value>
+      <value id="Wyoming">2</value>
+    </values>
+  </constant>
+
+  <!-- 2010-2011: Table A7 -->
+  <constant name="StudentStateTaxAllowancePercents">
+    <values>
+      <value id="Other">2</value>
+      <value id="Alabama">2</value>
+      <value id="Alaska">0</value>
+      <value id="AmericanSamoa">2</value>
+      <value id="Arizona">3</value>
+      <value id="Arkansas">3</value>
+      <value id="California">5</value>
+      <value id="CanadaAndCanadianProvinces">2</value>
+      <value id="Colorado">3</value>
+      <value id="Connecticut">4</value>
+      <value id="Delaware">3</value>
+      <value id="DistrictOfColumbia">6</value>
+      <value id="FederatedStatesOfMicronesia">2</value>
+      <value id="Florida">1</value>
+      <value id="Georgia">4</value>
+      <value id="Guam">2</value>
+      <value id="Hawaii">4</value>
+      <value id="Idaho">4</value>
+      <value id="Illinois">2</value>
+      <value id="Indiana">3</value>
+      <value id="Iowa">3</value>
+      <value id="Kansas">3</value>
+      <value id="Kentucky">4</value>
+      <value id="Louisiana">2</value>
+      <value id="Maine">4</value>
+      <value id="MarshallIslands">2</value>
+      <value id="Maryland">5</value>
+      <value id="Massachusetts">4</value>
+      <value id="Mexico">2</value>
+      <value id="Michigan">3</value>
+      <value id="Minnesota">4</value>
+      <value id="Mississippi">2</value>
+      <value id="Missouri">3</value>
+      <value id="Montana">3</value>
+      <value id="Nebraska">3</value>
+      <value id="Nevada">1</value>
+      <value id="NewHampshire">1</value>
+      <value id="NewJersey">4</value>
+      <value id="NewMexico">2</value>
+      <value id="NewYork">6</value>
+      <value id="NorthCarolina">4</value>
+      <value id="NorthDakota">1</value>
+      <value id="NorthernMarianaIslands">2</value>
+      <value id="Ohio">4</value>
+      <value id="Oklahoma">3</value>
+      <value id="Oregon">5</value>
+      <value id="Palau">2</value>
+      <value id="Pennsylvania">3</value>
+      <value id="PuertoRico">2</value>
+      <value id="RhodeIsland">4</value>
+      <value id="SouthCarolina">3</value>
+      <value id="SouthDakota">1</value>
+      <value id="Tennessee">1</value>
+      <value id="Texas">1</value>
+      <value id="Utah">4</value>
+      <value id="Vermont">3</value>
+      <value id="VirginIslands">2</value>
+      <value id="Virginia">4</value>
+      <value id="Washington">1</value>
+      <value id="WestVirginia">2</value>
+      <value id="Wisconsin">4</value>
+      <value id="Wyoming">1</value>
+    </values>
+  </constant>
+  
+  <!-- 2010-2011: Table A2 -->
+  <constant name="SocialSecurityTaxIncomeThreshold">
+    <value>106800</value>
+  </constant>
+  
+  <!-- 2010-2011: Table A2 -->
+  <constant name="SocialSecurityLowPercent">
+    <value>0.0765</value>
+  </constant>
+
+  <!-- 2010-2011: Table A2 -->
+  <constant name="SocialSecurityHighPercent">
+    <value>0.0145</value>
+  </constant>
+
+  <!-- 2010-2011: Table A2 -->
+  <constant name="SocialSecurityHighBase">
+    <value>8170.20</value>
+  </constant>
+
+  <!-- 2010-2011: Worksheet -->
+  <constant name="DepStudentIncomeProtectionAllowance">
+    <value>4500</value>
+  </constant>
+  
+  <!-- 2010-2011: Table A3 -->
+  <constant name="DepParentIncomeProtectionAllowances">
+    <values numberInHousehold="0">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="1">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="2">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">16230</value>
+      <value numberInCollege="2">13450</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="3">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">20210</value>
+      <value numberInCollege="2">17450</value>
+      <value numberInCollege="3">14670</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="4">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">24970</value>
+      <value numberInCollege="2">22190</value>
+      <value numberInCollege="3">19430</value>
+      <value numberInCollege="4">16650</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="5">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">29460</value>
+      <value numberInCollege="2">26680</value>
+      <value numberInCollege="3">23920</value>
+      <value numberInCollege="4">21140</value>
+      <value numberInCollege="5">18380</value>
+    </values>
+    <values numberInHousehold="6">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">34460</value>
+      <value numberInCollege="2">31680</value>
+      <value numberInCollege="3">28920</value>
+      <value numberInCollege="4">26140</value>
+      <value numberInCollege="5">23380</value>
+    </values>
+  </constant>
+
+  <!-- 2010-2011: Table C3 -->
+  <constant name="IndWithDepIncomeProtectionAllowances">
+    <values numberInHousehold="0">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="1">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="2">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">19690</value>
+      <value numberInCollege="2">16330</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="3">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">24510</value>
+      <value numberInCollege="2">21160</value>
+      <value numberInCollege="3">17800</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="4">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">30280</value>
+      <value numberInCollege="2">26910</value>
+      <value numberInCollege="3">23560</value>
+      <value numberInCollege="4">20190</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="5">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">35730</value>
+      <value numberInCollege="2">32350</value>
+      <value numberInCollege="3">29000</value>
+      <value numberInCollege="4">25640</value>
+      <value numberInCollege="5">22290</value>
+    </values>
+    <values numberInHousehold="6">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">41780</value>
+      <value numberInCollege="2">38410</value>
+      <value numberInCollege="3">35080</value>
+      <value numberInCollege="4">31690</value>
+      <value numberInCollege="5">28350</value>
+    </values>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="IndWithoutDepSingleIncomeProtectionAllowance">
+    <value>7780</value>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="IndWithoutDepMarriedIncomeProtectionAllowance">
+    <value>12460</value>
+  </constant>
+  
+  <!-- 2010-2011: Table A3 -->
+  <constant name="DepAdditionalFamilyAllowance">
+    <value>3890</value>
+  </constant>
+  
+  <!-- 2010-2011: Table A3 -->
+  <constant name="DepAdditionalStudentAllowance">
+    <value>2760</value>
+  </constant>
+  
+  <!-- 2010-2011: Table C3 -->
+  <constant name="IndAdditionalFamilyAllowance">
+    <value>4710</value>
+  </constant>
+  
+  <!-- 2010-2011: Table C3 -->
+  <constant name="IndAdditionalStudentAllowance">
+    <value>3350</value>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="EmploymentExpensePercent">
+    <value>0.35</value>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="EmploymentExpenseMaximum">
+    <value>3500</value>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="AIAssessmentPercent">
+    <value>0.5</value>
+  </constant>
+
+  <!-- 2010-2011: Table A4 -->
+  <constant name="BusinessFarmNetWorthAdjustmentRanges">
+    <values>
+      <value>1</value>
+      <value>115000</value>
+      <value>345000</value>
+      <value>580000</value>
+    </values>
+  </constant>
+
+  <!-- 2010-2011: Table A4 -->
+  <constant name="BusinessFarmNetWorthAdjustmentBases">
+    <values>
+      <value>0</value>
+      <value>46000</value>
+      <value>161000</value>
+      <value>302000</value>
+    </values>
+  </constant>
+
+  <!-- 2010-2011: Table A4 -->
+  <constant name="BusinessFarmNetWorthAdjustmentPercents">
+    <values>
+      <value>40</value>
+      <value>50</value>
+      <value>60</value>
+      <value>100</value>
+    </values>
+  </constant>
+
+  <!-- 2010-2011: Table A5 -->
+  <constant name="AssetProtectionAllowanceLowestAge">
+    <value>25</value>
+  </constant>
+  
+  <!-- 2010-2011: Table A5 -->
+  <constant name="MarriedAssetProtectionAllowances">
+    <values>
+      <value>0</value>
+      <value>2800</value>
+      <value>5500</value>
+      <value>8300</value>
+      <value>11100</value>
+      <value>13800</value>
+      <value>16600</value>
+      <value>19400</value>
+      <value>22100</value>
+      <value>24900</value>
+      <value>27700</value>
+      <value>30400</value>
+      <value>33200</value>
+      <value>36000</value>
+      <value>38700</value>
+      <value>41500</value>
+      <value>42200</value>
+      <value>43300</value>
+      <value>44400</value>
+      <value>45500</value>
+      <value>46600</value>
+      <value>47700</value>
+      <value>48900</value>
+      <value>50100</value>
+      <value>51300</value>
+      <value>52900</value>
+      <value>54200</value>
+      <value>55500</value>
+      <value>57100</value>
+      <value>58500</value>
+      <value>60200</value>
+      <value>62000</value>
+      <value>63500</value>
+      <value>65300</value>
+      <value>67200</value>
+      <value>69200</value>
+      <value>71200</value>
+      <value>73200</value>
+      <value>75600</value>
+      <value>77700</value>
+      <value>80300</value>
+    </values>
+  </constant>
+  
+  <!-- 2010-2011: Table A5 -->
+  <constant name="SingleAssetProtectionAllowances">
+    <values>
+      <value>0</value>
+      <value>1100</value>
+      <value>2200</value>
+      <value>3300</value>
+      <value>4400</value>
+      <value>5500</value>
+      <value>6600</value>
+      <value>7700</value>
+      <value>8700</value>
+      <value>9800</value>
+      <value>10900</value>
+      <value>12000</value>
+      <value>13100</value>
+      <value>14200</value>
+      <value>15300</value>
+      <value>16400</value>
+      <value>16700</value>
+      <value>17100</value>
+      <value>17500</value>
+      <value>17900</value>
+      <value>18300</value>
+      <value>18700</value>
+      <value>19100</value>
+      <value>19600</value>
+      <value>20100</value>
+      <value>20500</value>
+      <value>21000</value>
+      <value>21500</value>
+      <value>22000</value>
+      <value>22600</value>
+      <value>23200</value>
+      <value>23700</value>
+      <value>24300</value>
+      <value>25000</value>
+      <value>25600</value>
+      <value>26300</value>
+      <value>27000</value>
+      <value>27800</value>
+      <value>28500</value>
+      <value>29300</value>
+      <value>30100</value>
+    </values>
+  </constant>
+
+  <!-- 2010-2011: Worksheet -->
+  <constant name="DepStudentAssetRate">
+    <value>0.2</value>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="DepParentAssetRate">
+    <value>0.12</value>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="IndWithDepAssetRate">
+    <value>0.07</value>
+  </constant>
+  
+  <!-- 2010-2011: Worksheet -->
+  <constant name="IndWithoutDepAssetRate">
+    <value>0.2</value>
+  </constant>
+  
+  <!-- 2010-2011: Table A6 -->
+  <constant name="AAIContributionRanges">
+    <values>
+      <value>-3409</value>
+      <value>14500</value>
+      <value>18200</value>
+      <value>21900</value>
+      <value>25600</value>
+      <value>29300</value>
+    </values>
+  </constant>
+  
+  <!-- 2010-2011: Table A6 -->
+  <constant name="AAIContributionBases">
+    <values>
+      <value>0</value>
+      <value>3190</value>
+      <value>4115</value>
+      <value>5188</value>
+      <value>6446</value>
+      <value>7926</value>
+    </values>
+  </constant>
+  
+  <!-- 2010-2011: Table A6 -->
+  <constant name="AAIContributionPercents">
+    <values>
+      <value>22</value>
+      <value>25</value>
+      <value>29</value>
+      <value>34</value>
+      <value>40</value>
+      <value>47</value>
+    </values>
+  </constant>
+
+  <constant name="SimplifiedEFCMax">
+    <value>49999</value>
+  </constant>
+
+  <constant name="AutoZeroEFCMax">
+    <value>30000</value>
+  </constant>
+
+  <constant name="AltEnrollmentIncomeProtectionAllowance">
+    <value>4490</value>
+  </constant>
+
+</constants>
