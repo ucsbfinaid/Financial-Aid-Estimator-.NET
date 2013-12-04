@@ -3,6 +3,44 @@
 Open-source .NET Financial Aid Estimator, including an implementation of the Federal Expected Family Contribution
 (EFC) formula.
 
+## Getting Started
+
+To begin using the EFC Calculator from your web application, complete the following steps:
+
+1. Reference `Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.dll`
+2. Reference `Ucsb.Sa.FinAid.AidEstimation.Utility.dll`
+3. Place `EfcCalculationConstants.1314.xml` in `App_Data`
+3. Add the following to the `appSettings` section in your Web.config:
+
+```xml
+<add key="EfcCalculation.Constants.1314" value="~/App_Data/EfcCalculationConstants.1314.xml"/>
+```
+
+4. Pass values to the EFC Calculator:
+
+```csharp
+EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1314");
+
+DependentEfcCalculatorArguments arguments = new DependentEfcCalculatorArguments();
+
+arguments.MonthsOfEnrollment = 9;
+arguments.NumberInHousehold = 2;
+arguments.NumberInCollege = 1;
+
+HouseholdMember mother = new HouseholdMember();
+mother.IsWorking = true;
+mother.WorkIncome = 123000;
+arguments.FirstParent = mother;
+
+HouseholdMember student = new HouseholdMember();
+student.IsWorking = true;
+student.WorkIncome = 12000;
+arguments.Student = student;
+
+EfcProfile profile = calculator.GetDependentEfcProfile(arguments);
+Response.Write(profile.ExpectedFamilyContribution);
+```
+
 ## Copyright
 
 Copyright © 2013. The Regents of the University of California. All rights reserved.
