@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Xml;
 using Ucsb.Sa.FinAid.AidEstimation.EfcCalculation;
 using Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Constants;
 
 namespace Ucsb.Sa.FinAid.AidEstimation.Utility
 {
+    /// <summary>
+    /// Constructs Calculator and Constants objects from XML sources
+    /// </summary>
     public class EfcCalculatorFactory
     {
         private readonly XmlConstantsSource _source;
@@ -11,6 +15,11 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
         public EfcCalculatorFactory(string sourcePath)
         {
             _source = new XmlConstantsSource(sourcePath);
+        }
+
+        public EfcCalculatorFactory(XmlDocument sourceDoc)
+        {
+            _source = new XmlConstantsSource(sourceDoc);
         }
 
         public EfcCalculator GetEfcCalculator()
