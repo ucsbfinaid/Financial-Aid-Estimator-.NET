@@ -59,11 +59,16 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
 
             if (String.IsNullOrEmpty(AppSettingKeyTemplate))
             {
-                throw new ArgumentException("No AppSettings EFC Calculator key template was specified");
+                throw new ArgumentException("No appSettings EFC Calculator key template was specified");
             }
 
             string appSettingsKey = AppSettingKeyTemplate.Replace(KeyPlaceholder, key);
             string xmlSourcePath = ConfigurationManager.AppSettings[appSettingsKey];
+
+            if (String.IsNullOrEmpty(xmlSourcePath))
+            {
+                throw new ArgumentException("No source path was specified for the EFC Calculator in appSettings");
+            }
 
             // If a relative web path is used, resolve the application's physical path
             if (xmlSourcePath.StartsWith(RelativePathPlaceholder))
