@@ -16,7 +16,7 @@ To begin using the EFC Calculator from your web application, complete the follow
 <add key="EfcCalculation.Constants.1314" value="~/App_Data/EfcCalculationConstants.1314.xml"/>
 ```
 
-4. Pass values to the EFC Calculator:
+You can now use the EFC calculator:
 
 ```csharp
 EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1314");
