@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArgumentValidator.cs" />
     <Compile Include="EfcCalculatorFactory.cs" />
     <Compile Include="EfcCalculatorConfigurationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationError.cs" />
     <Compile Include="XmlConstantsSource.cs" />
   </ItemGroup>
   <ItemGroup>

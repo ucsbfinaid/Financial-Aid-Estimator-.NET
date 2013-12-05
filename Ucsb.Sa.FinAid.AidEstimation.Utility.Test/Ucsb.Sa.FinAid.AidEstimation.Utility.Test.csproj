@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ArgumentValidatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlConstantsSourceTests.cs" />
   </ItemGroup>
