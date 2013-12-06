@@ -17,6 +17,41 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
         }
 
         /// <summary>
+        /// Attempts to parse the input into a boolean. If the parsing fails, a <see cref="ValidationError"/> is
+        /// generated (using the provided parameter and message) and added to the validator's list of errors
+        /// </summary>
+        /// <param name="input">Value to parse</param>
+        /// <param name="inputDisplayName">Display name for the value being parsed</param>
+        /// <param name="inputParameterName">Parameter name (identifiable key) for the value being parsed</param>
+        /// <returns>The parsed boolean, or "false" if parsing fails</returns>
+        public bool ValidateBoolean(
+                string input,
+                string inputDisplayName,
+                string inputParameterName
+            )
+        {
+            ValidateInputInfo(inputDisplayName, inputParameterName);
+
+            bool value;
+
+            // Provided?
+            if (input == null)
+            {
+                Errors.Add(GetNoValueError(inputDisplayName, inputParameterName));
+                return false; // Stop validation
+            }
+
+            // Parsing
+            if (!Boolean.TryParse(input, out value))
+            {
+                Errors.Add(GetConversionError(inputDisplayName, inputParameterName));
+                return false;
+            }
+
+            return value;
+        }
+
+        /// <summary>
         /// Attempts to parse the input into a double value that lies within the maximum and minimum range
         /// (0-999999999). If the parsing fails, a <see cref="ValidationError"/> is
         /// generated (using the provided parameter and message) and added to the validator's list of errors

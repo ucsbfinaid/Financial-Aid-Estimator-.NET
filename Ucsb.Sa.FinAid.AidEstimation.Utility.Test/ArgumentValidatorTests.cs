@@ -8,6 +8,70 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
     public class ArgumentValidatorTests
     {
         [TestMethod]
+        public void ValidateBoolean_ValidInput_ParsedValue()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            bool result = validator.ValidateBoolean("true", "test", "Test");
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void ValidateBoolean_NullInput_ReturnsError()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateBoolean(null, "test", "Test");
+            Assert.AreEqual(1, validator.Errors.Count);
+        }
+
+        [TestMethod]
+        public void ValidateBoolean_EmptyInput_ReturnsError()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateBoolean(null, "test", "Test");
+            Assert.AreEqual(1, validator.Errors.Count);
+        }
+
+        [TestMethod]
+        public void ValidateBoolean_BadValue_ReturnsError()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateBoolean("G", "test", "Test");
+            Assert.AreEqual(1, validator.Errors.Count);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateBoolean_NullDisplayName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateBoolean("true", null, "Test");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateBoolean_EmptyDisplayName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateBoolean("true", String.Empty, "Test");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateBoolean_NullParamName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateBoolean("true", "test", null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateBoolean_EmptyParamName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateBoolean("true", "test", String.Empty);
+        }
+
+        [TestMethod]
         public void ValidatePositiveMoneyValue_ValidInput_ParsedValue()
         {
             ArgumentValidator validator = new ArgumentValidator();
