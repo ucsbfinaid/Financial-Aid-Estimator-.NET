@@ -41,6 +41,83 @@ EfcProfile profile = calculator.GetDependentEfcProfile(arguments);
 Response.Write(profile.ExpectedFamilyContribution);
 ```
 
+A full, working version of the EFC Calculator is provided in the `Ucsb.Sa.FinAid.AidEstimation.Web` project.
+
+## Validating User Input
+
+Since the EFC calculation requires a significant number of input values from the user, a utility class is
+provided to handle the validation of raw user input:
+
+```csharp
+// Collect user input
+RawDependentEfcCalculatorArguments rawArgs = new RawDependentEfcCalculatorArguments();
+
+rawArgs.OldestParentAge = inputOldestParentAge.Text;
+rawArgs.MaritalStatus = inputMaritalStatus.SelectedValue;
+rawArgs.StateOfResidency = inputStateOfResidency.SelectedValue;
+
+rawArgs.IsFirstParentWorking = inputFirstParentWorking.SelectedValue;
+rawArgs.FirstParentWorkIncome = inputFirstParentWorkIncome.Text;
+rawArgs.IsSecondParentWorking = inputSecondParentWorking.SelectedValue;
+rawArgs.SecondParentWorkIncome = inputSecondParentWorkIncome.Text;
+rawArgs.IsStudentWorking = inputIsStudentWorking.SelectedValue;
+rawArgs.StudentWorkIncome = inputStudentWorkIncome.Text;
+
+rawArgs.ParentAgi = inputParentAgi.Text;
+rawArgs.AreParentsTaxFilers = inputAreParentsTaxFilers.SelectedValue;
+rawArgs.ParentIncomeTax = inputParentIncomeTax.Text;
+rawArgs.ParentUntaxedIncomeAndBenefits = inputParentUntaxedIncomeAndBenefits.Text;
+rawArgs.ParentAdditionalFinancialInfo = inputParentAdditionalFinancialInfo.Text;
+
+rawArgs.StudentAgi = inputStudentAgi.Text;
+rawArgs.IsStudentTaxFiler = inputIsStudentTaxFiler.SelectedValue;
+rawArgs.StudentIncomeTax = inputStudentIncomeTax.Text;
+rawArgs.StudentUntaxedIncomeAndBenefits = inputStudentUntaxedIncomeAndBenefits.Text;
+rawArgs.StudentAdditionalFinancialInfo = inputStudentAdditionalFinancialInfo.Text;
+
+rawArgs.ParentCashSavingsChecking = inputParentCashSavingsChecking.Text;
+rawArgs.ParentInvestmentNetWorth = inputParentInvestmentNetWorth.Text;
+rawArgs.ParentBusinessFarmNetWorth = inputParentBusinessFarmNetWorth.Text;
+
+rawArgs.StudentCashSavingsChecking = inputStudentCashSavingsChecking.Text;
+rawArgs.StudentInvestmentNetWorth = inputStudentInvestmentNetWorth.Text;
+rawArgs.StudentBusinessFarmNetWorth = inputStudentBusinessFarmNetWorth.Text;
+
+rawArgs.NumberInHousehold = inputNumberInHousehold.Text;
+rawArgs.NumberInCollege = inputNumberInCollege.Text;
+
+rawArgs.MonthsOfEnrollment = "9";
+rawArgs.IsQualifiedForSimplified = "true";
+
+// Validate user input
+AidEstimationValidator validator = new AidEstimationValidator();
+DependentEfcCalculatorArguments args = validator.ValidateDependentEfcCalculatorArguments(rawArgs);
+
+// If validation fails, display errors
+if (validator.Errors.Any())
+{
+    errorList.DataSource = validator.Errors;
+    errorList.DataBind();
+    return;
+}
+
+// Calculate
+EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1314");
+EfcProfile profile = calculator.GetDependentEfcProfile(args);
+```
+
+In this example, the raw, text input from the user is assigned to corresponding properties on a
+`RawDependentEfcCalculatorArguments` object. This object is fed to the `ValidateDependentEfcCalculatorArguments`
+method on the `AidEstimationValidator` object, which parses the raw user values into a
+`DependentEfcCalculatorArguments` object that can be passed to the `EfcCalculator`.
+
+If errors occur during the parsing/validation process, they are assigned to the `Errors` property of
+the the `AidEstimationValidator` object.
+
+Possible validation errors include providing letters where numbers are expected, negative numbers where only
+positive values are allowed, or a higher number of household members in college than in
+the household.
+
 ## Copyright
 
 Copyright © 2013. The Regents of the University of California. All rights reserved.
