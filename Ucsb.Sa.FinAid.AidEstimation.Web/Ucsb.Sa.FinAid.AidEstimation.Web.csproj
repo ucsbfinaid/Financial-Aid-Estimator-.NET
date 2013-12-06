@@ -57,7 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EfcCalculationConstants.1314.xml" />
     <Content Include="Default.aspx" />
+    <Content Include="Full\Default.aspx" />
+    <Content Include="Full\Dependent.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -68,9 +71,31 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Full\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Full\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Full\Dependent.aspx.cs">
+      <DependentUpon>Dependent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Full\Dependent.aspx.designer.cs">
+      <DependentUpon>Dependent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Main.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,6 +108,13 @@
       <Project>{1d25a148-dce5-4f30-8f6e-744325acf88f}</Project>
       <Name>Ucsb.Sa.FinAid.AidEstimation.EfcCalculation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation.Utility\Ucsb.Sa.FinAid.AidEstimation.Utility.csproj">
+      <Project>{43BB3F09-660E-4044-8C14-428BDB7D5E23}</Project>
+      <Name>Ucsb.Sa.FinAid.AidEstimation.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Simple\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
