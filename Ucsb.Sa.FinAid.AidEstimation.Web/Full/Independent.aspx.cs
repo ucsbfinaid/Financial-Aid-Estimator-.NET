@@ -6,31 +6,23 @@ using Ucsb.Sa.FinAid.AidEstimation.Utility;
 
 namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
 {
-    public partial class Dependent : System.Web.UI.Page
+    public partial class Independent : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack)
             {
                 // Collect user input
-                RawDependentEfcCalculatorArguments rawArgs = new RawDependentEfcCalculatorArguments();
+                RawIndependentEfcCalculatorArguments rawArgs = new RawIndependentEfcCalculatorArguments();
 
-                rawArgs.OldestParentAge = inputOldestParentAge.Text;
+                rawArgs.StudentAge = inputStudentAge.Text;
                 rawArgs.MaritalStatus = inputMaritalStatus.SelectedValue;
                 rawArgs.StateOfResidency = inputStateOfResidency.SelectedValue;
 
-                rawArgs.IsFirstParentWorking = inputFirstParentWorking.SelectedValue;
-                rawArgs.FirstParentWorkIncome = inputFirstParentWorkIncome.Text;
-                rawArgs.IsSecondParentWorking = inputSecondParentWorking.SelectedValue;
-                rawArgs.SecondParentWorkIncome = inputSecondParentWorkIncome.Text;
                 rawArgs.IsStudentWorking = inputStudentWorking.SelectedValue;
                 rawArgs.StudentWorkIncome = inputStudentWorkIncome.Text;
-
-                rawArgs.ParentAgi = inputParentAgi.Text;
-                rawArgs.AreParentsTaxFilers = inputAreParentsTaxFilers.SelectedValue;
-                rawArgs.ParentIncomeTax = inputParentIncomeTax.Text;
-                rawArgs.ParentUntaxedIncomeAndBenefits = inputParentUntaxedIncomeAndBenefits.Text;
-                rawArgs.ParentAdditionalFinancialInfo = inputParentAdditionalFinancialInfo.Text;
+                rawArgs.IsSpouseWorking = inputSpouseWorking.SelectedValue;
+                rawArgs.SpouseWorkIncome = inputSpouseWorkIncome.Text;
 
                 rawArgs.StudentAgi = inputStudentAgi.Text;
                 rawArgs.IsStudentTaxFiler = inputStudentTaxFiler.SelectedValue;
@@ -38,14 +30,11 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
                 rawArgs.StudentUntaxedIncomeAndBenefits = inputStudentUntaxedIncomeAndBenefits.Text;
                 rawArgs.StudentAdditionalFinancialInfo = inputStudentAdditionalFinancialInfo.Text;
 
-                rawArgs.ParentCashSavingsChecking = inputParentCashSavingsChecking.Text;
-                rawArgs.ParentInvestmentNetWorth = inputParentInvestmentNetWorth.Text;
-                rawArgs.ParentBusinessFarmNetWorth = inputParentBusinessFarmNetWorth.Text;
-
                 rawArgs.StudentCashSavingsChecking = inputStudentCashSavingsChecking.Text;
                 rawArgs.StudentInvestmentNetWorth = inputStudentInvestmentNetWorth.Text;
                 rawArgs.StudentBusinessFarmNetWorth = inputStudentBusinessFarmNetWorth.Text;
 
+                rawArgs.HasDependents = inputHasDependents.SelectedValue;
                 rawArgs.NumberInHousehold = inputNumberInHousehold.Text;
                 rawArgs.NumberInCollege = inputNumberInCollege.Text;
 
@@ -54,7 +43,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
 
                 // Validate user input
                 AidEstimationValidator validator = new AidEstimationValidator();
-                DependentEfcCalculatorArguments args = validator.ValidateDependentEfcCalculatorArguments(rawArgs);
+                IndependentEfcCalculatorArguments args = validator.ValidateIndependentEfcCalculatorArguments(rawArgs);
 
                 // If validation fails, display errors
                 if (validator.Errors.Any())
@@ -66,7 +55,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
 
                 // Calculate
                 EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1314");
-                EfcProfile profile = calculator.GetDependentEfcProfile(args);
+                EfcProfile profile = calculator.GetIndependentEfcProfile(args);
 
                 // Display Results
                 formPlaceholder.Visible = false;

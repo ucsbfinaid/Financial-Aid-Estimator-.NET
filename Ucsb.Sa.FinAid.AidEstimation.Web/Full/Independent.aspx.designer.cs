@@ -10,7 +10,7 @@
 namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full {
     
     
-    public partial class Dependent {
+    public partial class Independent {
         
         /// <summary>
         /// formPlaceholder control.
@@ -31,13 +31,13 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full {
         protected global::System.Web.UI.WebControls.Repeater errorList;
         
         /// <summary>
-        /// inputOldestParentAge control.
+        /// inputStudentAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputOldestParentAge;
+        protected global::System.Web.UI.WebControls.TextBox inputStudentAge;
         
         /// <summary>
         /// inputMaritalStatus control.
@@ -47,42 +47,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList inputMaritalStatus;
-        
-        /// <summary>
-        /// inputFirstParentWorking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList inputFirstParentWorking;
-        
-        /// <summary>
-        /// inputFirstParentWorkIncome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputFirstParentWorkIncome;
-        
-        /// <summary>
-        /// inputSecondParentWorking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList inputSecondParentWorking;
-        
-        /// <summary>
-        /// inputSecondParentWorkIncome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputSecondParentWorkIncome;
         
         /// <summary>
         /// inputStudentWorking control.
@@ -103,49 +67,22 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full {
         protected global::System.Web.UI.WebControls.TextBox inputStudentWorkIncome;
         
         /// <summary>
-        /// inputParentAgi control.
+        /// inputSpouseWorking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputParentAgi;
+        protected global::System.Web.UI.WebControls.RadioButtonList inputSpouseWorking;
         
         /// <summary>
-        /// inputAreParentsTaxFilers control.
+        /// inputSpouseWorkIncome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList inputAreParentsTaxFilers;
-        
-        /// <summary>
-        /// inputParentIncomeTax control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputParentIncomeTax;
-        
-        /// <summary>
-        /// inputParentUntaxedIncomeAndBenefits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputParentUntaxedIncomeAndBenefits;
-        
-        /// <summary>
-        /// inputParentAdditionalFinancialInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputParentAdditionalFinancialInfo;
+        protected global::System.Web.UI.WebControls.TextBox inputSpouseWorkIncome;
         
         /// <summary>
         /// inputStudentAgi control.
@@ -193,33 +130,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full {
         protected global::System.Web.UI.WebControls.TextBox inputStudentAdditionalFinancialInfo;
         
         /// <summary>
-        /// inputParentCashSavingsChecking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputParentCashSavingsChecking;
-        
-        /// <summary>
-        /// inputParentInvestmentNetWorth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputParentInvestmentNetWorth;
-        
-        /// <summary>
-        /// inputParentBusinessFarmNetWorth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputParentBusinessFarmNetWorth;
-        
-        /// <summary>
         /// inputStudentCashSavingsChecking control.
         /// </summary>
         /// <remarks>
@@ -245,6 +155,15 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox inputStudentBusinessFarmNetWorth;
+        
+        /// <summary>
+        /// inputHasDependents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList inputHasDependents;
         
         /// <summary>
         /// inputNumberInHousehold control.
