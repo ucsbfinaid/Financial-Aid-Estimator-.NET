@@ -165,7 +165,7 @@
                 <li>
                     <asp:Label runat="server" AssociatedControlID="inputNumberInHousehold">
                         Number in Household
-                        <span class="description">Include you, your parents, and your parent(s)' dependents</span>
+                        <span class="description">Total number in your household during the last academic year. Include you, your parents, and your parent(s)' dependents</span>
                     </asp:Label>
                     <asp:TextBox runat="server" ID="inputNumberInHousehold"></asp:TextBox>
                 </li>

@@ -85,7 +85,10 @@
                     <asp:TextBox runat="server" ID="inputStudentIncomeTax"></asp:TextBox>
                 </li>
                 <li>
-                    <asp:Label runat="server" AssociatedControlID="inputStudentUntaxedIncomeAndBenefits">Student and Spouse's Untaxed Income and Benefits</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="inputStudentUntaxedIncomeAndBenefits">
+                        Student and Spouse's Untaxed Income and Benefits
+                        <span class="description">Including child support and money received from friends or relatives</span>
+                    </asp:Label>
                     <asp:TextBox runat="server" ID="inputStudentUntaxedIncomeAndBenefits"></asp:TextBox>
                 </li>
                 <li>
@@ -115,11 +118,17 @@
                     </fieldset>
                 </li>
                 <li>
-                    <asp:Label runat="server" AssociatedControlID="inputNumberInHousehold">Number in Household</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="inputNumberInHousehold">
+                        Number in Household
+                        <span class="description">Total number in your household during the last academic year. Include you, your spouse, your children, and any other dependents</span>
+                    </asp:Label>
                     <asp:TextBox runat="server" ID="inputNumberInHousehold"></asp:TextBox>
                 </li>
                 <li>
-                    <asp:Label runat="server" AssociatedControlID="inputNumberInCollege">Number in College</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="inputNumberInCollege">
+                        Number in College
+                        <span class="description">Total number of people in your household that were in college during the last academic year</span>
+                    </asp:Label>
                     <asp:TextBox runat="server" ID="inputNumberInCollege"></asp:TextBox>
                 </li>
                 <li>
