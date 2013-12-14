@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AidEstimationValidator.Constants.cs" />
     <Compile Include="AidEstimationValidator.cs" />
     <Compile Include="ArgumentValidator.cs" />
     <Compile Include="EfcCalculatorFactory.cs" />
@@ -48,6 +49,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RawDependentEfcCalculatorArguments.cs" />
     <Compile Include="RawIndependentEfcCalculatorArguments.cs" />
+    <Compile Include="RawSimpleDependentEfcCalculatorArguments.cs" />
+    <Compile Include="RawSimpleIndependentEfcCalculatorArguments.cs" />
     <Compile Include="ValidationError.cs" />
     <Compile Include="XmlConstantsSource.cs" />
   </ItemGroup>
