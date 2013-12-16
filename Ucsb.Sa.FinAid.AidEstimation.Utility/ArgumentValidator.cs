@@ -269,6 +269,42 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
             }
         }
 
+        /// <summary>
+        /// Attempts to parse the input into a <see cref="IncomeEarnedBy"/> enumeration value.
+        /// If the parsing fails, a <see cref="ValidationError"/> is generated (using the provided parameter
+        /// and message) and added to the validator's list of errors
+        /// </summary>
+        /// <param name="input">Value to parse</param>
+        /// <param name="inputDisplayName">Display name for the value being parsed</param>
+        /// <param name="inputParameterName">Parameter name (identifiable key) for the value being parsed</param>
+        /// <returns>The parsed value, or <see cref="IncomeEarnedBy.None"/> if parsing fails</returns>
+        public IncomeEarnedBy ValidateIncomeEarnedBy(
+                string input,
+                string inputDisplayName,
+                string inputParameterName
+            )
+        {
+            ValidateInputInfo(inputDisplayName, inputParameterName);
+
+            // Provided?
+            if (String.IsNullOrEmpty(input))
+            {
+                Errors.Add(GetNoValueError(inputDisplayName, inputParameterName));
+                return IncomeEarnedBy.None;
+            }
+
+            // Parsing
+            try
+            {
+                return (IncomeEarnedBy)Enum.Parse(typeof(IncomeEarnedBy), input, true);
+            }
+            catch (Exception)
+            {
+                Errors.Add(GetConversionError(inputDisplayName, inputParameterName));
+                return IncomeEarnedBy.None;
+            }
+        }
+
         private static ValidationError GetNoValueError(string inputDisplayName, string inputParameterName)
         {
             return GetError("No value provided for {0}", inputDisplayName, inputParameterName);

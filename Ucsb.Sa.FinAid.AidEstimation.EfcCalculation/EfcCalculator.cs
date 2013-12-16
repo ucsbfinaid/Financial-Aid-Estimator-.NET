@@ -228,7 +228,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                     EfcCalculationRole.DependentStudent,
                     MaritalStatus.SingleSeparatedDivorced,
                     0,
-                    args.StudentCashSavingsCheckings,
+                    args.StudentCashSavingsChecking,
                     args.StudentInvestmentNetWorth,
                     args.StudentBusinessFarmNetWorth);
             }

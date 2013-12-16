@@ -150,9 +150,9 @@
         }
 
         /// <summary>
-        /// Student's total cash, savings, and checkings
+        /// Student's total cash, savings, and checking
         /// </summary>
-        public double StudentCashSavingsCheckings
+        public double StudentCashSavingsChecking
         {
             get;
             set;

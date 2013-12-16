@@ -316,7 +316,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
                     ParentCashSavingsChecking = parentCashSavingsChecking,
                     ParentInvestmentNetWorth = parentInvestmentNetWorth,
                     ParentBusinessFarmNetWorth = parentBusinessFarmNetWorth,
-                    StudentCashSavingsCheckings = studentCashSavingsCheckings,
+                    StudentCashSavingsChecking = studentCashSavingsCheckings,
                     StudentInvestmentNetWorth = studentInvestmentNetWorth,
                     StudentBusinessFarmNetWorth = studentBusinessFarmNetWorth,
                     MaritalStatus = maritalStatus,

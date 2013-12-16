@@ -231,8 +231,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             validator.ValidateMoneyValue("3", "test", String.Empty);
         }
 
-        // NEW
-
         [TestMethod]
         public void ValidateNonZeroInteger_ValidInput_ParsedValue()
         {
@@ -312,8 +310,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             ArgumentValidator validator = new ArgumentValidator();
             validator.ValidateNonZeroInteger("3", "test", String.Empty);
         }
-
-        // NEW NEW
 
         [TestMethod]
         public void ValidateMaritalStatus_Single_ParsedValue()
@@ -395,8 +391,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             validator.ValidateMaritalStatus("3", "test", String.Empty);
         }
 
-        // NEW NEW NEW
-
         [TestMethod]
         public void ValidateUnitedStatesStateOrTerritory_State_ParsedValue()
         {
@@ -467,6 +461,78 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
         {
             ArgumentValidator validator = new ArgumentValidator();
             validator.ValidateUnitedStatesStateOrTerritory("3", "test", String.Empty);
+        }
+
+        [TestMethod]
+        public void ValidateIncomeEarnedBy_State_ParsedValue()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            IncomeEarnedBy result = validator.ValidateIncomeEarnedBy("both", "test", "Test");
+            Assert.AreEqual(IncomeEarnedBy.Both, result);
+        }
+
+        [TestMethod]
+        public void ValidateIncomeEarnedBy_VariedCase_ParsedValue()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            IncomeEarnedBy result = validator.ValidateIncomeEarnedBy("oNe", "test", "Test");
+            Assert.AreEqual(IncomeEarnedBy.One, result);
+        }
+
+        [TestMethod]
+        public void ValidateIncomeEarnedBy_NullInput_ReturnsError()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateIncomeEarnedBy(null, "test", "Test");
+            Assert.AreEqual(1, validator.Errors.Count);
+        }
+
+        [TestMethod]
+        public void ValidateIncomeEarnedBy_EmptyInput_ReturnsError()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateIncomeEarnedBy(null, "test", "Test");
+            Assert.AreEqual(1, validator.Errors.Count);
+        }
+
+        [TestMethod]
+        public void ValidateIncomeEarnedBy_BadValue_ReturnsError()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateIncomeEarnedBy("G", "test", "Test");
+            Assert.AreEqual(1, validator.Errors.Count);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateIncomeEarnedBy_NullDisplayName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateIncomeEarnedBy("3", null, "Test");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateIncomeEarnedBY_EmptyDisplayName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateIncomeEarnedBy("3", String.Empty, "Test");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateIncomeEarnedBy_NullParamName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateIncomeEarnedBy("3", "test", null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ValidateIncomeEarnedBy_EmptyParamName_ThrowsException()
+        {
+            ArgumentValidator validator = new ArgumentValidator();
+            validator.ValidateIncomeEarnedBy("3", "test", String.Empty);
         }
     }
 }
