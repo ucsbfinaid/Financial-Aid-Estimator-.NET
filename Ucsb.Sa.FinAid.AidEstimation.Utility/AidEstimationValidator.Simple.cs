@@ -168,11 +168,15 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
                 WorkIncome = firstParentWorkIncome
             };
 
-            HouseholdMember secondParent = new HouseholdMember
+            HouseholdMember secondParent = null;
+            if (maritalStatus == MaritalStatus.MarriedRemarried)
             {
-                IsWorking = isSecondParentWorking,
-                WorkIncome = secondParentWorkIncome
-            };
+                secondParent = new HouseholdMember
+                {
+                    IsWorking = isSecondParentWorking,
+                    WorkIncome = secondParentWorkIncome
+                };
+            }
 
             // ASSUME: Student is working
             HouseholdMember student = new HouseholdMember
@@ -245,6 +249,210 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
 
                 // ASSUME: Nine months of enrollment
                 MonthsOfEnrollment = 9
+            };
+
+            return parsedArgs;
+        }
+
+        public IndependentEfcCalculatorArguments ValidateSimpleIndependentEfcCalculatorArguments(RawSimpleIndependentEfcCalculatorArguments args)
+        {
+            if (args == null)
+            {
+                throw new ArgumentException("No raw arguments provided");
+            }
+
+            // Marital Status
+            MaritalStatus maritalStatus
+                = _validator.ValidateMaritalStatus(
+                    args.MaritalStatus,
+                    LabelIndStudentMaritalStatus,
+                    ParamMaritalStatus);
+
+            // Student Age
+            int studentAge =
+                _validator.ValidateNonZeroInteger(
+                    args.StudentAge,
+                    LabelIndStudentAge,
+                    ParamIndStudentAge);
+
+            // Student Income
+            double studentIncome =
+                _validator.ValidatePositiveMoneyValue(
+                    args.StudentIncome,
+                    LabelIndStudentIncome,
+                    ParamIndStudentIncome);
+
+            // Student Other Income
+            double studentOtherIncome =
+                _validator.ValidatePositiveMoneyValue(
+                    args.StudentOtherIncome,
+                    LabelIndStudentOtherIncome,
+                    ParamIndStudentOtherIncome);
+
+            // Student Income Earned By
+            IncomeEarnedBy incomeEarnedBy =
+                _validator.ValidateIncomeEarnedBy(
+                    args.StudentIncomeEarnedBy,
+                    LabelIndStudentIncomeEarnedBy,
+                    ParamIndStudentIncomeEarnedBy);
+
+            // CHECK: If Single/Separated/Divorced, "Student's Income Earned By" can not be "Both"
+            if (maritalStatus == MaritalStatus.SingleSeparatedDivorced && incomeEarnedBy == IncomeEarnedBy.Both)
+            {
+                _validator.Errors.Add(new ValidationError(ParamIndStudentIncomeEarnedBy,
+                    String.Format(@"{0} was ""Single/Separated/Divorced"", but {1} was marked as earned by both student and spouse",
+                    LabelIndStudentMaritalStatus, LabelIndStudentIncomeEarnedBy)));
+            }
+
+            // CHECK: If "Student's Income Earned By" is "None", then "Parent Income" must be 0
+            if (incomeEarnedBy == IncomeEarnedBy.None && studentIncome > 0)
+            {
+                _validator.Errors.Add(new ValidationError(ParamParentIncome,
+                    String.Format(@"{0} was marked as earned by neither student nor spouse, but {1} was greater than 0",
+                        LabelIndStudentIncomeEarnedBy, LabelIndStudentIncome)));
+            }
+
+            // Student Income Tax Paid
+            double studentIncomeTaxPaid =
+                _validator.ValidatePositiveMoneyValue(
+                    args.StudentIncomeTax,
+                    LabelIndStudentIncomeTax,
+                    ParamIndStudentIncomeTax);
+
+            // Student Assets
+            double studentAssets =
+                _validator.ValidatePositiveMoneyValue(
+                    args.StudentAssets,
+                    LabelIndStudentAssets,
+                    ParamIndStudentAssets);
+
+            // Number in Household
+            int numberInHousehold =
+                _validator.ValidateNonZeroInteger(
+                    args.NumberInHousehold,
+                    LabelNumInHousehold,
+                    ParamNumInHousehold);
+
+            // Number in College
+            int numberInCollege =
+                _validator.ValidateNonZeroInteger(
+                    args.NumberInCollege,
+                    LabelNumInCollege,
+                    ParamNumInCollege);
+
+            // CHECK: Number in Household must be greater than or equal to Number in College
+            if (numberInCollege > numberInHousehold)
+            {
+                _validator.Errors.Add(new ValidationError(ParamNumInCollege,
+                    String.Format(@"{0} must be less than or equal to {1}",
+                    LabelNumInCollege, LabelNumInHousehold)));
+            }
+
+            // Has Dependents
+            bool hasDependents =
+                _validator.ValidateBoolean(
+                    args.HasDependents,
+                    LabelIndStudentHasDep,
+                    ParamIndStudentHasDep);
+
+            // CHECK: If student has dependents, Number in Household can not be less than two
+            if (hasDependents && numberInHousehold < 2)
+            {
+                _validator.Errors.Add(new ValidationError(ParamIndStudentHasDep,
+                    String.Format(@"Student has dependents, but {0} was less than two.",
+                    LabelNumInHousehold)));
+            }
+
+            // State of Residency
+            UnitedStatesStateOrTerritory stateOfResidency =
+                _validator.ValidateUnitedStatesStateOrTerritory(
+                    args.StateOfResidency, 
+                    LabelStateOfResidency,
+                    ParamStateOfResidency);
+
+            if (_validator.Errors.Any())
+            {
+                return null;
+            }
+
+            // Build a list of arguments for the full EFC calculation using assumed
+            // values gleaned from the "simplified" values provided
+
+            bool isStudentWorking = false;
+            bool isSpouseWorking = false;
+
+            double studentWorkIncome = 0;
+            double spouseWorkIncome = 0;
+
+            if(incomeEarnedBy == IncomeEarnedBy.One)
+            {
+                isStudentWorking = true;
+                studentWorkIncome = studentIncome;
+            }
+
+            if(incomeEarnedBy == IncomeEarnedBy.Both)
+            {
+                isStudentWorking = isSpouseWorking = true;
+                studentWorkIncome = spouseWorkIncome = (studentIncome/2);
+            }
+
+            HouseholdMember student = new HouseholdMember
+            {
+                IsWorking = isStudentWorking,
+                WorkIncome = studentWorkIncome
+            };
+
+            HouseholdMember spouse = null;
+            if (maritalStatus == MaritalStatus.MarriedRemarried)
+            {
+                spouse = new HouseholdMember
+                {
+                    IsWorking = isSpouseWorking,
+                    WorkIncome = spouseWorkIncome
+                };
+            }
+
+            IndependentEfcCalculatorArguments parsedArgs = new IndependentEfcCalculatorArguments
+            {
+                Student = student,
+                Spouse = spouse,
+
+                // ASSUME: "Student and Spouse's Income" == "Student and Spouse's AGI"
+                AdjustedGrossIncome = studentIncome,
+
+                // ASSUME: Student and Spouse are tax filers
+                AreTaxFilers = true,
+
+                IncomeTaxPaid = studentIncomeTaxPaid,
+
+                // ASSUME: "Student and Spouse's Untaxed Income and Benefits" == "Student and Spouse's Other Income"
+                UntaxedIncomeAndBenefits = studentOtherIncome,
+
+                // ASSUME: "Student and Spouse's Additional Financial Information" is zero
+                AdditionalFinancialInfo = 0,
+
+                // ASSUME: "Student's and Spouse's Cash, Savings, and Checking" == "Student and Spouse's Assets"
+                CashSavingsCheckings = studentAssets,
+
+                // ASSUME: "Student and Spouse's Net Worth of Investments" is zero
+                InvestmentNetWorth = 0,
+
+                // ASSUME: "Student and Spouse's Net Worth of Business and/or Investment Farm" is zero
+                BusinessFarmNetWorth = 0,
+
+                HasDependents = hasDependents,
+                MaritalStatus = maritalStatus,
+                StateOfResidency = stateOfResidency,
+                NumberInHousehold = numberInHousehold,
+                NumberInCollege = numberInCollege,
+                Age = studentAge,
+
+                // ASSUME: Student is NOT qualified for simplified formula
+                IsQualifiedForSimplified = false,
+
+                // ASSUME: Nine months of enrollment
+                MonthsOfEnrollment = 9
+
             };
 
             return parsedArgs;
