@@ -64,6 +64,7 @@
     <Content Include="Full\Independent.aspx" />
     <Content Include="Simple\Default.aspx" />
     <Content Include="Simple\Dependent.aspx" />
+    <Content Include="Simple\Independent.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="Simple\Dependent.aspx.designer.cs">
       <DependentUpon>Dependent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simple\Independent.aspx.cs">
+      <DependentUpon>Independent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simple\Independent.aspx.designer.cs">
+      <DependentUpon>Independent.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
