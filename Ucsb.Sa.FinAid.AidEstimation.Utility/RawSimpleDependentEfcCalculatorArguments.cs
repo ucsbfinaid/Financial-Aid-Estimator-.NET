@@ -9,8 +9,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
     {
         public string MaritalStatus { get; set; }
 
-        public string OldestParentAge { get; set; }
-
         public string ParentIncome { get; set; }
 
         public string ParentOtherIncome { get; set; }

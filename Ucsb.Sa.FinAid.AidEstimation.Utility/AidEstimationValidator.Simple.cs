@@ -21,13 +21,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
                     LabelParentMaritalStatus,
                     ParamMaritalStatus);
 
-            // Oldest Parent Age
-            int oldestParentAge
-                = _validator.ValidateNonZeroInteger(
-                        args.OldestParentAge,
-                        LabelOldestParentAge,
-                        ParamOldestParentAge);
-
             // Parent Income
             double parentIncome =
                 _validator.ValidatePositiveMoneyValue(
@@ -192,6 +185,9 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
                 SecondParent = secondParent,
                 Student = student,
 
+                // ASSUME: "Age of Oldest Parent" is 45
+                OldestParentAge = 45,
+
                 // ASSUME: "Parent's AGI" == "Parent's Income"
                 ParentAdjustedGrossIncome = parentIncome,
 
@@ -242,7 +238,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
                 StateOfResidency = stateOfResidency,
                 NumberInHousehold = numberInHousehold,
                 NumberInCollege = numberInCollege,
-                OldestParentAge = oldestParentAge,
 
                 // ASSUME: Student is NOT qualified for simplified formula
                 IsQualifiedForSimplified = false,
