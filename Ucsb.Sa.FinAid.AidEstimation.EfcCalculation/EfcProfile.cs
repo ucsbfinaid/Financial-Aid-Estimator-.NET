@@ -20,7 +20,7 @@
             private set;
         }
 
-        internal EfcProfile(double expectedFamilyContribution,
+        public EfcProfile(double expectedFamilyContribution,
                                     double parentContribution,
                                     double studentContribution)
         {
