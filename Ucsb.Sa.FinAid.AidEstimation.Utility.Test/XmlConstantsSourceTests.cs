@@ -393,5 +393,127 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
 
             Assert.AreEqual(values.Length, 0);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetCostOfAttendanceItemArray_NullValue_ThrowsException()
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            source.GetKeyValuePairArray<string>(null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetCostOfAttendanceItemArray_EmptyValue_ThrowsException()
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            source.GetKeyValuePairArray<string>(String.Empty);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetCostOfAttendanceItemArray_NoNode_ThrowsException()
+        {
+            XmlDocument xmlDoc = new XmlDocument
+            {
+                InnerXml = "<constants></constants>"
+            };
+
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            source.GetMultiArray<string>("doesntexist");
+        }
+
+        [TestMethod]
+        public void GetCostOfAttendanceItemArray_HasItem_ReturnsValue()
+        {
+            XmlDocument xmlDoc = new XmlDocument
+            {
+                InnerXml =
+                    @"<constants><constant name=""test""><value name=""testname"" description=""testdescription"">6000</value></constant></constants>"
+            };
+
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            CostOfAttendanceItem[] values = source.GetCostOfAttendanceItemArray("test");
+
+            Assert.AreEqual(1, values.Length);
+            Assert.AreEqual("testname", values[0].Name);
+            Assert.AreEqual("testdescription", values[0].Description);
+            Assert.AreEqual(6000, values[0].Value);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetCostOfAttendanceItemArray_NoName_ThrowsException()
+        {
+            XmlDocument xmlDoc = new XmlDocument
+            {
+                InnerXml =
+                    @"<constants><constant name=""test""><value description=""testdescription"">6000</value></constant></constants>"
+            };
+
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            source.GetCostOfAttendanceItemArray("test");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetCostOfAttendanceItemArray_NoDescription_ThrowsException()
+        {
+            XmlDocument xmlDoc = new XmlDocument
+            {
+                InnerXml =
+                    @"<constants><constant name=""test""><value name=""testname"">6000</value></constant></constants>"
+            };
+
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            source.GetCostOfAttendanceItemArray("test");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetCostOfAttendanceItemArray_NoValue_ThrowsException()
+        {
+            XmlDocument xmlDoc = new XmlDocument
+            {
+                InnerXml =
+                    @"<constants><constant name=""test""><value name=""testname"" description=""testdescription""></value></constant></constants>"
+            };
+
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            source.GetCostOfAttendanceItemArray("test");
+        }
+
+        [TestMethod]
+        public void GetCostOfAttendanceItemArray_NoValues_EmptyArray()
+        {
+            XmlDocument xmlDoc = new XmlDocument
+            {
+                InnerXml = @"<constants><constant name=""test""></constant></constants>"
+            };
+
+            XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
+            CostOfAttendanceItem[] values = source.GetCostOfAttendanceItemArray("test");
+
+            Assert.AreEqual(values.Length, 0);
+        }
     }
 }

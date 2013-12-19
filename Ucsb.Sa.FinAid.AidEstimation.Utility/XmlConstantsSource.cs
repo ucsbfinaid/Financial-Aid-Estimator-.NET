@@ -134,6 +134,48 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
             return constants;
         }
 
+        public CostOfAttendanceItem[] GetCostOfAttendanceItemArray(string constantName)
+        {
+            XmlNode node = GetConstantNode(constantName, ConstantMultiplicity.Multidimensional);
+
+            CostOfAttendanceItem[] constants = new CostOfAttendanceItem[node.ChildNodes.Count];
+            for (int i = 0; i < node.ChildNodes.Count; i++)
+            {
+                CostOfAttendanceItem item = new CostOfAttendanceItem();
+                XmlNode itemNode = node.ChildNodes[i];
+
+                if (itemNode.Attributes == null)
+                {
+                    throw new ArgumentException("No cost of attendance item attributes provided");
+                }
+
+                // Name
+                XmlAttribute nameAttr = itemNode.Attributes["name"];
+                if (nameAttr == null || String.IsNullOrEmpty(nameAttr.Value))
+                {
+                    throw new ArgumentException("No cost of attendance item name provided");
+                }
+
+                item.Name = nameAttr.Value;
+
+                // Description
+                XmlAttribute descAttr = itemNode.Attributes["description"];
+                if (descAttr == null || String.IsNullOrEmpty(descAttr.Value))
+                {
+                    throw new ArgumentException("No cost of attendance item description provided");
+                }
+
+                item.Description = descAttr.Value;
+
+                // Value
+                item.Value = ConvertValue<double>(itemNode.InnerText);
+
+                constants[i] = item;
+            }
+
+            return constants;
+        }
+
         private XmlNode GetConstantNode(string constantName, ConstantMultiplicity multiplicity)
         {
             if (String.IsNullOrEmpty(constantName))
@@ -171,6 +213,11 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
 
         private static T ConvertValue<T>(string value)
         {
+            if (String.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException("No value provided");
+            }
+
             Type constantType = typeof(T);
 
             if (constantType.BaseType == typeof(Enum))

@@ -26,6 +26,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation", "Ucsb.Sa.FinAid.AidEstimation\Ucsb.Sa.FinAid.AidEstimation.csproj", "{2CFBACD0-1733-4035-9E94-275D948D0A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation.Test", "Ucsb.Sa.FinAid.AidEstimation.Test\Ucsb.Sa.FinAid.AidEstimation.Test.csproj", "{862DB3AA-0B20-48E0-98BE-79799A8086FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +56,14 @@ Global
 		{D655EAC2-5A3B-4E4A-9191-AF4787546DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D655EAC2-5A3B-4E4A-9191-AF4787546DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D655EAC2-5A3B-4E4A-9191-AF4787546DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862DB3AA-0B20-48E0-98BE-79799A8086FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862DB3AA-0B20-48E0-98BE-79799A8086FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862DB3AA-0B20-48E0-98BE-79799A8086FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862DB3AA-0B20-48E0-98BE-79799A8086FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
