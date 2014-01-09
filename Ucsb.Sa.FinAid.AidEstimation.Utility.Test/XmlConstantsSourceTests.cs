@@ -394,23 +394,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             Assert.AreEqual(values.Length, 0);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void GetCostOfAttendanceItemArray_NullValue_ThrowsException()

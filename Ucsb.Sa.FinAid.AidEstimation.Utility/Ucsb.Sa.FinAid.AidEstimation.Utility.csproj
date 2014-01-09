@@ -46,6 +46,7 @@
     <Compile Include="AidEstimationValidator.cs" />
     <Compile Include="AidEstimationValidator.Simple.cs" />
     <Compile Include="ArgumentValidator.cs" />
+    <Compile Include="CostOfAttendanceEstimatorConfigurationManager.cs" />
     <Compile Include="CostOfAttendanceEstimatorFactory.cs" />
     <Compile Include="EfcCalculatorFactory.cs" />
     <Compile Include="EfcCalculatorConfigurationManager.cs" />
