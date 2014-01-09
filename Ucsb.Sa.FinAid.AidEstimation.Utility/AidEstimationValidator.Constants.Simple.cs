@@ -4,36 +4,36 @@
     {
         // Income
 
-        private const string LabelParentIncome = @"""Parent(s)' Income""";
-        private const string LabelStudentIncome = @"""Student's Income""";
-        private const string LabelIndStudentIncome = @"""Student and Spouse's Total Income""";
-        private const string ParamParentIncome = "parentIncome";
-        private const string ParamStudentIncome = "studentIncome";
-        private const string ParamIndStudentIncome = "studentIncome";
+        public static string LabelParentIncome = @"""Parent(s)' Income""";
+        public static string LabelStudentIncome = @"""Student's Income""";
+        public static string LabelIndStudentIncome = @"""Student and Spouse's Total Income""";
+        public static string ParamParentIncome = "parentIncome";
+        public static string ParamStudentIncome = "studentIncome";
+        public static string ParamIndStudentIncome = "studentIncome";
 
         // Income Earned By
 
-        private const string LabelParentIncomeEarnedBy = @"""Parent(s)' Income Earned By""";
-        private const string LabelIndStudentIncomeEarnedBy = @"""Student's Income Earned By""";
-        private const string ParamParentIncomeEarnedBy = "parentIncomeEarnedBy";
-        private const string ParamIndStudentIncomeEarnedBy = "studentIncomeEarnedBy";
+        public static string LabelParentIncomeEarnedBy = @"""Parent(s)' Income Earned By""";
+        public static string LabelIndStudentIncomeEarnedBy = @"""Student's Income Earned By""";
+        public static string ParamParentIncomeEarnedBy = "parentIncomeEarnedBy";
+        public static string ParamIndStudentIncomeEarnedBy = "studentIncomeEarnedBy";
 
         // Other Income
 
-        private const string LabelParentOtherIncome = @"""Parent(s)' Other Income""";
-        private const string LabelStudentOtherIncome = @"""Student's Other Income""";
-        private const string LabelIndStudentOtherIncome = @"""Student and Spouse's Other Income""";
-        private const string ParamParentOtherIncome = "parentOtherIncome";
-        private const string ParamStudentOtherIncome = "studentOtherIncome";
-        private const string ParamIndStudentOtherIncome = "studentOtherIncome";
+        public static string LabelParentOtherIncome = @"""Parent(s)' Other Income""";
+        public static string LabelStudentOtherIncome = @"""Student's Other Income""";
+        public static string LabelIndStudentOtherIncome = @"""Student and Spouse's Other Income""";
+        public static string ParamParentOtherIncome = "parentOtherIncome";
+        public static string ParamStudentOtherIncome = "studentOtherIncome";
+        public static string ParamIndStudentOtherIncome = "studentOtherIncome";
 
         // Assets
 
-        private const string LabelParentAssets = @"""Parent(s)' Assets""";
-        private const string LabelStudentAssets = @"""Student's Assets""";
-        private const string LabelIndStudentAssets = @"""Student and Spouse's Assets""";
-        private const string ParamParentAssets = "parentAssets";
-        private const string ParamStudentAssets = "studentAssets";
-        private const string ParamIndStudentAssets = "studentAssets";
+        public static string LabelParentAssets = @"""Parent(s)' Assets""";
+        public static string LabelStudentAssets = @"""Student's Assets""";
+        public static string LabelIndStudentAssets = @"""Student and Spouse's Assets""";
+        public static string ParamParentAssets = "parentAssets";
+        public static string ParamStudentAssets = "studentAssets";
+        public static string ParamIndStudentAssets = "studentAssets";
     }
 }

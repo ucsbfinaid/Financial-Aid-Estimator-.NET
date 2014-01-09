@@ -4,141 +4,141 @@
     {
         // Is Working?
 
-        private const string LabelIsFirstParentWorking = @"""Did the First Parent Work?""";
-        private const string LabelIsSecondParentWorking = @"""Did the Second Parent Work?""";
-        private const string LabelIsStudentWorking = @"""Did the Student Work?""";
-        private const string LabelIsSpouseWorking = @"""Did the Spouse Work?""";
-        private const string ParamIsFirstParentWorking = "isFirstParentWorking";
-        private const string ParamIsSecondParentWorking = "isSecondParentWorking";
-        private const string ParamIsStudentWorking = "isStudentWorking";
-        private const string ParamIsSpouseWorking = "isSpouseWorking";
+        public static string LabelIsFirstParentWorking = @"""Did the First Parent Work?""";
+        public static string LabelIsSecondParentWorking = @"""Did the Second Parent Work?""";
+        public static string LabelIsStudentWorking = @"""Did the Student Work?""";
+        public static string LabelIsSpouseWorking = @"""Did the Spouse Work?""";
+        public static string ParamIsFirstParentWorking = "isFirstParentWorking";
+        public static string ParamIsSecondParentWorking = "isSecondParentWorking";
+        public static string ParamIsStudentWorking = "isStudentWorking";
+        public static string ParamIsSpouseWorking = "isSpouseWorking";
 
         // Work Income
 
-        private const string LabelFirstParentWorkIncome = @"""First Parent's Income Earned From Work""";
-        private const string LabelSecondParentWorkIncome = @"""Second Parent's Income Earned From Work""";
-        private const string LabelStudentWorkIncome = @"""Student's Income Earned From Work""";
-        private const string LabelSpouseWorkIncome = @"""Spouse's Income Earned From Work""";
-        private const string ParamFirstParentWorkIncome = "firstParentWorkIncome";
-        private const string ParamSecondParentWorkIncome = "secondParentWorkIncome";
-        private const string ParamStudentWorkIncome = "studentWorkIncome";
-        private const string ParamSpouseWorkIncome = "spouseWorkIncome";
+        public static string LabelFirstParentWorkIncome = @"""First Parent's Income Earned From Work""";
+        public static string LabelSecondParentWorkIncome = @"""Second Parent's Income Earned From Work""";
+        public static string LabelStudentWorkIncome = @"""Student's Income Earned From Work""";
+        public static string LabelSpouseWorkIncome = @"""Spouse's Income Earned From Work""";
+        public static string ParamFirstParentWorkIncome = "firstParentWorkIncome";
+        public static string ParamSecondParentWorkIncome = "secondParentWorkIncome";
+        public static string ParamStudentWorkIncome = "studentWorkIncome";
+        public static string ParamSpouseWorkIncome = "spouseWorkIncome";
 
         // AGI
 
-        private const string LabelParentAgi = @"""Parent(s)' Adjusted Gross Income (AGI)""";
-        private const string LabelStudentAgi = @"""Student's Adjusted Gross Income (AGI)""";
-        private const string LabelIndStudentAgi = @"""Student and Spouse's Adjusted Gross Income (AGI)""";
-        private const string ParamParentAgi = "parentAgi";
-        private const string ParamStudentAgi = "studentAgi";
-        private const string ParamIndStudentAgi = "studentAgi";
+        public static string LabelParentAgi = @"""Parent(s)' Adjusted Gross Income (AGI)""";
+        public static string LabelStudentAgi = @"""Student's Adjusted Gross Income (AGI)""";
+        public static string LabelIndStudentAgi = @"""Student and Spouse's Adjusted Gross Income (AGI)""";
+        public static string ParamParentAgi = "parentAgi";
+        public static string ParamStudentAgi = "studentAgi";
+        public static string ParamIndStudentAgi = "studentAgi";
 
         // Are Tax Filers?
 
-        private const string LabelAreParentsTaxFilers = @"""Did Parent(s) File Taxes?""";
-        private const string LabelIsStudentTaxFiler = @"""Did the Student File Taxes?""";
-        private const string LabelIsIndStudentTaxFiler = @"""Did the Student and Spouse File Taxes?""";
-        private const string ParamAreParentsTaxFilers = "areParentsTaxFilers";
-        private const string ParamIsStudentTaxFiler = "isStudentTaxFiler";
-        private const string ParamIsIndStudentTaxFiler = "isStudentTaxFiler";
+        public static string LabelAreParentsTaxFilers = @"""Did Parent(s) File Taxes?""";
+        public static string LabelIsStudentTaxFiler = @"""Did the Student File Taxes?""";
+        public static string LabelIsIndStudentTaxFiler = @"""Did the Student and Spouse File Taxes?""";
+        public static string ParamAreParentsTaxFilers = "areParentsTaxFilers";
+        public static string ParamIsStudentTaxFiler = "isStudentTaxFiler";
+        public static string ParamIsIndStudentTaxFiler = "isStudentTaxFiler";
 
         // Income Tax Paid
 
-        private const string LabelParentIncomeTax = @"""Parent(s)' Income Taxes Paid""";
-        private const string LabelStudentIncomeTax = @"""Student's Income Taxes Paid""";
-        private const string LabelIndStudentIncomeTax = @"""Student and Spouse's Total Income Taxes Paid""";
-        private const string ParamParentIncomeTax = "parentIncomeTax";
-        private const string ParamStudentIncomeTax = "studentIncomeTax";
-        private const string ParamIndStudentIncomeTax = "studentIncomeTax";
+        public static string LabelParentIncomeTax = @"""Parent(s)' Income Taxes Paid""";
+        public static string LabelStudentIncomeTax = @"""Student's Income Taxes Paid""";
+        public static string LabelIndStudentIncomeTax = @"""Student and Spouse's Total Income Taxes Paid""";
+        public static string ParamParentIncomeTax = "parentIncomeTax";
+        public static string ParamStudentIncomeTax = "studentIncomeTax";
+        public static string ParamIndStudentIncomeTax = "studentIncomeTax";
 
         // Untaxed Income And Benefits
 
-        private const string LabelParentUntaxedIncomeAndBenefits = @"""Parent(s)' Untaxed Income and Benefits""";
-        private const string LabelStudentUntaxedIncomeAndBenefits = @"""Student's Untaxed Income and Benefits""";
-        private const string LabelIndStudentUntaxedIncomeAndBenefits
+        public static string LabelParentUntaxedIncomeAndBenefits = @"""Parent(s)' Untaxed Income and Benefits""";
+        public static string LabelStudentUntaxedIncomeAndBenefits = @"""Student's Untaxed Income and Benefits""";
+        public static string LabelIndStudentUntaxedIncomeAndBenefits
             = @"""Student and Spouse's Untaxed Income and Benefits""";
-        private const string ParamParentUntaxedIncomeAndBenefits = "parentUntaxedIncomeAndBenefits";
-        private const string ParamStudentUntaxedIncomeAndBenefits = "studentUntaxedIncomeAndBenefits";
-        private const string ParamIndStudentUntaxedIncomeAndBenefits = "studentUntaxedIncomeAndBenefits";
+        public static string ParamParentUntaxedIncomeAndBenefits = "parentUntaxedIncomeAndBenefits";
+        public static string ParamStudentUntaxedIncomeAndBenefits = "studentUntaxedIncomeAndBenefits";
+        public static string ParamIndStudentUntaxedIncomeAndBenefits = "studentUntaxedIncomeAndBenefits";
 
         // Additional Financial Information
 
-        private const string LabelParentAdditionalFinancialInfo = @"""Parent(s)' Additional Financial Information""";
-        private const string LabelStudentAdditionalFinancialInfo = @"""Student's Additional Financial Information""";
-        private const string LabelIndStudentAdditionalFinancialInfo = @"""Student and Spouse's Additional Financial Information""";
-        private const string ParamParentAdditionalFinancialInfo = "parentAdditionalFinancialInfo";
-        private const string ParamStudentAdditionalFinancialInfo = "studentAdditionalFinancialInfo";
-        private const string ParamIndStudentAdditionalFinancialInfo = "studentAdditionalFinancialInfo";
+        public static string LabelParentAdditionalFinancialInfo = @"""Parent(s)' Additional Financial Information""";
+        public static string LabelStudentAdditionalFinancialInfo = @"""Student's Additional Financial Information""";
+        public static string LabelIndStudentAdditionalFinancialInfo = @"""Student and Spouse's Additional Financial Information""";
+        public static string ParamParentAdditionalFinancialInfo = "parentAdditionalFinancialInfo";
+        public static string ParamStudentAdditionalFinancialInfo = "studentAdditionalFinancialInfo";
+        public static string ParamIndStudentAdditionalFinancialInfo = "studentAdditionalFinancialInfo";
 
         // Cash, Savings, Checking
 
-        private const string LabelParentCashSavingsChecking = @"""Parent(s)' Cash, Savings, and Checking""";
-        private const string LabelStudentCashSavingsChecking = @"""Student's Cash, Savings, and Checking""";
-        private const string LabelIndStudentCashSavingsChecking
+        public static string LabelParentCashSavingsChecking = @"""Parent(s)' Cash, Savings, and Checking""";
+        public static string LabelStudentCashSavingsChecking = @"""Student's Cash, Savings, and Checking""";
+        public static string LabelIndStudentCashSavingsChecking
             = @"""Student and Spouse's Cash, Savings, and Checking""";
-        private const string ParamParentCashSavingsChecking = "parentCashSavingsChecking";
-        private const string ParamStudentCashSavingsChecking = "studentCashSavingsChecking";
-        private const string ParamIndStudentCashSavingsChecking = "studentCashSavingsChecking";
+        public static string ParamParentCashSavingsChecking = "parentCashSavingsChecking";
+        public static string ParamStudentCashSavingsChecking = "studentCashSavingsChecking";
+        public static string ParamIndStudentCashSavingsChecking = "studentCashSavingsChecking";
 
         // Investment Net Worth
 
-        private const string LabelParentInvestmentNetWorth = @"""Net Worth of Parent(s)' Investments""";
-        private const string LabelStudentInvestmentNetWorth = @"""Net Worth of Student's Investments""";
-        private const string LabelIndStudentInvestmentNetWorth = @"""Net Worth of Student and Spouse's Investments""";
-        private const string ParamParentInvestmentNetWorth = "parentInvestmentNetWorth";
-        private const string ParamStudentInvestmentNetWorth = "studentInvestmentNetWorth";
-        private const string ParamIndStudentInvestmentNetWorth = "studentInvestmentNetWorth";
+        public static string LabelParentInvestmentNetWorth = @"""Net Worth of Parent(s)' Investments""";
+        public static string LabelStudentInvestmentNetWorth = @"""Net Worth of Student's Investments""";
+        public static string LabelIndStudentInvestmentNetWorth = @"""Net Worth of Student and Spouse's Investments""";
+        public static string ParamParentInvestmentNetWorth = "parentInvestmentNetWorth";
+        public static string ParamStudentInvestmentNetWorth = "studentInvestmentNetWorth";
+        public static string ParamIndStudentInvestmentNetWorth = "studentInvestmentNetWorth";
 
         // Business Farm Net Worth
 
-        private const string LabelParentBusinessFarmNetWorth = @"""Net Worth of Parent(s)' Business and/or Investment Farm""";
-        private const string LabelStudentBusinessFarmNetWorth = @"""Net Worth of Student's Business and/or Investment Farm""";
-        private const string LabelIndStudentBusinessFarmNetWorth = @"""Net Worth of Student and Spouse's Business and/or Investment Farm""";
-        private const string ParamParentBusinessFarmNetWorth = "parentBusinessFarmNetWorth";
-        private const string ParamStudentBusinessFarmNetWorth = "studentBusinessFarmNetWorth";
-        private const string ParamIndStudentBusinessFarmNetWorth = "studentBusinessFarmNetWorth";
+        public static string LabelParentBusinessFarmNetWorth = @"""Net Worth of Parent(s)' Business and/or Investment Farm""";
+        public static string LabelStudentBusinessFarmNetWorth = @"""Net Worth of Student's Business and/or Investment Farm""";
+        public static string LabelIndStudentBusinessFarmNetWorth = @"""Net Worth of Student and Spouse's Business and/or Investment Farm""";
+        public static string ParamParentBusinessFarmNetWorth = "parentBusinessFarmNetWorth";
+        public static string ParamStudentBusinessFarmNetWorth = "studentBusinessFarmNetWorth";
+        public static string ParamIndStudentBusinessFarmNetWorth = "studentBusinessFarmNetWorth";
 
         // Has Dependents
 
-        private const string LabelIndStudentHasDep = @"""Student has Dependents""";
-        private const string ParamIndStudentHasDep = "hasDependents";
+        public static string LabelIndStudentHasDep = @"""Student has Dependents""";
+        public static string ParamIndStudentHasDep = "hasDependents";
 
         // Marital Status
 
-        private const string ParamMaritalStatus = "maritalStatus";
-        private const string LabelParentMaritalStatus = @"""Parent(s)' Marital Status""";
-        private const string LabelIndStudentMaritalStatus = @"""Student's Marital Status""";
+        public static string ParamMaritalStatus = "maritalStatus";
+        public static string LabelParentMaritalStatus = @"""Parent(s)' Marital Status""";
+        public static string LabelIndStudentMaritalStatus = @"""Student's Marital Status""";
 
         // State of Residency
 
-        private const string LabelStateOfResidency = @"""State of Residency""";
-        private const string ParamStateOfResidency = "stateOfResidency";
+        public static string LabelStateOfResidency = @"""State of Residency""";
+        public static string ParamStateOfResidency = "stateOfResidency";
 
         // Number in Household
 
-        private const string LabelNumInHousehold = @"""Number in Household""";
-        private const string ParamNumInHousehold = "numberInHousehold";
+        public static string LabelNumInHousehold = @"""Number in Household""";
+        public static string ParamNumInHousehold = "numberInHousehold";
 
         // Number in College
 
-        private const string LabelNumInCollege = @"""Number in College""";
-        private const string ParamNumInCollege = "numberInCollege";
+        public static string LabelNumInCollege = @"""Number in College""";
+        public static string ParamNumInCollege = "numberInCollege";
 
         // Age
 
-        private const string LabelOldestParentAge = @"""Age of Oldest Parent""";
-        private const string LabelIndStudentAge = @"""Student's Age""";
-        private const string ParamOldestParentAge = "oldestParentAge";
-        private const string ParamIndStudentAge = "studentAge";
+        public static string LabelOldestParentAge = @"""Age of Oldest Parent""";
+        public static string LabelIndStudentAge = @"""Student's Age""";
+        public static string ParamOldestParentAge = "oldestParentAge";
+        public static string ParamIndStudentAge = "studentAge";
 
         // Months of Enrollment
 
-        private const string LabelMonthsOfEnrollment = @"""Months of Enrollment""";
-        private const string ParamMonthsOfEnrollment = "monthsOfEnrollment";
+        public static string LabelMonthsOfEnrollment = @"""Months of Enrollment""";
+        public static string ParamMonthsOfEnrollment = "monthsOfEnrollment";
 
         // Is Qualified for Simplified?
 
-        private const string LabelIsQualifiedForSimplified = @"""Is Qualified for Simplified?""";
-        private const string ParamIsQualifiedForSimplified = "isQualifiedForSimplified";
+        public static string LabelIsQualifiedForSimplified = @"""Is Qualified for Simplified?""";
+        public static string ParamIsQualifiedForSimplified = "isQualifiedForSimplified";
     }
 }
