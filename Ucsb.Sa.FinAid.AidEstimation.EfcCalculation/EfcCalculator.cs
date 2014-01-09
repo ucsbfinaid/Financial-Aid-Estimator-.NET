@@ -55,7 +55,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                 || args.MonthsOfEnrollment <= 0
                 || args.Student == null)
             {
-                return new EfcProfile(0, 0, 0);
+                return new EfcProfile(0, 0, 0, 0);
             }
 
             double workIncome = 0;
@@ -86,7 +86,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
             // Determine Auto Zero EFC eligibility
             if (args.IsQualifiedForSimplified && simpleIncome <= _constants.AutoZeroEfcMax)
             {
-                return new EfcProfile(0, 0, 0);
+                return new EfcProfile(0, 0, 0, 0);
             }
 
             // Parent's Total Income
@@ -239,7 +239,8 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
             EfcProfile profile = new EfcProfile(
                 parentContribution + studentContribution,
                 parentContribution,
-                studentContribution);
+                studentContribution,
+                parentTotalIncome);
 
             return profile;
         }
@@ -255,7 +256,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                     || args.MonthsOfEnrollment <= 0
                     || args.Student == null)
             {
-                return new EfcProfile(0, 0, 0);
+                return new EfcProfile(0, 0, 0, 0);
             }
 
             EfcCalculationRole role = (args.HasDependents)
@@ -284,7 +285,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                 && role == EfcCalculationRole.IndependentStudentWithDependents
                 && simpleIncome <= _constants.AutoZeroEfcMax)
             {
-                return new EfcProfile(0, 0, 0);
+                return new EfcProfile(0, 0, 0, 0);
             }
 
             // Student's Total Income
@@ -347,7 +348,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
 
             // For MORE than default months of enrollment, the standard contribution is used
 
-            EfcProfile profile = new EfcProfile(studentContribution, 0, studentContribution);
+            EfcProfile profile = new EfcProfile(studentContribution, 0, studentContribution, 0);
             return profile;
         }
     }

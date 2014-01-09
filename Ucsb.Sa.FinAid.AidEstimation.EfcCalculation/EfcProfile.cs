@@ -20,13 +20,21 @@
             private set;
         }
 
+        public double ParentTotalIncome
+        {
+            get;
+            private set;
+        }
+
         public EfcProfile(double expectedFamilyContribution,
-                                    double parentContribution,
-                                    double studentContribution)
+                            double parentContribution,
+                            double studentContribution,
+                            double parentTotalIncome)
         {
             ExpectedFamilyContribution = expectedFamilyContribution;
             ParentContribution = parentContribution;
             StudentContribution = studentContribution;
+            ParentTotalIncome = ParentTotalIncome;
         }
     }
 }
