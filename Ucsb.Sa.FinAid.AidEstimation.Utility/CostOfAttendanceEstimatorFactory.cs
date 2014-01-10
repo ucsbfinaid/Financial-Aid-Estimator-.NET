@@ -97,6 +97,19 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
             {
             }
 
+            // Out of State Fees
+            try
+            {
+                double outOfStateFees = _source.GetValue<double>("OutOfStateFees");
+                foreach (CostOfAttendance coa in coaList.Values)
+                {
+                    coa.OutOfStateFees = outOfStateFees;
+                }
+            }
+            catch (Exception)
+            {
+            }
+
             return new CostOfAttendanceEstimator(coaList);
         }
 
