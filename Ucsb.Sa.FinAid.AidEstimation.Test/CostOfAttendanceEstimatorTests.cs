@@ -14,6 +14,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Test
             CostOfAttendanceEstimator estimator = new CostOfAttendanceEstimator(null);
         }
 
+        [TestMethod]
         public void GetCostOfAttendance_NoItems_ReturnsNull()
         {
             CostOfAttendanceEstimator estimator = new CostOfAttendanceEstimator(new Dictionary<CostOfAttendanceKey, CostOfAttendance>());
@@ -21,6 +22,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Test
             Assert.IsNull(coa);
         }
 
+        [TestMethod]
         public void GetCostOfAttendance_HasItems_ReturnsItem()
         {
             CostOfAttendanceEstimator estimator = new CostOfAttendanceEstimator(new Dictionary<CostOfAttendanceKey, CostOfAttendance>

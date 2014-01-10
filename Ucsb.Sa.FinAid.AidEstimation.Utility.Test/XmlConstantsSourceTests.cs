@@ -431,7 +431,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             XmlDocument xmlDoc = new XmlDocument
             {
                 InnerXml =
-                    @"<constants><constant name=""test""><value name=""testname"" description=""testdescription"">6000</value></constant></constants>"
+                    @"<constants><constant name=""test""><values><value name=""testname"" description=""testdescription"">6000</value></values></constant></constants>"
             };
 
             XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
@@ -450,7 +450,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             XmlDocument xmlDoc = new XmlDocument
             {
                 InnerXml =
-                    @"<constants><constant name=""test""><value description=""testdescription"">6000</value></constant></constants>"
+                    @"<constants><constant name=""test""><values><value description=""testdescription"">6000</value></values></constant></constants>"
             };
 
             XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
@@ -464,7 +464,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             XmlDocument xmlDoc = new XmlDocument
             {
                 InnerXml =
-                    @"<constants><constant name=""test""><value name=""testname"">6000</value></constant></constants>"
+                    @"<constants><constant name=""test""><values><value name=""testname"">6000</value></values></constant></constants>"
             };
 
             XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
@@ -478,7 +478,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
             XmlDocument xmlDoc = new XmlDocument
             {
                 InnerXml =
-                    @"<constants><constant name=""test""><value name=""testname"" description=""testdescription""></value></constant></constants>"
+                    @"<constants><constant name=""test""><values><value name=""testname"" description=""testdescription""></value></values></constant></constants>"
             };
 
             XmlConstantsSource source = new XmlConstantsSource(xmlDoc);
@@ -486,7 +486,8 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility.Test
         }
 
         [TestMethod]
-        public void GetCostOfAttendanceItemArray_NoValues_EmptyArray()
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetCostOfAttendanceItemArray_NoValues_ThrowsException()
         {
             XmlDocument xmlDoc = new XmlDocument
             {

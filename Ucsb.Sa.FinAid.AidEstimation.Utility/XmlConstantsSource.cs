@@ -136,7 +136,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
 
         public CostOfAttendanceItem[] GetCostOfAttendanceItemArray(string constantName)
         {
-            XmlNode node = GetConstantNode(constantName, ConstantMultiplicity.Multidimensional);
+            XmlNode node = GetConstantNode(constantName, ConstantMultiplicity.Multiple);
 
             CostOfAttendanceItem[] constants = new CostOfAttendanceItem[node.ChildNodes.Count];
             for (int i = 0; i < node.ChildNodes.Count; i++)

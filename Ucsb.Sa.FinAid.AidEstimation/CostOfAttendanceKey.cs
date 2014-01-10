@@ -10,5 +10,27 @@
             EducationLevel = educationLevel;
             HousingOption = housingOption;
         }
+
+        public bool Equals(CostOfAttendanceKey otherKey)
+        {
+            return (otherKey.EducationLevel == EducationLevel && otherKey.HousingOption == HousingOption);
+        }
+
+        public override bool Equals(object obj)
+        {
+            CostOfAttendanceKey otherKey = obj as CostOfAttendanceKey;
+
+            if (otherKey == null)
+            {
+                return false;
+            }
+
+            return Equals(otherKey);
+        }
+
+        public override int GetHashCode()
+        {
+            return ((int) EducationLevel) ^ ((int) HousingOption);
+        }
     }
 }
