@@ -72,5 +72,28 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Test
         {
             AwardRange.GetRangeFromValue(400, 100, -500);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof (ArgumentException))]
+        public void GetRangeFromValue_NegativeMinAwardValue_ThrowsException()
+        {
+            AwardRange.GetRangeFromValue(400, 100, 100, -100);
+        }
+
+        [TestMethod]
+        public void GetRangeFromValue_MinimumLessThanMinAwardValue_MinimumEqualsZero()
+        {
+            AwardRange range = AwardRange.GetRangeFromValue(500, 100, 100, 500);
+            Assert.AreEqual(0, range.Minimum);
+            Assert.AreEqual(600, range.Maximum);
+        }
+
+        [TestMethod]
+        public void GetRangeFromValue_MaximumLessThanMinAwardValue_BothEqualZero()
+        {
+            AwardRange range = AwardRange.GetRangeFromValue(500, 100, 100, 700);
+            Assert.AreEqual(0, range.Minimum);
+            Assert.AreEqual(0, range.Maximum);
+        }
     }
 }
