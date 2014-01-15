@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AwardRange.cs" />
     <Compile Include="CostOfAttendance.cs" />
     <Compile Include="CostOfAttendanceEstimator.cs" />
     <Compile Include="CostOfAttendanceItem.cs" />
