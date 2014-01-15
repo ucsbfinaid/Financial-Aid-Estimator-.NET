@@ -136,11 +136,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj">
+    <ProjectReference Include="..\AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj">
       <Project>{1d25a148-dce5-4f30-8f6e-744325acf88f}</Project>
       <Name>Ucsb.Sa.FinAid.AidEstimation.EfcCalculation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation.Utility\Ucsb.Sa.FinAid.AidEstimation.Utility.csproj">
+    <ProjectReference Include="..\AidEstimation.Utility\Ucsb.Sa.FinAid.AidEstimation.Utility.csproj">
       <Project>{43BB3F09-660E-4044-8C14-428BDB7D5E23}</Project>
       <Name>Ucsb.Sa.FinAid.AidEstimation.Utility</Name>
     </ProjectReference>

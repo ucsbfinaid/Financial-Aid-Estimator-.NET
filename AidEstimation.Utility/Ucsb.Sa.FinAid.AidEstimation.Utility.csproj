@@ -59,11 +59,11 @@
     <Compile Include="XmlConstantsSource.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj">
+    <ProjectReference Include="..\AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj">
       <Project>{1d25a148-dce5-4f30-8f6e-744325acf88f}</Project>
       <Name>Ucsb.Sa.FinAid.AidEstimation.EfcCalculation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation\Ucsb.Sa.FinAid.AidEstimation.csproj">
+    <ProjectReference Include="..\AidEstimation\Ucsb.Sa.FinAid.AidEstimation.csproj">
       <Project>{2cfbacd0-1733-4035-9e94-275d948d0a20}</Project>
       <Name>Ucsb.Sa.FinAid.AidEstimation</Name>
     </ProjectReference>

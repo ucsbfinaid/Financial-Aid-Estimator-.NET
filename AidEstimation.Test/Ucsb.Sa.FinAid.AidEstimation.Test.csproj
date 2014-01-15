@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D655EAC2-5A3B-4E4A-9191-AF4787546DAB}</ProjectGuid>
+    <ProjectGuid>{862DB3AA-0B20-48E0-98BE-79799A8086FD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ucsb.Sa.FinAid.AidEstimation.Utility.Test</RootNamespace>
-    <AssemblyName>Ucsb.Sa.FinAid.AidEstimation.Utility.Test</AssemblyName>
+    <RootNamespace>Ucsb.Sa.FinAid.AidEstimation.Test</RootNamespace>
+    <AssemblyName>Ucsb.Sa.FinAid.AidEstimation.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -39,7 +39,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -54,28 +53,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ArgumentValidatorTests.cs" />
+    <Compile Include="AwardRangeTests.cs" />
+    <Compile Include="CostOfAttendanceEstimatorTests.cs" />
+    <Compile Include="CostOfAttendanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlConstantsSourceTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj">
-      <Project>{1D25A148-DCE5-4F30-8F6E-744325ACF88F}</Project>
-      <Name>Ucsb.Sa.FinAid.AidEstimation.EfcCalculation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation.Utility\Ucsb.Sa.FinAid.AidEstimation.Utility.csproj">
-      <Project>{43BB3F09-660E-4044-8C14-428BDB7D5E23}</Project>
-      <Name>Ucsb.Sa.FinAid.AidEstimation.Utility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ucsb.Sa.FinAid.AidEstimation\Ucsb.Sa.FinAid.AidEstimation.csproj">
+    <ProjectReference Include="..\AidEstimation\Ucsb.Sa.FinAid.AidEstimation.csproj">
       <Project>{2CFBACD0-1733-4035-9E94-275D948D0A20}</Project>
       <Name>Ucsb.Sa.FinAid.AidEstimation</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TestFile.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
