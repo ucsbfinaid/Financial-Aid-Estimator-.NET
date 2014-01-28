@@ -34,7 +34,7 @@
             ExpectedFamilyContribution = expectedFamilyContribution;
             ParentContribution = parentContribution;
             StudentContribution = studentContribution;
-            ParentTotalIncome = ParentTotalIncome;
+            ParentTotalIncome = parentTotalIncome;
         }
     }
 }

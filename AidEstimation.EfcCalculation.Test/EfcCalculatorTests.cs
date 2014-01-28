@@ -117,6 +117,53 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         }
 
         [TestMethod]
+        public void GetDependentEfcProfile_ParentTotalIncome_Calculated()
+        {
+            DependentEfcCalculatorArguments args = new DependentEfcCalculatorArguments
+            {
+                FirstParent = new HouseholdMember
+                {
+                    IsWorking = false,
+                    WorkIncome = 0
+                },
+                SecondParent = new HouseholdMember
+                {
+                    IsWorking = false,
+                    WorkIncome = 0
+                },
+                Student = new HouseholdMember
+                {
+                    IsWorking = false,
+                    WorkIncome = 0
+                },
+                ParentAdjustedGrossIncome = 0,
+                AreParentsTaxFilers = false,
+                ParentIncomeTaxPaid = 0,
+                ParentUntaxedIncomeAndBenefits = 10000,
+                ParentAdditionalFinancialInfo = 0,
+                StudentAdjustedGrossIncome = 0,
+                IsStudentTaxFiler = false,
+                StudentIncomeTaxPaid = 0,
+                StudentUntaxedIncomeAndBenefits = 0,
+                StudentAdditionalFinancialInfo = 0,
+                ParentCashSavingsChecking = 0,
+                ParentInvestmentNetWorth = 0,
+                ParentBusinessFarmNetWorth = 0,
+                StudentCashSavingsChecking = 0,
+                StudentInvestmentNetWorth = 0,
+                MaritalStatus = MaritalStatus.MarriedRemarried,
+                StateOfResidency = UnitedStatesStateOrTerritory.California,
+                NumberInHousehold = 3,
+                NumberInCollege = 1,
+                OldestParentAge = 30,
+                MonthsOfEnrollment = 9
+            };
+
+            EfcProfile profile = _efcCalculator.GetDependentEfcProfile(args);
+            Assert.AreEqual(10000, profile.ParentTotalIncome);
+        }
+
+        [TestMethod]
         public void GetDependentEfcProfile_Values_Calculated()
         {
             DependentEfcCalculatorArguments args = new DependentEfcCalculatorArguments
