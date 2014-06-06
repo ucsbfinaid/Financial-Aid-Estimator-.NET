@@ -3,14 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <meta charset="utf-8">
-    <meta name="viewport" content="height=device-height,width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
-    <title>Financial Aid Estimator Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0;" />
+
+    <title>Financial Aid Estimator</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="style/main.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
-    <h1>Financial Aid Estimator</h1>
+    <div id="root">
+        <h1>Financial Aid Estimator</h1>
+        <h2>University Name</h2>
     
-    <asp:ContentPlaceHolder ID="mainContent" runat="server">
-    </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="mainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
 </body>
 </html>

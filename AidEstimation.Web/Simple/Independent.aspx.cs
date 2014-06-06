@@ -49,7 +49,6 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Simple
                 formPlaceholder.Visible = false;
                 resultsPlaceholder.Visible = true;
                 studentContributionOutput.Text = profile.StudentContribution.ToString();
-                parentContributionOutput.Text = profile.ParentContribution.ToString();
                 expectedFamilyContributionOutput.Text = profile.ExpectedFamilyContribution.ToString();
             }
         }

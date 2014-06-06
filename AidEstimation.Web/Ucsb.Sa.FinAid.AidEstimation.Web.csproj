@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EfcCalculationConstants.1314.xml" />
+    <Content Include="App_Data\EfcCalculationConstants.1415.xml" />
     <Content Include="Default.aspx" />
     <Content Include="Full\Default.aspx" />
     <Content Include="Full\Dependent.aspx" />
@@ -65,6 +65,7 @@
     <Content Include="Simple\Default.aspx" />
     <Content Include="Simple\Dependent.aspx" />
     <Content Include="Simple\Independent.aspx" />
+    <Content Include="style\main.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

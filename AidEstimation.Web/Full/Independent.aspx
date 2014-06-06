@@ -13,8 +13,8 @@
 
         <asp:Repeater ID="errorList" runat="server">
             <HeaderTemplate>
-                <p>There was an error with the values for the following fields:</p>
-                <ul>
+                <p class="error">There was an error with the values for the following fields:</p>
+                <ul class="error error-list">
             </HeaderTemplate>
             <ItemTemplate>
                 <li><%# Eval("Message") %></li>
@@ -33,7 +33,7 @@
                 <li>
                     <fieldset>
                         <legend>Marital Status</legend>
-                        <asp:RadioButtonList runat="server" ID="inputMaritalStatus" RepeatLayout="UnorderedList">
+                        <asp:RadioButtonList runat="server" ID="inputMaritalStatus" RepeatLayout="UnorderedList" CssClass="radio-input-list">
                             <asp:ListItem Value="single">Single/Separated/Divorced</asp:ListItem>
                             <asp:ListItem Value="married">Married/Remarried</asp:ListItem>
                         </asp:RadioButtonList>
@@ -42,7 +42,7 @@
                 <li>
                     <fieldset>
                         <legend>Did the Student Work?</legend>
-                        <asp:RadioButtonList runat="server" ID="inputStudentWorking" RepeatLayout="UnorderedList">
+                        <asp:RadioButtonList runat="server" ID="inputStudentWorking" RepeatLayout="UnorderedList" CssClass="radio-input-list">
                             <asp:ListItem Value="true">Yes, I worked</asp:ListItem>
                             <asp:ListItem Value="false">No, I did <em>not</em> work</asp:ListItem>
                         </asp:RadioButtonList>
@@ -56,7 +56,7 @@
                     <fieldset>
                         <legend>Did the Spouse Work?</legend>
                         
-                        <asp:RadioButtonList runat="server" ID="inputSpouseWorking">
+                        <asp:RadioButtonList runat="server" ID="inputSpouseWorking" RepeatLayout="UnorderedList" CssClass="radio-input-list">
                             <asp:ListItem Value="true">Yes, my Spouse worked</asp:ListItem>
                             <asp:ListItem Value="false">No, my Spouse did <em>not</em> work</asp:ListItem>
                         </asp:RadioButtonList>
@@ -74,7 +74,7 @@
                     <fieldset>
                         <legend>Did the Student and Spouse File Taxes?</legend>
                         
-                        <asp:RadioButtonList runat="server" ID="inputStudentTaxFiler">
+                        <asp:RadioButtonList runat="server" ID="inputStudentTaxFiler" RepeatLayout="UnorderedList" CssClass="radio-input-list">
                             <asp:ListItem Value="true">Yes, we filed taxes</asp:ListItem>
                             <asp:ListItem Value="false">No, we did <em>not</em> files taxes</asp:ListItem>
                         </asp:RadioButtonList>
@@ -111,7 +111,7 @@
                     <fieldset>
                         <legend>Student has Dependents</legend>
                         
-                        <asp:RadioButtonList runat="server" ID="inputHasDependents">
+                        <asp:RadioButtonList runat="server" ID="inputHasDependents" RepeatLayout="UnorderedList" CssClass="radio-input-list">
                             <asp:ListItem Value="true">Yes, I have dependents</asp:ListItem>
                             <asp:ListItem Value="false">No, I do <em>not</em> have dependents</asp:ListItem>
                         </asp:RadioButtonList>
@@ -134,6 +134,11 @@
                 <li>
                     <asp:Label runat="server" AssociatedControlID="inputStateOfResidency">State of Residency</asp:Label>
                     <asp:DropDownList runat="server" ID="inputStateOfResidency">
+                        <asp:ListItem Value="Alabama">Alabama</asp:ListItem>
+                        <asp:ListItem Value="Alaska">Alaska</asp:ListItem>
+                        <asp:ListItem Value="AmericanSamoa">American Samoa</asp:ListItem>
+                        <asp:ListItem Value="Arizona">Arizona</asp:ListItem>
+                        <asp:ListItem Value="Arkansas">Arkansas</asp:ListItem>
                         <asp:ListItem Value="California">California</asp:ListItem>
                         <asp:ListItem Value="CanadaAndCanadianProvinces">Canada And Canadian Provinces</asp:ListItem>
                         <asp:ListItem Value="Colorado">Colorado</asp:ListItem>
@@ -193,8 +198,8 @@
                         <asp:ListItem Value="Other">Other</asp:ListItem>
                     </asp:DropDownList>
                 </li>
-                <li>
-                    <asp:Button runat="server" UseSubmitBehavior="true" Text="Calculate EFC" />
+                <li class="button-wrapper">
+                    <asp:Button runat="server" UseSubmitBehavior="true" Text="Calculate EFC" CssClass="button" />
                 </li>
             </ul>
         </form>
@@ -203,15 +208,116 @@
 
     <asp:Placeholder ID="resultsPlaceholder" runat="server" Visible="false">
         
-        <h3>Expected Family Contribution</h3>
-        
-        <ul>
-            <li>Student Contribution (SC): <asp:Literal ID="studentContributionOutput" runat="server" /></li>
-            <li>Parent Contribution (PC): <asp:Literal ID="parentContributionOutput" runat="server" /></li>
-            <li>Expected Family Contribution (EFC): <asp:Literal ID="expectedFamilyContributionOutput" runat="server" /></li>
+		<h3>Expected Family Contribution</h3>
+
+		<ul class="results">
+			<li>
+				<span class="result-label">
+					Student Contribution
+					<span class="description">Amount that you are expected to contribute towards the cost of your education</span>
+				</span>
+				<span class="result-amount"><asp:Literal ID="studentContributionOutput" runat="server" /></span>
+			</li>
+			<li class="total">
+				<span class="result-label">
+					Expected Family Contribution
+					<span class="description">Sum of the Student Contribution (SC) and Parent Contribution (PC)</span>
+				</span>
+				<span class="result-amount"><asp:Literal ID="expectedFamilyContributionOutput" runat="server" /></span>
+			</li>
+		</ul>
+
+        <h3>Estimated Award Letter</h3>
+
+        <ul class="results">
+	        <li>
+		        <span class="result-label">
+			        Grant Award
+			        <span class="description">Estimated total amount of grants that you will be offered in your Financial Aid Award Letter</span>
+			        </span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li>
+		        <span class="result-label">
+			        Self Help Award
+			        <span class="description">Estimated total amount of student loans and Work-Study you will be offered in your Financial Aid Award Letter</span>
+		        </span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li>
+		        <span class="result-label">
+			        Family Help Award
+			        <span class="description">Estimated total amount of parent loans and private loan eligiblity you will be offered in your Financial Aid Award Letter</span>
+		        </span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
         </ul>
 
-        <a href="Independent.aspx">&laquo; Return to Calculator</a>
+        <h3>Estimated Total Price of Attendance</h3>
+
+        <ul class="results">
+	        <li>
+		        <span class="result-label">
+			        Tuition and Fees
+			        <span class="description">Includes cost of education, university health care, and miscellaneous university fees</span>
+		        </span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li>
+		        <span class="result-label">
+			        Room and Board
+			        <span class="description">Includes rent, food, and utilities</span>
+		        </span>
+		        <span class="plus-operator">+</span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li>
+		        <span class="result-label">
+			        Books and Supplies
+			        <span class="description">Includes books and supplies</span>
+		        </span>
+		        <span class="plus-operator">+</span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li>
+		        <span class="result-label">
+			        Other Expenses
+			        <span class="description">Includes transportation and miscellaneous personal expenses</span>
+		        </span>
+		        <span class="plus-operator">+</span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li class="total">
+		        <span class="result-label">
+			        Total Cost of Attendance
+			        <span class="description">The total cost of attendance</span>
+		        </span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li>
+		        <span class="result-label">
+			        Grant Award
+			        <span class="description">Total estimated Grant Award</span>
+		        </span>
+		        <span class="minus-operator">-</span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+	        <li class="total">
+		        <span class="result-label">
+			        Estimated Net Cost
+			        <span class="description">The total cost of attendance that you must contribute towards your education through either loans or out-of-pocket expense</span>
+		        </span>
+		        <span class="result-amount">$99,999.00</span>
+	        </li>
+        </ul>
+
+        <p id="cohort-notice">
+	        <strong>XX%</strong> of first-year full-time independent, undergraduate students received grant aid in 20XX-20YY
+        </p>
+
+        <span class="button-wrapper">
+            <a href="Independent.aspx" class="button">&laquo; Return to Calculator</a>
+        </span>
 
     </asp:Placeholder>
 
