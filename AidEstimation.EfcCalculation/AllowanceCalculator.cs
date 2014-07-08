@@ -199,7 +199,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                         incomeProtectionAllowance += (numInHousehold - maxHouseholdCount) * additionalFamilyAllowance;
                     }
 
-                    // If number of children in college exceeds table range, add additionalStudentAllowance
+                    // If number of children in college exceeds table range, subtract additionalStudentAllowance
                     // for each additional child
                     int maxCollegeCount = incomeProtectionAllowances.GetLength(1) - 1;
                     int collegeCount = numInCollege;
