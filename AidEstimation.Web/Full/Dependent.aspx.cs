@@ -65,7 +65,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
                 }
 
                 // Calculate
-                EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1415");
+                EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1516");
                 EfcProfile profile = calculator.GetDependentEfcProfile(args);
 
                 // Display Results
