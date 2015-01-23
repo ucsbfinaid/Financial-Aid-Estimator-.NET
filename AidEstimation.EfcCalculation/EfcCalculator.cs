@@ -275,7 +275,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
                     workIncome += args.Spouse.WorkIncome;
                 }
 
-                householdMembers.Add(args.Student);
+                householdMembers.Add(args.Spouse);
             }
 
             double simpleIncome = (args.AreTaxFilers) ? args.AdjustedGrossIncome : workIncome;

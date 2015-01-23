@@ -501,6 +501,42 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         }
 
         [TestMethod]
+        public void GetIndependentEfcProfile_DifferentSpouseIncome_Calculated()
+        {
+            var args = new IndependentEfcCalculatorArguments
+            {
+                Student = new HouseholdMember
+                {
+                    IsWorking = true,
+                    WorkIncome = 600000
+                },
+                Spouse = new HouseholdMember
+                {
+                    IsWorking = true,
+                    WorkIncome = 900000
+                },
+                AdjustedGrossIncome = 1200000,
+                AreTaxFilers = true,
+                IncomeTaxPaid = 6000,
+                UntaxedIncomeAndBenefits = 10000,
+                AdditionalFinancialInfo = 2000,
+                CashSavingsCheckings = 100000,
+                InvestmentNetWorth = 8000,
+                BusinessFarmNetWorth = 350000,
+                HasDependents = true,
+                MaritalStatus = MaritalStatus.MarriedRemarried,
+                StateOfResidency = UnitedStatesStateOrTerritory.Alaska,
+                NumberInHousehold = 20,
+                NumberInCollege = 10,
+                Age = 30,
+                MonthsOfEnrollment = 9
+            };
+
+            EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
+            Assert.AreEqual(49847, profile.ExpectedFamilyContribution);
+        }
+
+        [TestMethod]
         public void GetDependentEfcProfile_SimplifiedHighAssets_Calculated()
         {
             DependentEfcCalculatorArguments args = new DependentEfcCalculatorArguments
