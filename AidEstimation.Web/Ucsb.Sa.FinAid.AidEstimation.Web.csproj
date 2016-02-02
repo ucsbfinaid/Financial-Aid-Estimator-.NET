@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,7 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EfcCalculationConstants.1516.xml" />
+    <Content Include="App_Data\EfcCalculationConstants.1617.xml" />
     <Content Include="Default.aspx" />
     <Content Include="Full\Default.aspx" />
     <Content Include="Full\Dependent.aspx" />
