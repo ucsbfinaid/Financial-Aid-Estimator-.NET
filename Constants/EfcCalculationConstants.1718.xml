@@ -2,12 +2,12 @@
 
 <constants>
 
-  <!-- 2016-2017: Table A1 -->
+  <!-- 2017-2018: Table A1 -->
   <constant name="StateTaxAllowanceIncomeThreshold">
     <value>15000</value>
   </constant>
 
-  <!-- 2016-2017: Table A1, first column -->
+  <!-- 2017-2018: Table A1, first column -->
   <constant name="ParentStateTaxAllowancePercents">
     <values>
       <value id="Other">2</value>
@@ -16,12 +16,12 @@
       <value id="AmericanSamoa">2</value>
       <value id="Arizona">4</value>
       <value id="Arkansas">4</value>
-      <value id="California">7</value>
+      <value id="California">8</value>
       <value id="CanadaAndCanadianProvinces">2</value>
       <value id="Colorado">4</value>
-      <value id="Connecticut">8</value>
+      <value id="Connecticut">9</value>
       <value id="Delaware">5</value>
-      <value id="DistrictOfColumbia">7</value>
+      <value id="DistrictOfColumbia">8</value>
       <value id="FederatedStatesOfMicronesia">2</value>
       <value id="Florida">3</value>
       <value id="Georgia">5</value>
@@ -31,25 +31,25 @@
       <value id="Illinois">6</value>
       <value id="Indiana">4</value>
       <value id="Iowa">5</value>
-      <value id="Kansas">5</value>
+      <value id="Kansas">4</value>
       <value id="Kentucky">5</value>
       <value id="Louisiana">3</value>
       <value id="Maine">6</value>
       <value id="MarshallIslands">2</value>
       <value id="Maryland">8</value>
-      <value id="Massachusetts">6</value>
+      <value id="Massachusetts">7</value>
       <value id="Mexico">2</value>
-      <value id="Michigan">4</value>
+      <value id="Michigan">5</value>
       <value id="Minnesota">6</value>
       <value id="Mississippi">3</value>
-      <value id="Missouri">4</value>
-      <value id="Montana">4</value>
+      <value id="Missouri">5</value>
+      <value id="Montana">5</value>
       <value id="Nebraska">5</value>
       <value id="Nevada">2</value>
       <value id="NewHampshire">5</value>
       <value id="NewJersey">9</value>
       <value id="NewMexico">3</value>
-      <value id="NewYork">9</value>
+      <value id="NewYork">10</value>
       <value id="NorthCarolina">5</value>
       <value id="NorthDakota">2</value>
       <value id="NorthernMarianaIslands">2</value>
@@ -60,7 +60,7 @@
       <value id="Pennsylvania">5</value>
       <value id="PuertoRico">2</value>
       <value id="RhodeIsland">7</value>
-      <value id="SouthCarolina">4</value>
+      <value id="SouthCarolina">5</value>
       <value id="SouthDakota">2</value>
       <value id="Tennessee">2</value>
       <value id="Texas">3</value>
@@ -71,11 +71,11 @@
       <value id="Washington">3</value>
       <value id="WestVirginia">3</value>
       <value id="Wisconsin">7</value>
-      <value id="Wyoming">1</value>
+      <value id="Wyoming">2</value>
     </values>
   </constant>
   
-  <!-- 2016-2017: Table A7 -->
+  <!-- 2017-2018: Table A7 -->
   <constant name="StudentStateTaxAllowancePercents">
     <values>
       <value id="Other">1</value>
@@ -84,12 +84,12 @@
       <value id="AmericanSamoa">1</value>
       <value id="Arizona">2</value>
       <value id="Arkansas">3</value>
-      <value id="California">5</value>
+      <value id="California">6</value>
       <value id="CanadaAndCanadianProvinces">1</value>
       <value id="Colorado">3</value>
       <value id="Connecticut">5</value>
       <value id="Delaware">3</value>
-      <value id="DistrictOfColumbia">5</value>
+      <value id="DistrictOfColumbia">6</value>
       <value id="FederatedStatesOfMicronesia">1</value>
       <value id="Florida">1</value>
       <value id="Georgia">3</value>
@@ -104,20 +104,20 @@
       <value id="Louisiana">2</value>
       <value id="Maine">4</value>
       <value id="MarshallIslands">1</value>
-      <value id="Maryland">5</value>
+      <value id="Maryland">6</value>
       <value id="Massachusetts">4</value>
       <value id="Mexico">1</value>
       <value id="Michigan">3</value>
-      <value id="Minnesota">4</value>
+      <value id="Minnesota">5</value>
       <value id="Mississippi">2</value>
       <value id="Missouri">3</value>
       <value id="Montana">3</value>
       <value id="Nebraska">3</value>
       <value id="Nevada">1</value>
       <value id="NewHampshire">1</value>
-      <value id="NewJersey">4</value>
+      <value id="NewJersey">5</value>
       <value id="NewMexico">2</value>
-      <value id="NewYork">6</value>
+      <value id="NewYork">7</value>
       <value id="NorthCarolina">4</value>
       <value id="NorthDakota">1</value>
       <value id="NorthernMarianaIslands">1</value>
@@ -127,7 +127,7 @@
       <value id="Palau">1</value>
       <value id="Pennsylvania">3</value>
       <value id="PuertoRico">1</value>
-      <value id="RhodeIsland">3</value>
+      <value id="RhodeIsland">4</value>
       <value id="SouthCarolina">3</value>
       <value id="SouthDakota">1</value>
       <value id="Tennessee">1</value>
@@ -143,32 +143,32 @@
     </values>
   </constant>
 
-  <!-- 2016-2017: Table A2 -->
+  <!-- 2017-2018: Table A2 -->
   <constant name="SocialSecurityTaxIncomeThreshold">
     <value>118500</value>
   </constant>
 
-  <!-- 2016-2017: Table A2 -->
+  <!-- 2017-2018: Table A2 -->
   <constant name="SocialSecurityLowPercent">
     <value>0.0765</value>
   </constant>
 
-  <!-- 2016-2017: Table A2 -->
+  <!-- 2017-2018: Table A2 -->
   <constant name="SocialSecurityHighPercent">
     <value>0.0145</value>
   </constant>
 
-  <!-- 2016-2017: Table A2 -->
+  <!-- 2017-2018: Table A2 -->
   <constant name="SocialSecurityHighBase">
     <value>9065.25</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="DepStudentIncomeProtectionAllowance">
-    <value>6400</value>
+    <value>6420</value>
   </constant>
 
-  <!-- 2016-2017: Table A3 -->
+  <!-- 2017-2018: Table A3 -->
   <constant name="DepParentIncomeProtectionAllowances">
     <values numberInHousehold="0">
       <value numberInCollege="0">0</value>
@@ -188,47 +188,47 @@
     </values>
     <values numberInHousehold="2">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">17840</value>
-      <value numberInCollege="2">14790</value>
+      <value numberInCollege="1">17910</value>
+      <value numberInCollege="2">14840</value>
       <value numberInCollege="3">0</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="3">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">22220</value>
-      <value numberInCollege="2">19180</value>
-      <value numberInCollege="3">16130</value>
+      <value numberInCollege="1">22300</value>
+      <value numberInCollege="2">19250</value>
+      <value numberInCollege="3">16190</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="4">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">27440</value>
-      <value numberInCollege="2">24390</value>
-      <value numberInCollege="3">21350</value>
-      <value numberInCollege="4">18300</value>
+      <value numberInCollege="1">27540</value>
+      <value numberInCollege="2">24480</value>
+      <value numberInCollege="3">21430</value>
+      <value numberInCollege="4">18360</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="5">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">32380</value>
-      <value numberInCollege="2">29320</value>
-      <value numberInCollege="3">26290</value>
-      <value numberInCollege="4">23240</value>
-      <value numberInCollege="5">20200</value>
+      <value numberInCollege="1">32490</value>
+      <value numberInCollege="2">29430</value>
+      <value numberInCollege="3">26380</value>
+      <value numberInCollege="4">23320</value>
+      <value numberInCollege="5">20270</value>
     </values>
     <values numberInHousehold="6">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">37870</value>
-      <value numberInCollege="2">34820</value>
-      <value numberInCollege="3">31780</value>
-      <value numberInCollege="4">28730</value>
-      <value numberInCollege="5">25690</value>
+      <value numberInCollege="1">38010</value>
+      <value numberInCollege="2">34940</value>
+      <value numberInCollege="3">31900</value>
+      <value numberInCollege="4">28830</value>
+      <value numberInCollege="5">25790</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Table C3 -->
+  <!-- 2017-2018: Table C3 -->
   <constant name="IndWithDepIncomeProtectionAllowances">
     <values numberInHousehold="0">
       <value numberInCollege="0">0</value>
@@ -248,112 +248,112 @@
     </values>
     <values numberInHousehold="2">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">25210</value>
-      <value numberInCollege="2">20900</value>
+      <value numberInCollege="1">25280</value>
+      <value numberInCollege="2">20960</value>
       <value numberInCollege="3">0</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="3">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">31390</value>
-      <value numberInCollege="2">27100</value>
-      <value numberInCollege="3">22790</value>
+      <value numberInCollege="1">31480</value>
+      <value numberInCollege="2">27180</value>
+      <value numberInCollege="3">22860</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="4">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">38760</value>
-      <value numberInCollege="2">34460</value>
-      <value numberInCollege="3">30170</value>
-      <value numberInCollege="4">25850</value>
+      <value numberInCollege="1">38870</value>
+      <value numberInCollege="2">34560</value>
+      <value numberInCollege="3">30260</value>
+      <value numberInCollege="4">25930</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="5">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">45740</value>
-      <value numberInCollege="2">41420</value>
-      <value numberInCollege="3">37130</value>
-      <value numberInCollege="4">32830</value>
-      <value numberInCollege="5">28540</value>
+      <value numberInCollege="1">45870</value>
+      <value numberInCollege="2">41540</value>
+      <value numberInCollege="3">37240</value>
+      <value numberInCollege="4">32920</value>
+      <value numberInCollege="5">28620</value>
     </values>
     <values numberInHousehold="6">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">53490</value>
-      <value numberInCollege="2">49190</value>
-      <value numberInCollege="3">44910</value>
-      <value numberInCollege="4">40580</value>
-      <value numberInCollege="5">36300</value>
+      <value numberInCollege="1">53640</value>
+      <value numberInCollege="2">49330</value>
+      <value numberInCollege="3">45040</value>
+      <value numberInCollege="4">40690</value>
+      <value numberInCollege="5">36400</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="IndWithoutDepSingleIncomeProtectionAllowance">
-    <value>9960</value>
+    <value>9980</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="IndWithoutDepMarriedIncomeProtectionAllowance">
-    <value>15960</value>
+    <value>16010</value>
   </constant>
 
-  <!-- 2016-2017: Table A3 -->
+  <!-- 2017-2018: Table A3 -->
   <constant name="DepAdditionalFamilyAllowance">
-    <value>4270</value>
-  </constant>
-
-  <!-- 2016-2017: Table A3 -->
-  <constant name="DepAdditionalStudentAllowance">
-    <value>3040</value>
-  </constant>
-
-  <!-- 2016-2017: Table C3 -->
-  <constant name="IndAdditionalFamilyAllowance">
-    <value>6040</value>
-  </constant>
-
-  <!-- 2016-2017: Table C3 -->
-  <constant name="IndAdditionalStudentAllowance">
     <value>4290</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Table A3 -->
+  <constant name="DepAdditionalStudentAllowance">
+    <value>3050</value>
+  </constant>
+
+  <!-- 2017-2018: Table C3 -->
+  <constant name="IndAdditionalFamilyAllowance">
+    <value>6060</value>
+  </constant>
+
+  <!-- 2017-2018: Table C3 -->
+  <constant name="IndAdditionalStudentAllowance">
+    <value>4300</value>
+  </constant>
+
+  <!-- 2017-2018: Worksheet -->
   <constant name="EmploymentExpensePercent">
     <value>0.35</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="EmploymentExpenseMaximum">
     <value>4000</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="AIAssessmentPercent">
     <value>0.5</value>
   </constant>
   
-  <!-- 2016-2017: Table A4 -->
+  <!-- 2017-2018: Table A4 -->
   <constant name="BusinessFarmNetWorthAdjustmentRanges">
     <values>
       <value>1</value>
-      <value>125000</value>
-      <value>380000</value>
-      <value>635000</value>
+      <value>130000</value>
+      <value>385000</value>
+      <value>640000</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Table A4 -->
+  <!-- 2017-2018: Table A4 -->
   <constant name="BusinessFarmNetWorthAdjustmentBases">
     <values>
       <value>0</value>
-      <value>50000</value>
-      <value>177500</value>
-      <value>330500</value>
+      <value>52000</value>
+      <value>179500</value>
+      <value>332500</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Table A4 -->
+  <!-- 2017-2018: Table A4 -->
   <constant name="BusinessFarmNetWorthAdjustmentPercents">
     <values>
       <value>40</value>
@@ -363,150 +363,150 @@
     </values>
   </constant>
  
-  <!-- 2016-2017: Table A5 -->
+  <!-- 2017-2018: Table A5 -->
   <constant name="AssetProtectionAllowanceLowestAge">
     <value>25</value>
   </constant>
 
-  <!-- 2016-2017: Table A5 -->
+  <!-- 2017-2018: Table A5 -->
   <constant name="MarriedAssetProtectionAllowances">
     <values>
       <value>0</value>
-      <value>1000</value>
-      <value>2100</value>
-      <value>3100</value>
-      <value>4100</value>
-      <value>5200</value>
-      <value>6200</value>
-      <value>7200</value>
-      <value>8300</value>
-      <value>9300</value>
-      <value>10300</value>
-      <value>11400</value>
-      <value>12400</value>
+      <value>1100</value>
+      <value>2200</value>
+      <value>3400</value>
+      <value>4500</value>
+      <value>5600</value>
+      <value>6700</value>
+      <value>7800</value>
+      <value>9000</value>
+      <value>10100</value>
+      <value>11200</value>
+      <value>12300</value>
       <value>13400</value>
-      <value>14500</value>
-      <value>15500</value>
-      <value>15900</value>
-      <value>16300</value>
-      <value>16600</value>
-      <value>17000</value>
-      <value>17400</value>
-      <value>17800</value>
-      <value>18300</value>
-      <value>18700</value>
-      <value>19200</value>
-      <value>19700</value>
+      <value>14600</value>
+      <value>15700</value>
+      <value>16800</value>
+      <value>17100</value>
+      <value>17500</value>
+      <value>17900</value>
+      <value>18400</value>
+      <value>18800</value>
+      <value>19300</value>
+      <value>19800</value>
       <value>20200</value>
       <value>20700</value>
-      <value>21300</value>
-      <value>21800</value>
+      <value>21200</value>
+      <value>21700</value>
       <value>22400</value>
-      <value>23000</value>
-      <value>23700</value>
-      <value>24300</value>
-      <value>25000</value>
-      <value>25700</value>
-      <value>26400</value>
-      <value>27200</value>
-      <value>27900</value>
-      <value>28800</value>
-      <value>29600</value>
+      <value>22900</value>
+      <value>23600</value>
+      <value>24100</value>
+      <value>24800</value>
+      <value>25600</value>
+      <value>26200</value>
+      <value>26900</value>
+      <value>27700</value>
+      <value>28500</value>
+      <value>29300</value>
+      <value>30100</value>
+      <value>31100</value>
+      <value>31900</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Table A5 -->
+  <!-- 2017-2018: Table A5 -->
   <constant name="SingleAssetProtectionAllowances">
     <values>
       <value>0</value>
-      <value>500</value>
-      <value>1100</value>
-      <value>1600</value>
-      <value>2100</value>
+      <value>600</value>
+      <value>1300</value>
+      <value>1900</value>
       <value>2600</value>
       <value>3200</value>
-      <value>3700</value>
-      <value>4200</value>
-      <value>4700</value>
-      <value>5300</value>
+      <value>3800</value>
+      <value>4500</value>
+      <value>5100</value>
       <value>5800</value>
-      <value>6300</value>
-      <value>6800</value>
-      <value>7400</value>
-      <value>7900</value>
-      <value>8100</value>
+      <value>6400</value>
+      <value>7000</value>
+      <value>7700</value>
       <value>8300</value>
-      <value>8500</value>
-      <value>8600</value>
-      <value>8800</value>
       <value>9000</value>
-      <value>9200</value>
-      <value>9400</value>
-      <value>9700</value>
-      <value>9900</value>
-      <value>10100</value>
-      <value>10400</value>
-      <value>10600</value>
+      <value>9600</value>
+      <value>9800</value>
+      <value>10000</value>
+      <value>10200</value>
+      <value>10500</value>
+      <value>10700</value>
       <value>10900</value>
-      <value>11100</value>
+      <value>11200</value>
       <value>11400</value>
       <value>11700</value>
       <value>12000</value>
-      <value>12300</value>
-      <value>12600</value>
-      <value>12900</value>
+      <value>12200</value>
+      <value>12500</value>
+      <value>12800</value>
       <value>13200</value>
-      <value>13600</value>
-      <value>13900</value>
-      <value>14300</value>
+      <value>13500</value>
+      <value>13800</value>
+      <value>14100</value>
+      <value>14500</value>
+      <value>14900</value>
+      <value>15200</value>
+      <value>15600</value>
+      <value>16000</value>
+      <value>16400</value>
+      <value>16900</value>
+      <value>17300</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="DepStudentAssetRate">
     <value>0.2</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="DepParentAssetRate">
     <value>0.12</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="IndWithDepAssetRate">
     <value>0.07</value>
   </constant>
 
-  <!-- 2016-2017: Worksheet -->
+  <!-- 2017-2018: Worksheet -->
   <constant name="IndWithoutDepAssetRate">
     <value>0.2</value>
   </constant>
 
-  <!-- 2016-2017: Table A6 -->
+  <!-- 2017-2018: Table A6 -->
   <constant name="AAIContributionRanges">
     <values>
       <value>-3409</value>
-      <value>15900</value>
-      <value>20000</value>
-      <value>24100</value>
-      <value>28200</value>
-      <value>32200</value>
+      <value>16000</value>
+      <value>20100</value>
+      <value>24200</value>
+      <value>28300</value>
+      <value>32300</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Table A6 -->
+  <!-- 2017-2018: Table A6 -->
   <constant name="AAIContributionBases">
     <values>
       <value>0</value>
-      <value>3498</value>
-      <value>4523</value>
-      <value>5712</value>
-      <value>7106</value>
-      <value>8706</value>
+      <value>3520</value>
+      <value>4545</value>
+      <value>5734</value>
+      <value>7128</value>
+      <value>8728</value>
     </values>
   </constant>
 
-  <!-- 2016-2017: Table A6 -->
+  <!-- 2017-2018: Table A6 -->
   <constant name="AAIContributionPercents">
     <values>
       <value>22</value>
@@ -527,7 +527,7 @@
   </constant>
 
   <constant name="AltEnrollmentIncomeProtectionAllowance">
-    <value>4940</value>
+    <value>4950</value>
   </constant>
 
 </constants>
