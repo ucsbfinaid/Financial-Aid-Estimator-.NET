@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<constants>
+
+  <!-- COST OF ATTENDANCE -->
+  <constant name="CoaUndergraduateOffCampus">
+    <values>
+      <value name="Tuition and Fees" description="Includes estimated tuition and fees">15000</value>
+      <value name="Room and Board" description="Includes rent, food, and utilities">9500</value>
+      <value name="Books and Supplies" description="Includes books and supplies">1000</value>
+      <value name="Other Expenses (Personal and Transportation)" description="Includes transportation and other personal expenses">2000</value>
+      <value name="Health Insurance Fee" description="Health Insurance Fee">2298</value>
+    </values>
+  </constant>
+
+  <constant name="CoaUndergraduateOnCampus">
+    <values>
+      <value name="Tuition and Fees" description="Includes estimated tuition and fees">15000</value>
+      <value name="Room and Board" description="Includes rent, food, and utilities">15000</value>
+      <value name="Books and Supplies" description="Includes books and supplies">1000</value>
+      <value name="Other Expenses (Personal and Transportation)" description="Includes transportation and other personal expenses">2000</value>
+      <value name="Health Insurance Fee" description="Health Insurance Fee">2298</value>
+    </values>
+  </constant>
+
+  <constant name="CoaUndergraduateCommuter">
+    <values>
+      <value name="Tuition and Fees" description="Includes estimated tuition and fees">15000</value>
+      <value name="Room and Board" description="Includes rent, food, and utilities">5000</value>
+      <value name="Books and Supplies" description="Includes books and supplies">1000</value>
+      <value name="Other Expenses (Personal and Transportation)" description="Includes transportation and other personal expenses">2000</value>
+      <value name="Health Insurance Fee" description="Health Insurance Fee">2298</value>
+    </values>
+  </constant>
+
+  <!-- OUT OF STATE FEES -->
+  <constant name="OutOfStateFees">
+    <value>28014</value>
+  </constant>
+  
+</constants>

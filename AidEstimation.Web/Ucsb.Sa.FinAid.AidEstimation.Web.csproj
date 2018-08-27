@@ -58,7 +58,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EfcCalculationConstants.1819.xml" />
+    <Content Include="App_Data\AidEstimationConstants.1819.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\EfcCalculationConstants.1819.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="Full\Default.aspx" />
     <Content Include="Full\Dependent.aspx" />
@@ -67,7 +72,9 @@
     <Content Include="Simple\Dependent.aspx" />
     <Content Include="Simple\Independent.aspx" />
     <Content Include="style\main.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
@@ -145,6 +152,10 @@
     <ProjectReference Include="..\AidEstimation.Utility\Ucsb.Sa.FinAid.AidEstimation.Utility.csproj">
       <Project>{43BB3F09-660E-4044-8C14-428BDB7D5E23}</Project>
       <Name>Ucsb.Sa.FinAid.AidEstimation.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AidEstimation\Ucsb.Sa.FinAid.AidEstimation.csproj">
+      <Project>{2cfbacd0-1733-4035-9e94-275d948d0a20}</Project>
+      <Name>Ucsb.Sa.FinAid.AidEstimation</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
