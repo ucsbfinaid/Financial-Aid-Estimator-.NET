@@ -341,21 +341,31 @@ p.error
     color: #333;
 }
 
-.validation-message
-{
-    display: none;
+.validation-message {
     font-size: 0.8em;
-    font-style: italic;
-    margin: 1em 0 0 0;
+    color: #C00;
+    font-weight: bold;
+    float: right;
+    width: 50%;
 }
 
-.validation-summary
-{
-    display: none;
-    text-align: center;
-    margin: 2em 0 0 0;
+.validation-summary {
+    color: #C00;
+    font-weight: bold;
 }
 
+.validation-summary ul {
+    list-style: disc;
+    margin: 0.5em 0 2.5em 2em;
+    padding: initial;
+}
+
+.validation-summary ul li {
+    margin-bottom: initial;
+}
+.validation-summary ul li:last-of-type {
+    margin-bottom: 2em;
+}
 /* =RESULTS
 ============================================= */
 
