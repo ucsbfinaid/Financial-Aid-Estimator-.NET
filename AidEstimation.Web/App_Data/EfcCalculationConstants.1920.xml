@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<constants>
+
+  <!-- 2019-2020: Table A1 -->
+  <constant name="StateTaxAllowanceIncomeThreshold">
+    <value>15000</value>
+  </constant>
+
+  <!-- 2019-2020: Table A1, first column -->
+  <constant name="ParentStateTaxAllowancePercents">
+    <values>
+      <value id="Other">3</value>
+      <value id="Alabama">3</value>
+      <value id="Alaska">2</value>
+      <value id="AmericanSamoa">3</value>
+      <value id="Arizona">4</value>
+      <value id="Arkansas">4</value>
+      <value id="California">8</value>
+      <value id="CanadaAndCanadianProvinces">3</value>
+      <value id="Colorado">4</value>
+      <value id="Connecticut">9</value>
+      <value id="Delaware">5</value>
+      <value id="DistrictOfColumbia">7</value>
+      <value id="FederatedStatesOfMicronesia">3</value>
+      <value id="Florida">3</value>
+      <value id="Georgia">5</value>
+      <value id="Guam">3</value>
+      <value id="Hawaii">5</value>
+      <value id="Idaho">5</value>
+      <value id="Illinois">5</value>
+      <value id="Indiana">4</value>
+      <value id="Iowa">5</value>
+      <value id="Kansas">4</value>
+      <value id="Kentucky">5</value>
+      <value id="Louisiana">3</value>
+      <value id="Maine">6</value>
+      <value id="MarshallIslands">3</value>
+      <value id="Maryland">8</value>
+      <value id="Massachusetts">7</value>
+      <value id="Mexico">3</value>
+      <value id="Michigan">4</value>
+      <value id="Minnesota">6</value>
+      <value id="Mississippi">3</value>
+      <value id="Missouri">4</value>
+      <value id="Montana">5</value>
+      <value id="Nebraska">5</value>
+      <value id="Nevada">2</value>
+      <value id="NewHampshire">4</value>
+      <value id="NewJersey">9</value>
+      <value id="NewMexico">3</value>
+      <value id="NewYork">9</value>
+      <value id="NorthCarolina">5</value>
+      <value id="NorthDakota">2</value>
+      <value id="NorthernMarianaIslands">3</value>
+      <value id="Ohio">5</value>
+      <value id="Oklahoma">3</value>
+      <value id="Oregon">7</value>
+      <value id="Palau">3</value>
+      <value id="Pennsylvania">5</value>
+      <value id="PuertoRico">3</value>
+      <value id="RhodeIsland">6</value>
+      <value id="SouthCarolina">4</value>
+      <value id="SouthDakota">2</value>
+      <value id="Tennessee">2</value>
+      <value id="Texas">3</value>
+      <value id="Utah">5</value>
+      <value id="Vermont">6</value>
+      <value id="VirginIslands">3</value>
+      <value id="Virginia">6</value>
+      <value id="Washington">3</value>
+      <value id="WestVirginia">3</value>
+      <value id="Wisconsin">6</value>
+      <value id="Wyoming">2</value>
+    </values>
+  </constant>
+  
+  <!-- 2019-2020: Table A7 -->
+  <constant name="StudentStateTaxAllowancePercents">
+    <values>
+      <value id="Other">2</value>
+      <value id="Alabama">2</value>
+      <value id="Alaska">0</value>
+      <value id="AmericanSamoa">2</value>
+      <value id="Arizona">2</value>
+      <value id="Arkansas">3</value>
+      <value id="California">6</value>
+      <value id="CanadaAndCanadianProvinces">2</value>
+      <value id="Colorado">3</value>
+      <value id="Connecticut">5</value>
+      <value id="Delaware">3</value>
+      <value id="DistrictOfColumbia">6</value>
+      <value id="FederatedStatesOfMicronesia">2</value>
+      <value id="Florida">1</value>
+      <value id="Georgia">3</value>
+      <value id="Guam">2</value>
+      <value id="Hawaii">4</value>
+      <value id="Idaho">3</value>
+      <value id="Illinois">3</value>
+      <value id="Indiana">3</value>
+      <value id="Iowa">3</value>
+      <value id="Kansas">2</value>
+      <value id="Kentucky">4</value>
+      <value id="Louisiana">2</value>
+      <value id="Maine">3</value>
+      <value id="MarshallIslands">2</value>
+      <value id="Maryland">6</value>
+      <value id="Massachusetts">4</value>
+      <value id="Mexico">2</value>
+      <value id="Michigan">3</value>
+      <value id="Minnesota">5</value>
+      <value id="Mississippi">2</value>
+      <value id="Missouri">3</value>
+      <value id="Montana">3</value>
+      <value id="Nebraska">3</value>
+      <value id="Nevada">1</value>
+      <value id="NewHampshire">1</value>
+      <value id="NewJersey">5</value>
+      <value id="NewMexico">2</value>
+      <value id="NewYork">7</value>
+      <value id="NorthCarolina">3</value>
+      <value id="NorthDakota">1</value>
+      <value id="NorthernMarianaIslands">2</value>
+      <value id="Ohio">3</value>
+      <value id="Oklahoma">2</value>
+      <value id="Oregon">5</value>
+      <value id="Palau">2</value>
+      <value id="Pennsylvania">3</value>
+      <value id="PuertoRico">2</value>
+      <value id="RhodeIsland">4</value>
+      <value id="SouthCarolina">3</value>
+      <value id="SouthDakota">1</value>
+      <value id="Tennessee">1</value>
+      <value id="Texas">1</value>
+      <value id="Utah">3</value>
+      <value id="Vermont">3</value>
+      <value id="VirginIslands">2</value>
+      <value id="Virginia">4</value>
+      <value id="Washington">1</value>
+      <value id="WestVirginia">3</value>
+      <value id="Wisconsin">4</value>
+      <value id="Wyoming">1</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Table A2 -->
+  <constant name="SocialSecurityTaxIncomeThreshold">
+    <value>127200</value>
+  </constant>
+
+  <!-- 2019-2020: Table A2 -->
+  <constant name="SocialSecurityLowPercent">
+    <value>0.0765</value>
+  </constant>
+
+  <!-- 2019-2020: Table A2 -->
+  <constant name="SocialSecurityHighPercent">
+    <value>0.0145</value>
+  </constant>
+
+  <!-- 2019-2020: Table A2 -->
+  <constant name="SocialSecurityHighBase">
+    <value>9730.80</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="DepStudentIncomeProtectionAllowance">
+    <value>6660</value>
+  </constant>
+
+  <!-- 2019-2020: Table A3 -->
+  <constant name="DepParentIncomeProtectionAllowances">
+    <values numberInHousehold="0">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="1">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="2">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">18580</value>
+      <value numberInCollege="2">15400</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="3">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">23140</value>
+      <value numberInCollege="2">19980</value>
+      <value numberInCollege="3">16800</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="4">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">28580</value>
+      <value numberInCollege="2">25400</value>
+      <value numberInCollege="3">22240</value>
+      <value numberInCollege="4">19060</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="5">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">33720</value>
+      <value numberInCollege="2">30540</value>
+      <value numberInCollege="3">27380</value>
+      <value numberInCollege="4">24200</value>
+      <value numberInCollege="5">21040</value>
+    </values>
+    <values numberInHousehold="6">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">39430</value>
+      <value numberInCollege="2">36260</value>
+      <value numberInCollege="3">33100</value>
+      <value numberInCollege="4">29920</value>
+      <value numberInCollege="5">26760</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Table C3 -->
+  <constant name="IndWithDepIncomeProtectionAllowances">
+    <values numberInHousehold="0">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="1">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="2">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">26250</value>
+      <value numberInCollege="2">21760</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="3">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">32680</value>
+      <value numberInCollege="2">28210</value>
+      <value numberInCollege="3">23730</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="4">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">40360</value>
+      <value numberInCollege="2">35880</value>
+      <value numberInCollege="3">31410</value>
+      <value numberInCollege="4">26920</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="5">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">47620</value>
+      <value numberInCollege="2">43120</value>
+      <value numberInCollege="3">38660</value>
+      <value numberInCollege="4">34180</value>
+      <value numberInCollege="5">29710</value>
+    </values>
+    <values numberInHousehold="6">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">55690</value>
+      <value numberInCollege="2">51210</value>
+      <value numberInCollege="3">46750</value>
+      <value numberInCollege="4">42240</value>
+      <value numberInCollege="5">37790</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="IndWithoutDepSingleIncomeProtectionAllowance">
+    <value>10360</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="IndWithoutDepMarriedIncomeProtectionAllowance">
+    <value>16620</value>
+  </constant>
+
+  <!-- 2019-2020: Table A3 -->
+  <constant name="DepAdditionalFamilyAllowance">
+    <value>4450</value>
+  </constant>
+
+  <!-- 2019-2020: Table A3 -->
+  <constant name="DepAdditionalStudentAllowance">
+    <value>3160</value>
+  </constant>
+
+  <!-- 2019-2020: Table C3 -->
+  <constant name="IndAdditionalFamilyAllowance">
+    <value>6290</value>
+  </constant>
+
+  <!-- 2019-2020: Table C3 -->
+  <constant name="IndAdditionalStudentAllowance">
+    <value>4470</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="EmploymentExpensePercent">
+    <value>0.35</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="EmploymentExpenseMaximum">
+    <value>4000</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="AIAssessmentPercent">
+    <value>0.5</value>
+  </constant>
+  
+  <!-- 2019-2020: Table A4 -->
+  <constant name="BusinessFarmNetWorthAdjustmentRanges">
+    <values>
+      <value>1</value>
+      <value>130000</value>
+      <value>395000</value>
+      <value>660000</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Table A4 -->
+  <constant name="BusinessFarmNetWorthAdjustmentBases">
+    <values>
+      <value>0</value>
+      <value>52000</value>
+      <value>184500</value>
+      <value>343500</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Table A4 -->
+  <constant name="BusinessFarmNetWorthAdjustmentPercents">
+    <values>
+      <value>40</value>
+      <value>50</value>
+      <value>60</value>
+      <value>100</value>
+    </values>
+  </constant>
+ 
+  <!-- 2019-2020: Table A5 -->
+  <constant name="AssetProtectionAllowanceLowestAge">
+    <value>25</value>
+  </constant>
+
+  <!-- 2019-2020: Table A5 -->
+  <constant name="MarriedAssetProtectionAllowances">
+    <values>
+      <value>0</value>
+      <value>700</value>
+      <value>1300</value>
+      <value>2000</value>
+      <value>2600</value>
+      <value>3300</value>
+      <value>4000</value>
+      <value>4600</value>
+      <value>5300</value>
+      <value>5900</value>
+      <value>6600</value>
+      <value>7300</value>
+      <value>7900</value>
+      <value>8600</value>
+      <value>9200</value>
+      <value>9900</value>
+      <value>10100</value>
+      <value>10400</value>
+      <value>10600</value>
+      <value>10900</value>
+      <value>11100</value>
+      <value>11400</value>
+      <value>11600</value>
+      <value>11900</value>
+      <value>12200</value>
+      <value>12500</value>
+      <value>12900</value>
+      <value>13200</value>
+      <value>13500</value>
+      <value>13900</value>
+      <value>14300</value>
+      <value>14700</value>
+      <value>15100</value>
+      <value>15500</value>
+      <value>15900</value>
+      <value>16400</value>
+      <value>16800</value>
+      <value>17300</value>
+      <value>17800</value>
+      <value>18300</value>
+      <value>18900</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Table A5 -->
+  <constant name="SingleAssetProtectionAllowances">
+    <values>
+      <value>0</value>
+      <value>300</value>
+      <value>700</value>
+      <value>1000</value>
+      <value>1400</value>
+      <value>1700</value>
+      <value>2100</value>
+      <value>2400</value>
+      <value>2800</value>
+      <value>3100</value>
+      <value>3500</value>
+      <value>3800</value>
+      <value>4200</value>
+      <value>4500</value>
+      <value>4900</value>
+      <value>5200</value>
+      <value>5300</value>
+      <value>5500</value>
+      <value>5600</value>
+      <value>5700</value>
+      <value>5800</value>
+      <value>6000</value>
+      <value>6100</value>
+      <value>6200</value>
+      <value>6400</value>
+      <value>6500</value>
+      <value>6700</value>
+      <value>6800</value>
+      <value>7000</value>
+      <value>7200</value>
+      <value>7300</value>
+      <value>7500</value>
+      <value>7700</value>
+      <value>7900</value>
+      <value>8100</value>
+      <value>8300</value>
+      <value>8500</value>
+      <value>8800</value>
+      <value>9000</value>
+      <value>9200</value>
+      <value>9500</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="DepStudentAssetRate">
+    <value>0.2</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="DepParentAssetRate">
+    <value>0.12</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="IndWithDepAssetRate">
+    <value>0.07</value>
+  </constant>
+
+  <!-- 2019-2020: Worksheet -->
+  <constant name="IndWithoutDepAssetRate">
+    <value>0.2</value>
+  </constant>
+
+  <!-- 2019-2020: Table A6 -->
+  <constant name="AAIContributionRanges">
+    <values>
+      <value>-3409</value>
+      <value>16600</value>
+      <value>20800</value>
+      <value>25100</value>
+      <value>29300</value>
+      <value>33600</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Table A6 -->
+  <constant name="AAIContributionBases">
+    <values>
+      <value>0</value>
+      <value>3652</value>
+      <value>4702</value>
+      <value>5949</value>
+      <value>7377</value>
+      <value>9097</value>
+    </values>
+  </constant>
+
+  <!-- 2019-2020: Table A6 -->
+  <constant name="AAIContributionPercents">
+    <values>
+      <value>22</value>
+      <value>25</value>
+      <value>29</value>
+      <value>34</value>
+      <value>40</value>
+      <value>47</value>
+    </values>
+  </constant>
+
+  <constant name="SimplifiedEFCMax">
+    <value>49999</value>
+  </constant>
+
+  <constant name="AutoZeroEFCMax">
+    <value>26000</value>
+  </constant>
+
+  <constant name="AltEnrollmentIncomeProtectionAllowance">
+    <value>5140</value>
+  </constant>
+
+</constants>
