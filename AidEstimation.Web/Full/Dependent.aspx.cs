@@ -71,7 +71,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
                 }
 
                 // Calculate
-                EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1819");
+                EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1920");
                 EfcProfile profile = calculator.GetDependentEfcProfile(args);
 
                 // Display Results
@@ -81,7 +81,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
                 parentContributionOutput.Text = profile.ParentContribution.ToString("C0");
                 expectedFamilyContributionOutput.Text = profile.ExpectedFamilyContribution.ToString("C0");
 
-                CostOfAttendanceEstimator coaEstimator = CostOfAttendanceEstimatorConfigurationManager.GetCostOfAttendanceEstimator("1819");
+                CostOfAttendanceEstimator coaEstimator = CostOfAttendanceEstimatorConfigurationManager.GetCostOfAttendanceEstimator("1920");
                 CostOfAttendance coa = coaEstimator.GetCostOfAttendance(EducationLevel.Undergraduate, (HousingOption) Enum.Parse(typeof(HousingOption), inputHousing.SelectedValue));
                                 
                 tuitionFeesOutput.Text = coa.Items[0].Value.ToString("C0");
@@ -97,7 +97,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
                 estimatedGrantOutput.Text = "$99,999"; // placeholder
                 estimatedNetCostOutput.Text = "$99,999"; // placeholder
 
-                percentageGrantOutput.Text = ConfigurationManager.AppSettings["PercentageGrant.Dependant.1819"];
+                percentageGrantOutput.Text = ConfigurationManager.AppSettings["PercentageGrant.Dependent.1920"];
             }
             else
             {
