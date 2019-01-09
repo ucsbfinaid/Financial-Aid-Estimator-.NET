@@ -83,5 +83,41 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
 
             return calculator;
         }
+
+        /// <summary>
+        /// Overload version that constructs <see cref="EfcCalculator"/>s using the paths to XML files passed. 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="xmlSourcePath"></param>
+        /// <returns></returns>
+        public static EfcCalculator GetEfcCalculator(string key, string xmlSourcePath)
+        {
+            if (String.IsNullOrEmpty(key))
+            {
+                throw new ArgumentException("No EFC Calculator key provided");
+            }
+
+            if (_cache.ContainsKey(key))
+            {
+                return _cache[key];
+            }
+
+            if (String.IsNullOrEmpty(xmlSourcePath))
+            {
+                throw new ArgumentException("No source path was specified for the EFC Calculator in appSettings");
+            }
+
+            // If a relative web path is used, resolve the application's physical path
+            if (xmlSourcePath.StartsWith(RelativePathPlaceholder))
+            {
+                xmlSourcePath = xmlSourcePath.Replace(RelativePathPlaceholder, HostingEnvironment.ApplicationPhysicalPath);
+            }
+
+            EfcCalculatorFactory factory = new EfcCalculatorFactory(xmlSourcePath);
+            EfcCalculator calculator = factory.GetEfcCalculator();
+            _cache[key] = calculator;
+
+            return calculator;
+        }
     }
 }

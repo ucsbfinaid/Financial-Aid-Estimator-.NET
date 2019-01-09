@@ -1,0 +1,257 @@
+﻿@model Dictionary<string, string>
+@{
+    Layout = "_BasicLayout";
+    string HeaderText = ViewData["HeaderText"].ToString();
+    string ShowErrors = ViewData["Errors"].ToString().Length > 0 ? "" : "display:none";
+    string Errors = ViewData["Errors"].ToString();
+}
+
+<div class="header">@Html.Raw(HeaderText)</div>
+
+<form id="form" method="post" class="form-inline" action="@Url.Action("Estimate", "Independent")" asp-antiforgery="true">
+
+    <div class="alert alert-danger" id="errorList" style="@ShowErrors">@Html.Raw(Errors)</div>
+
+    <div class="col-md-6 col-lg-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><strong>Household</strong></div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="inputStudentAge" class="form-label">Student Age:</label>
+                    <input type="text" id="inputStudentAge" name="StudentAge" class="form-control form-fixed-width" value="@Model["StudentAge"]" required digits="true" min="1" data-msg-required="Please enter the age of the student" />
+                    <br />
+                    <label for="inputMaritalStatus" class="form-label">Student's Marital Status:</label>
+                    <select id="inputMaritalStatus" name="MaritalStatus" class="form-control form-fixed-width">
+                        <option value="single">Single/Separated/Divorced</option>
+                        <option value="married">Married/Remarried</option>
+                    </select>
+                    <br />
+                    <label for="inputStudentDependents" class="form-label">Does the Student have Dependents?</label>
+                    <select id="inputStudentDependents" name="StudentDependents" class="form-control form-fixed-width">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <br />
+                    <label for="inputNumberInHousehold" class="form-label">Number in Household:</label>
+                    <input type="text" id="inputNumberInHousehold" name="NumberInHousehold" class="form-control form-fixed-width" value="@Model["NumberInHousehold"]" required digits="true" min="1" data-msg-required="Please enter the number in household." />
+                    <br />
+                    <label for="inputNumberInCollege" class="form-label">Number in College:</label>
+                    <input type="text" id="inputNumberInCollege" name="NumberInCollege" class="form-control form-fixed-width" value="@Model["NumberInCollege"]" required digits="true" min="1" data-msg-required="Please enter a value" />
+                    <div class="description">Total number of people in your household that will attend college during the next academic year, not including your parent(s)</div>
+                    <br />
+                    <label for="inputStateOfResidency" class="form-label">State of Residency:</label>
+                    <select id="inputStateOfResidency" name="StateOfResidency" class="form-control form-fixed-width">
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="AmericanSamoa">American Samoa</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="CanadaAndCanadianProvinces">Canada And Canadian Provinces</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="DistrictOfColumbia">District Of Columbia</option>
+                        <option value="FederatedStatesOfMicronesia">Federated States Of Micronesia</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="MarshallIslands">Marshall Islands</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="NewJersey">New Jersey</option>
+                        <option value="NewMexico">New Mexico</option>
+                        <option value="NewYork">New York</option>
+                        <option value="NorthCarolina">North Carolina</option>
+                        <option value="NorthDakota">North Dakota</option>
+                        <option value="NorthernMarianaIslands">Northern Mariana Islands</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="PuertoRico">Puerto Rico</option>
+                        <option value="RhodeIsland">Rhode Island</option>
+                        <option value="SouthCarolina">South Carolina</option>
+                        <option value="SouthDakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="VirginIslands">Virgin Islands</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="WestVirginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br />
+                    <label for="inputHousing" class="form-label">Housing Option:</label>
+                    <select id="inputHousing" name="Housing" class="form-control form-fixed-width">
+                        <option value="OnCampus">On Campus</option>
+                        <option value="OffCampus">Off-Campus</option>
+                        <option value="Commuter">Commuter</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><strong>Income</strong></div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="inputStudentWorking" class="form-label">Did the Student Work?</label>
+                    <select id="inputStudentWorking" name="StudentWorking" class="form-control form-fixed-width">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span id="spanStudentWorking" style="display:none;">
+                        <br />
+                        <label for="inputStudentWorkIncome" class="form-label">Student's Income Earned From Work:</label>
+                        <input type="text" id="inputStudentWorkIncome" name="StudentWorkIncome" class="form-control form-fixed-width" value="@Model["StudentWorkIncome"]" required number="true" data-msg-required="Please enter a value or zero" />
+                    </span>
+                    <span id="spanMarried" style="display:none;">
+                        <br />
+                        <label for="inputSpouseWorking" class="form-label">Did the Spouse Work?</label>
+                        <select id="inputSpouseWorking" name="SpouseWorking" class="form-control form-fixed-width">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </span>
+                    <span id="spanSpouseWorking" style="display:none;">
+                        <br />
+                        <label for="inputSpouseWorkIncome" class="form-label">Spouse's Income Earned From Work:</label>
+                        <input type="text" id="inputSpouseWorkIncome" name="SpouseWorkIncome" class="form-control form-fixed-width" value="@Model["SpouseWorkIncome"]" required number="true" data-msg-required="Please enter a value or zero" />
+                    </span>
+                    <br />
+                    <label for="inputStudentTaxFiler" class="form-label">Did the Student File Taxes?</label>
+                    <select id="inputStudentTaxFiler" name="StudentTaxFiler" class="form-control form-fixed-width">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span id="spanStudentTaxFiler" style="display:none;">
+                        <br />
+                        <label for="inputStudentAgi" class="form-label">Family's Adjusted Gross Income (AGI):</label>
+                        <input type="text" id="inputStudentAgi" name="StudentAgi" class="form-control form-fixed-width" value="@Model["StudentAgi"]" required number="true" data-msg-required="Please enter a value or zero" />
+                        <br />
+                        <label for="inputStudentIncomeTax" class="form-label">Family's Income Tax Paid:</label>
+                        <input type="text" id="inputStudentIncomeTax" name="StudentIncomeTax" class="form-control form-fixed-width" value="@Model["StudentIncomeTax"]" required number="true" data-msg-required="Please enter a value or zero" />
+                    </span>
+                    <br />
+                    <label for="inputStudentUntaxedIncomeAndBenefits" class="form-label">Family's Untaxed Income and Benefits:</label>
+                    <input type="text" id="inputStudentUntaxedIncomeAndBenefits" name="StudentUntaxedIncomeAndBenefits" class="form-control form-fixed-width" value="@Model["StudentUntaxedIncomeAndBenefits"]" required number="true" data-msg-required="Please enter a value" />
+                    <div class="description">Including child support and money received from friends or relatives</div>
+                    <br />
+                    <label for="inputStudentAdditionalFinancialInfo" class="form-label">Family's Additional Financial Information:</label>
+                    <input type="text" id="inputStudentAdditionalFinancialInfo" name="StudentAdditionalFinancialInfo" class="form-control form-fixed-width" value="@Model["StudentAdditionalFinancialInfo"]" required number="true" data-msg-required="Please enter a value" />
+                    <br />
+                    <label for="inputStudentCashSavingsChecking" class="form-label">Family's Cash, Savings, and Checking:</label>
+                    <input type="text" id="inputStudentCashSavingsChecking" name="StudentCashSavingsChecking" class="form-control form-fixed-width" value="@Model["StudentCashSavingsChecking"]" required number="true" data-msg-required="Please enter a value" />
+                    <br />
+                    <label for="inputStudentInvestmentNetWorth" class="form-label">Net Worth of family's Investments:</label>
+                    <input type="text" id="inputStudentInvestmentNetWorth" name="StudentInvestmentNetWorth" class="form-control form-fixed-width" value="@Model["StudentInvestmentNetWorth"]" required number="true" data-msg-required="Please enter a value" />
+                    <br />
+                    <label for="inputStudentBusinessFarmNetWorth" class="form-label">Net Worth of family's Business<br />and/or Investment Farm:</label>
+                    <input type="text" id="inputStudentBusinessFarmNetWorth" name="StudentBusinessFarmNetWorth" class="form-control form-fixed-width" value="@Model["StudentBusinessFarmNetWorth"]" required number="true" data-msg-required="Please enter a value" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12">
+        <button id="Calculate" class="btn btn-primary"><span class="glyphicon glyphicon-education"></span> Calculate!</button>
+    </div>
+</form>
+
+
+@section Scripts {
+
+    <script asp-add-nonce="true">
+
+        $(document).ready(function () {
+            var validator = $('#form').validate({
+                onfocusout: function (element) {
+                    this.element(element);
+                }
+            });
+
+            $("#inputMaritalStatus").change(function (e) {
+
+                if ($("#inputMaritalStatus").val() == "single") {
+                    $("#spanMarried").hide();
+                    $("#inputSpouseWorking").val("false");
+                }
+                else {
+                    $("#spanMarried").show();
+                    $("#inputSpouseWorking").val(null);
+                }
+            });
+
+            $("#inputStudentWorking").change(function (e) {
+                if ($("#inputStudentWorking").val() == "true") {
+                    $("#inputStudentWorkIncome").val("");
+                    $("#spanStudentWorking").show();
+                }
+                else {
+                    $("#inputStudentWorkIncome").val("0");
+                    $("#spanStudentWorking").hide();
+                }
+            });
+
+            $("#inputSpouseWorking").change(function (e) {
+                if ($("#inputSpouseWorking").val() == "true") {
+                    $("#inputSpouseWorkIncome").val("");
+                    $("#spanSpouseWorking").show();
+                }
+                else {
+                    $("#inputSpouseWorkIncome").val("0");
+                    $("#spanSpouseWorking").hide();
+                }
+            });
+
+            $("#inputStudentTaxFiler").change(function (e) {
+                if ($("#inputStudentTaxFiler").val() == "true") {
+                    $("#inputStudentAgi").val("");
+                    $("#inputStudentIncomeTax").val("");
+                    $("#spanStudentTaxFiler").show();
+                }
+                else {
+                    $("#inputStudentAgi").val("0");
+                    $("#inputStudentIncomeTax").val("0");
+                    $("#spanStudentTaxFiler").hide();
+                }
+            });
+
+            $("#inputStateOfResidency").val("@Model["StateOfResidency"]");
+            $("#inputHousing").val("@Model["Housing"]");
+            $("#inputMaritalStatus").val("@Model["MaritalStatus"]");
+            $("#inputStudentDependents").val("@Model["StudentDependents"]");
+            $("#inputSpouseWorking").val("@Model["SpouseWorking"]");
+            $("#inputStudentWorking").val("@Model["StudentWorking"]");
+            $("#inputStudentTaxFiler").val("@Model["StudentTaxFiler"]");
+
+            $("Calculate").click(function (e) {
+                $('#form').valid();
+            });
+        });
+    </script>
+}

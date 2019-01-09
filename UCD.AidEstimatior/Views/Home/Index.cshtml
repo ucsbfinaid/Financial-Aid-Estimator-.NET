@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "_BasicLayout";
+    string IntroText = ViewData["IntroText"].ToString();
+}
+
+<div>@Html.Raw(IntroText)</div>
+
+<div class="col-md-4 col-xs-12 col-sm-4 col-lg-4 col-md-offset-1 col-sm-offset-1 col-lg-offset-1" style="padding:15px;">
+    <a id="dependant" class="btn btn-lg btn-primary" asp-controller="Dependent" asp-action="Index">
+        <strong>Dependent Estimator</strong><br />
+        <span>I am <strong>less</strong> than 24 years old</span>
+    </a>
+</div>
+<div class="col-md-4 col-xs-12 col-sm-4 col-lg-4 col-md-offset-1 col-sm-offset-1 col-lg-offset-1" style="padding:15px;">
+    <a id="independant" class="btn btn-lg btn-primary" asp-controller="Independent" asp-action="Index">
+        <strong>Independent Estimator</strong><br />
+        <span>I am <strong>at least</strong> 24 years old</span>
+    </a>
+</div>
+
+<p style="clear:both">
+    Students who are less than 24 years old may still qualify for Independent status. For more information,
+    <a href="https://studentaid.ed.gov/sa/fafsa/filling-out/dependency#dependency-questions" target="_blank">view the Dependency Status criteria</a>.
+</p>
+
+@section Scripts {
+    <script asp-add-nonce="true">
+
+        $(document).ready(function () {
+            $('#sidebar').removeClass();
+            $('#render-body').removeClass();
+        });
+    </script>
+}

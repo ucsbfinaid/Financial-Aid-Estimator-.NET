@@ -1,0 +1,83 @@
+﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="~/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="~/favicon-16x16.png" sizes="16x16">
+
+    <title>@ViewData["Title"]Financial Aid Net Price Calculator - OUR SCHOOL</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/main.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    </environment>
+    @RenderSection("Header", required: false)
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-left">
+        <div class="container-fluid">
+            <div class="title-centered">
+                <span class="navbar-brand"><a asp-controller="Home"><img src="~/images/OURLOGO.png" alt="OUR Logo" style="width: 110px;" /></a></span>
+            </div>
+            <div class="navbar-header">
+                <span id="headertitle" class="title" style="left:50%"><strong>Net Price</strong> Calculator</span>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid body-content" id="content">
+        <div id="render-body" class="col-md-8 col-lg-9 col-sm-6">
+            @RenderBody()
+        </div>
+        <div id="sidebar" class="col-md-4 col-lg-3 col-sm-6">
+            <br />
+            <div class="panel panel-info">
+                <div class="panel-heading"><h3>More Information</h3></div>
+                <div class="panel-body">
+                    @Html.Raw(ViewData["AidEstimatorMoreInfo"])
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            <a href="FAQLINK">Questions and comments?</a> |
+            <a href="PRIVACYLINK">Privacy &amp; Accessibility</a>
+        </p>
+        <p>Copyright &#169; The Regents of the University of California. All rights reserved.</p>
+    </div>
+
+    <script asp-add-nonce="true">
+		var csrfToken = "@Xsrf.GetAndStoreTokens(Context).RequestToken";
+    </script>
+
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+        @if (ViewContext.ClientValidationEnabled)
+        {
+            <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+        }
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+        @if (ViewContext.ClientValidationEnabled)
+        {
+            <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+        }
+    </environment>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
