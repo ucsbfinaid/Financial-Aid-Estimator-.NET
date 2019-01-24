@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<constants>
+
+  <!-- COST OF ATTENDANCE -->
+  <constant name="CoaUndergraduateOffCampus">
+    <values>
+      <value name="Tuition and Fees" description="Includes cost of education and miscellaneous university fees.">15000</value>
+      <value name="Room and Board" description="Expected rent or housing fees and groceries or meal costs.">9000</value>
+      <value name="Books and Supplies" description="Includes text books and other school supplies.">1000</value>
+      <value name="Other Expenses (Personal and Transportation)" description="Includes transportation and miscellaneous personal expenses.">2000</value>
+      <value name="Health Insurance Fee" description="The UC health insurance fee.">2298</value>
+    </values>
+  </constant>
+
+  <constant name="CoaUndergraduateOnCampus">
+    <values>
+      <value name="Tuition and Fees" description="Includes cost of education and miscellaneous university fees.">15000</value>
+      <value name="Room and Board" description="Expected rent or housing fees and groceries or meal costs.">20000</value>
+      <value name="Books and Supplies" description="Includes text books and other school supplies.">1000</value>
+      <value name="Other Expenses (Personal and Transportation)" description="Includes transportation and miscellaneous personal expenses.">2000</value>
+      <value name="Health Insurance Fee" description="The UC health insurance fee.">2298</value>
+    </values>
+  </constant>
+
+  <constant name="CoaUndergraduateCommuter">
+    <values>
+      <value name="Tuition and Fees" description="Includes cost of education and miscellaneous university fees.">15000</value>
+      <value name="Room and Board" description="Expected rent or housing fees and groceries or meal costs.">6000</value>
+      <value name="Books and Supplies" description="Includes text books and other school supplies.">1000</value>
+      <value name="Other Expenses (Personal and Transportation)" description="Includes transportation and miscellaneous personal expenses.">3000</value>
+      <value name="Health Insurance Fee" description="The UC health insurance fee.">2298</value>
+    </values>
+  </constant>
+
+  <!-- OUT OF STATE FEES -->
+  <constant name="OutOfStateFees">
+    <value>28014</value>
+  </constant>
+  
+</constants>

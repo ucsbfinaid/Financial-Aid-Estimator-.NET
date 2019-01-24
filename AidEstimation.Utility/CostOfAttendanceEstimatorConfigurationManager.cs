@@ -82,5 +82,41 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
 
             return estimator;
         }
+
+        /// <summary>
+        /// Overload version that constructs <see cref="EfcCalculator"/>s using the paths to XML files passed. 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="xmlSourcePath"></param>
+        /// <returns></returns>
+        public static CostOfAttendanceEstimator GetCostOfAttendanceEstimator(string key, string xmlSourcePath)
+        {
+            if (String.IsNullOrEmpty(key))
+            {
+                throw new ArgumentException("No Cost of Attendance Estimator key provided");
+            }
+
+            if (_cache.ContainsKey(key))
+            {
+                return _cache[key];
+            }
+            
+            if (String.IsNullOrEmpty(xmlSourcePath))
+            {
+                throw new ArgumentException("No source path was specified for the Cost of Attendance Estimator in appSettings");
+            }
+
+            // If a relative web path is used, resolve the application's physical path
+            if (xmlSourcePath.StartsWith(RelativePathPlaceholder))
+            {
+                xmlSourcePath = xmlSourcePath.Replace(RelativePathPlaceholder, HostingEnvironment.ApplicationPhysicalPath);
+            }
+
+            CostOfAttendanceEstimatorFactory factory = new CostOfAttendanceEstimatorFactory(xmlSourcePath);
+            CostOfAttendanceEstimator estimator = factory.GetCostOfAttendanceEstimator();
+            _cache[key] = estimator;
+
+            return estimator;
+        }
     }
 }

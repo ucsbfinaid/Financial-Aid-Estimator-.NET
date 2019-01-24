@@ -1,0 +1,110 @@
+﻿@model ValueTuple<Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.EfcProfile, Ucsb.Sa.FinAid.AidEstimation.CostOfAttendance>
+@{
+    Layout = "_BasicLayout";
+    string ShowErrors = ViewData["Errors"].ToString().Length > 0 ? "" : "display:none";
+    string Errors = ViewData["Errors"].ToString();
+    Dictionary<string, string> EstimatedAwards = ViewData["EstimatedAwards"] as Dictionary<string, string>;
+    bool ShowOutOfState = (bool)ViewData["ShowOutOfState"];
+    string EstimateHeaderText = ViewData["EstimateHeaderText"].ToString();
+}
+<br />
+<div class="header">@Html.Raw(EstimateHeaderText)</div>
+
+<div class="alert alert-danger" id="errorList" style="@ShowErrors">@Html.Raw(Errors)</div>
+
+<div class="col-md-6 col-lg-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><strong>Estimated Contributions</strong></div>
+        <div class="panel-body">
+            <label class="form-label">Student Contribution</label>
+            <span class="results">@Model.Item1.StudentContribution.ToString("C0")</span><br />
+            <span class="description">Amount that you are expected to contribute towards the cost of your education</span>
+            <br />
+            <div class="alert alert-info">
+                <label class="form-label">Expected Family Contribution (EFC)</label>
+                <span class="results">@Model.Item1.ExpectedFamilyContribution.ToString("C0")</span><br />
+                <span class="description">Sum of the student contribution and parent contribution</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><strong>Estimated Awards</strong></div>
+        <div class="panel-body">
+            <label class="form-label">Student Loans and Work-Study</label>
+            <span class="results">@EstimatedAwards["SelfHelp"]</span><br />
+            <span class="description">Estimated amount of student loans and Work-Study you may be offered.</span>
+            <div class="alert alert-info">
+                <label class="form-label">Grant Award</label>
+                <span class="results">@EstimatedAwards["GrantAwards"]</span><br />
+                <span class="description">Estimated amount of grants that you may be offered.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><strong>Estimated Cost of Attendance</strong></div>
+        <div class="panel-body">
+            <label class="form-label">Tuition and Fees</label>
+            <span class="results">@Model.Item2.Items[0].Value.ToString("C0")</span><br />
+            <span class="description">@Model.Item2.Items[0].Description</span>
+            <br />
+            <label class="form-label">Room and Board (Housing and Food)</label>
+            <span class="results">@Model.Item2.Items[1].Value.ToString("C0")</span><br />
+            <span class="description">@Model.Item2.Items[1].Description</span>
+            <br />
+            <label class="form-label">Books and Supplies</label>
+            <span class="results">@Model.Item2.Items[2].Value.ToString("C0")</span><br />
+            <span class="description">@Model.Item2.Items[2].Description</span>
+            <br />
+            <label class="form-label">Health Insurance Fee</label>
+            <span class="results">@Model.Item2.Items[4].Value.ToString("C0")</span><br />
+            <span class="description">@Model.Item2.Items[4].Description</span>
+            @if (ShowOutOfState)
+            {
+                <br />
+                <label class="form-label">Out of State Fees</label>
+                <span class="results">@EstimatedAwards["OutOfStateFee"]</span><br />
+                <span class="description">Fees for non-California residents</span>
+            }
+            <br />
+            <label class="form-label">Other Expenses</label>
+            <span class="results">@Model.Item2.Items[3].Value.ToString("C0")</span><br />
+            <span class="description">@Model.Item2.Items[3].Description</span>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><strong>Totals</strong></div>
+        <div class="panel-body">
+            <label class="form-label">Estimated Total Cost of Attendance</label>
+            <span class="results total">@EstimatedAwards["TotalCOA"]</span><br />
+            <br />
+            <label class="form-label">Estimated Total Grant Award</label>
+            <span class="results total">@EstimatedAwards["GrantAwards"]</span><br /><br />
+            <div class="alert alert-success">
+                <label class="form-label">Estimated Net Price</label>
+                <span class="results total">@EstimatedAwards["NetCost"]</span><br />
+                <span class="description">The total cost of attendance that you must contribute towards your education through either loans or out-of-pocket expense</span>
+            </div>
+            <div class="results">
+                <strong class="total">@EstimatedAwards["GrantAwardsPct"]%</strong> of first-year full-time independent, undergraduate students at OURSCHOOL received some amount of grant aid in 2017-2018
+            </div>
+        </div>
+    </div>
+</div>
+
+<button id="return" class="btn btn-primary"><span class="glyphicon glyphicon-backward"></span> Return to Calculator</button>
+
+@section Scripts {
+
+    <script asp-add-nonce="true">
+
+        $(document).ready(function () {
+            $('#return').click(function (e) { window.location = "../" });
+        });
+    </script>
+}

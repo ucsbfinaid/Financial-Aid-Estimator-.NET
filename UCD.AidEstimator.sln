@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Constants", "Constants", "{B8D5B662-461C-445F-9E15-F9CDC914846E}"
+	ProjectSection(SolutionItems) = preProject
+		Constants\EfcCalculationConstants.1011.xml = Constants\EfcCalculationConstants.1011.xml
+		Constants\EfcCalculationConstants.1112.xml = Constants\EfcCalculationConstants.1112.xml
+		Constants\EfcCalculationConstants.1213.xml = Constants\EfcCalculationConstants.1213.xml
+		Constants\EfcCalculationConstants.1314.xml = Constants\EfcCalculationConstants.1314.xml
+		Constants\EfcCalculationConstants.1415.xml = Constants\EfcCalculationConstants.1415.xml
+		Constants\EfcCalculationConstants.1516.xml = Constants\EfcCalculationConstants.1516.xml
+		Constants\EfcCalculationConstants.1617.xml = Constants\EfcCalculationConstants.1617.xml
+		Constants\EfcCalculationConstants.1718.xml = Constants\EfcCalculationConstants.1718.xml
+		Constants\EfcCalculationConstants.1819.xml = Constants\EfcCalculationConstants.1819.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{FA5A9331-4C06-43FA-A8C1-4DEB0AA0D1C7}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation", "AidEstimation\Ucsb.Sa.FinAid.AidEstimation.csproj", "{2CFBACD0-1733-4035-9E94-275D948D0A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation.EfcCalculation", "AidEstimation.EfcCalculation\Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.csproj", "{1D25A148-DCE5-4F30-8F6E-744325ACF88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation.Utility", "AidEstimation.Utility\Ucsb.Sa.FinAid.AidEstimation.Utility.csproj", "{43BB3F09-660E-4044-8C14-428BDB7D5E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucsb.Sa.FinAid.AidEstimation.Web", "AidEstimation.Web\Ucsb.Sa.FinAid.AidEstimation.Web.csproj", "{E5716305-E0CA-4F76-8BE8-A7E41DEDE209}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UCD.AidEstimator", "UCD.AidEstimatior\UCD.AidEstimator.csproj", "{B977CAB1-ACD9-4E2E-9A74-4F76C7E80C3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFBACD0-1733-4035-9E94-275D948D0A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D25A148-DCE5-4F30-8F6E-744325ACF88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BB3F09-660E-4044-8C14-428BDB7D5E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BB3F09-660E-4044-8C14-428BDB7D5E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BB3F09-660E-4044-8C14-428BDB7D5E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BB3F09-660E-4044-8C14-428BDB7D5E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5716305-E0CA-4F76-8BE8-A7E41DEDE209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5716305-E0CA-4F76-8BE8-A7E41DEDE209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5716305-E0CA-4F76-8BE8-A7E41DEDE209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5716305-E0CA-4F76-8BE8-A7E41DEDE209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B977CAB1-ACD9-4E2E-9A74-4F76C7E80C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B977CAB1-ACD9-4E2E-9A74-4F76C7E80C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B977CAB1-ACD9-4E2E-9A74-4F76C7E80C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B977CAB1-ACD9-4E2E-9A74-4F76C7E80C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7A7EA9D-C03F-4FFB-B67E-83A594D1F2D8}
+	EndGlobalSection
+EndGlobal

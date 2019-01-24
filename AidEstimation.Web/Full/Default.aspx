@@ -49,7 +49,7 @@
 
     <p>
         Students who are less than 24 years old may still qualify for Independent status. For more information,
-        <a href="http://www.fafsa.ed.gov/help/fftoc02k.htm">view the Dependency Status criteria</a>.
+        <a href="https://studentaid.ed.gov/sa/fafsa/filling-out/dependency#dependency-questions" target="_blank">view the Dependency Status criteria</a>.
     </p>
 
 </asp:Content>
