@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <license type="expression">BSD-3-Clause</license>
+    <projectUrl>https://github.com/ucsbfinaid/Financial-Aid-Estimator-.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release of this package to NuGet</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>higher-education financial-aid</tags>
+  </metadata>
+</package>
