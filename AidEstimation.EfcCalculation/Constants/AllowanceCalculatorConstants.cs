@@ -33,36 +33,27 @@
         }
 
         /// <summary>
-        /// Threshold value used in determining the formula for Social Security Tax Allowance
+        /// Threshold values used in calculating Social Security Tax Allowance
         /// </summary>
-        public int SocialSecurityTaxIncomeThreshold
+        public int[] SocialSecurityTaxIncomeThresholds
         {
             get;
             set;
         }
 
         /// <summary>
-        /// Percentage used in formula for Social Security Tax Allowance for incomes below the threshold
+        /// Base values used in calculating Social Security Tax Allowance
         /// </summary>
-        public double SocialSecurityLowPercent
+        public double[] SocialSecurityTaxBases
         {
             get;
             set;
         }
 
         /// <summary>
-        /// Percentage used in formula for Social Security Tax Allowance for incomes above the threshold
+        /// Percentage values used in calculating Social Security Tax Allowance
         /// </summary>
-        public double SocialSecurityHighPercent
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Base value used in formula for Social Security Tax Allowance for incomes above the threshold
-        /// </summary>
-        public double SocialSecurityHighBase
+        public double[] SocialSecurityTaxPercentages
         {
             get;
             set;

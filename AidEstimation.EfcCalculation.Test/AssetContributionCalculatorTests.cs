@@ -62,7 +62,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _calculator
                 .CalculateAdjustedBusinessFarmNetWorthContribution(EfcCalculationRole.Parent, 202202);
-            Assert.AreEqual(89101, result);
+            Assert.AreEqual(87601, result);
         }
 
         [TestMethod]
@@ -70,7 +70,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _calculator
                 .CalculateAdjustedBusinessFarmNetWorthContribution(EfcCalculationRole.Parent, 202202202);
-            Assert.AreEqual(201909702, result);
+            Assert.AreEqual(201875702, result);
         }
 
         [TestMethod]
@@ -133,7 +133,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         public void CalculateAssetProtectionAllowance_Values_Calculated()
         {
             double result = _calculator.CalculateAssetProtectionAllowance(MaritalStatus.MarriedRemarried, 30);
-            Assert.AreEqual(10700, result);
+            Assert.AreEqual(1600, result);
         }
 
         [TestMethod]
@@ -147,22 +147,22 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         public void CalculateAssetProtectionAllowance_HighAge_Calculated()
         {
             double result = _calculator.CalculateAssetProtectionAllowance(MaritalStatus.MarriedRemarried, 70);
-            Assert.AreEqual(61800, result);
+            Assert.AreEqual(9400, result);
         }
 
         [TestMethod]
         public void CalculateAssetProtectionAllowance_SingleParent_Calculated()
         {
             double result = _calculator.CalculateAssetProtectionAllowance(MaritalStatus.SingleSeparatedDivorced, 45);
-            Assert.AreEqual(10600, result);
+            Assert.AreEqual(1900, result);
         }
 
         [TestMethod]
         public void CalculateDiscretionaryNetWorth_Values_Calculated()
         {
             double result = _calculator
-                .CalculateDiscretionaryNetWorth(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, 45, 6000, 26000, 9000);
-            Assert.AreEqual(-600, result);
+                .CalculateDiscretionaryNetWorth(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, 45, 600, 200, 900);
+            Assert.AreEqual(-4340, result);
         }
 
         [TestMethod]
@@ -177,7 +177,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         public void CalculateContributionFromAssets_NegativeValue_EqualsZero()
         {
             double result = _calculator
-                .CalculateContributionFromAssets(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, 45, 6000, 26000, 9000);
+                .CalculateContributionFromAssets(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, 45, 600, 200, 900);
             Assert.AreEqual(0, result);
         }
 
@@ -194,7 +194,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _calculator
                 .CalculateContributionFromAssets(EfcCalculationRole.IndependentStudentWithoutDependents, MaritalStatus.MarriedRemarried, 30, 6000, 26000, 9000);
-            Assert.AreEqual(4980, result);
+            Assert.AreEqual(6800, result);
         }
 
         [TestMethod]
@@ -202,7 +202,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _calculator
                 .CalculateContributionFromAssets(EfcCalculationRole.IndependentStudentWithDependents, MaritalStatus.MarriedRemarried, 30, 6000, 26000, 9000);
-            Assert.AreEqual(1743, result);
+            Assert.AreEqual(2380, result);
         }
     }
 }

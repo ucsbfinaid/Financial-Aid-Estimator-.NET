@@ -146,6 +146,7 @@
   <!-- 2020-2021: Table A2 -->
   <constant name="SocialSecurityTaxIncomeThresholds">
     <values>
+      <value>0</value>
       <value>128400</value>
       <value>200000</value>
     </values>
