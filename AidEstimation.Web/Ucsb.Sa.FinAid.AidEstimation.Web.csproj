@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,10 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\AidEstimationConstants.1920.xml">
+    <Content Include="App_Data\AidEstimationConstants.2021.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\EfcCalculationConstants.1920.xml" />
+    <Content Include="App_Data\EfcCalculationConstants.2021.xml" />
     <Content Include="Default.aspx" />
     <Content Include="Full\Default.aspx" />
     <Content Include="Full\Dependent.aspx" />

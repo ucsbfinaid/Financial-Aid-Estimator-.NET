@@ -55,7 +55,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
                 }
 
                 // Calculate
-                EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1920");
+                EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("2021");
                 EfcProfile profile = calculator.GetIndependentEfcProfile(args);
 
                 // Display Results
@@ -64,7 +64,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Web.Full
                 studentContributionOutput.Text = profile.StudentContribution.ToString("C0");
                 expectedFamilyContributionOutput.Text = profile.ExpectedFamilyContribution.ToString("C0");
 
-                CostOfAttendanceEstimator coaEstimator = CostOfAttendanceEstimatorConfigurationManager.GetCostOfAttendanceEstimator("1920");
+                CostOfAttendanceEstimator coaEstimator = CostOfAttendanceEstimatorConfigurationManager.GetCostOfAttendanceEstimator("2021");
                 CostOfAttendance coa = coaEstimator.GetCostOfAttendance(EducationLevel.Undergraduate, (HousingOption)Enum.Parse(typeof(HousingOption), inputHousing.SelectedValue));
 
                 tuitionFeesOutput.Text = coa.Items[0].Value.ToString("C0");
