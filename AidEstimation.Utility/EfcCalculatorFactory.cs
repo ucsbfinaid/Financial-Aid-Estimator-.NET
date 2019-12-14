@@ -80,10 +80,9 @@ namespace Ucsb.Sa.FinAid.AidEstimation.Utility
                     ParentStateTaxAllowancePercents = _source.GetArray<int>("ParentStateTaxAllowancePercents"),
                     StudentStateTaxAllowancePercents = _source.GetArray<int>("StudentStateTaxAllowancePercents"),
 
-                    SocialSecurityTaxIncomeThreshold = _source.GetValue<int>("SocialSecurityTaxIncomeThreshold"),
-                    SocialSecurityLowPercent = _source.GetValue<double>("SocialSecurityLowPercent"),
-                    SocialSecurityHighPercent = _source.GetValue<double>("SocialSecurityHighPercent"),
-                    SocialSecurityHighBase = _source.GetValue<double>("SocialSecurityHighBase"),
+                    SocialSecurityTaxIncomeThresholds = _source.GetArray<int>("SocialSecurityTaxIncomeThresholds"),
+                    SocialSecurityTaxPercentages = _source.GetArray<double>("SocialSecurityTaxPercentages"),
+                    SocialSecurityTaxBases = _source.GetArray<double>("SocialSecurityTaxBases"),
 
                     EmploymentExpensePercent = _source.GetValue<double>("EmploymentExpensePercent"),
                     EmploymentExpenseMaximum = _source.GetValue<int>("EmploymentExpenseMaximum"),

@@ -203,7 +203,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetDependentEfcProfile(args);
-            Assert.AreEqual(9278, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(7923, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -250,7 +250,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetDependentEfcProfile(args);
-            Assert.AreEqual(48227, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(46943, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -357,7 +357,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
-            Assert.AreEqual(36727, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(36177, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -393,7 +393,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
-            Assert.AreEqual(299467, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(297710, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -461,7 +461,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
-            Assert.AreEqual(6762, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(5595, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -497,7 +497,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
-            Assert.AreEqual(50052, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(49037, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -533,7 +533,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
-            Assert.AreEqual(49847, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(48706, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -581,7 +581,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetDependentEfcProfile(args);
-            Assert.AreEqual(3912, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(3281, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -618,7 +618,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
-            Assert.AreEqual(1255, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(467, profile.ExpectedFamilyContribution);
         }
 
         [TestMethod]
@@ -789,8 +789,8 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetDependentEfcProfile(args);
-            Assert.AreEqual(2625, profile.ParentContribution);
-            Assert.AreEqual(867, profile.StudentContribution);
+            Assert.AreEqual(2307, profile.ParentContribution);
+            Assert.AreEqual(732, profile.StudentContribution);
         }
 
         [TestMethod]
@@ -833,8 +833,8 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetDependentEfcProfile(args);
-            Assert.AreEqual(8409, profile.ParentContribution);
-            Assert.AreEqual(1403, profile.StudentContribution);
+            Assert.AreEqual(7423, profile.ParentContribution);
+            Assert.AreEqual(998, profile.StudentContribution);
         }
 
         [TestMethod]
@@ -898,7 +898,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
             };
 
             EfcProfile profile = _efcCalculator.GetIndependentEfcProfile(args);
-            Assert.AreEqual(12243, profile.ExpectedFamilyContribution);
+            Assert.AreEqual(12060, profile.ExpectedFamilyContribution);
         }
     }
 }

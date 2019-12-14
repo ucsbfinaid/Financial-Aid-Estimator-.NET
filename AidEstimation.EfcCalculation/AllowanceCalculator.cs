@@ -133,16 +133,21 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation
         {
             double socialSecurityTaxAllowance;
 
-            if (workIncome > _constants.SocialSecurityTaxIncomeThreshold)
+            double socialSecurityTaxBase = 0;
+            double socialSecurityTaxPercentage = 0;
+            double socialSecurityTaxThreshold = 0;
+
+            for(int i = 0; i < _constants.SocialSecurityTaxIncomeThresholds.Length; i++)
             {
-                socialSecurityTaxAllowance =
-                    ((workIncome - _constants.SocialSecurityTaxIncomeThreshold) * _constants.SocialSecurityHighPercent)
-                        + _constants.SocialSecurityHighBase;
+                if (workIncome > _constants.SocialSecurityTaxIncomeThresholds[i])
+                {
+                    socialSecurityTaxThreshold = _constants.SocialSecurityTaxIncomeThresholds[i];
+                    socialSecurityTaxBase = _constants.SocialSecurityTaxBases[i];
+                    socialSecurityTaxPercentage = _constants.SocialSecurityTaxPercentages[i];
+                }
             }
-            else
-            {
-                socialSecurityTaxAllowance = (_constants.SocialSecurityLowPercent * workIncome);
-            }
+
+            socialSecurityTaxAllowance = ((workIncome - socialSecurityTaxThreshold) * socialSecurityTaxPercentage) + socialSecurityTaxBase;
 
             return Math.Round(socialSecurityTaxAllowance < 0 ? 0 : socialSecurityTaxAllowance,
                 MidpointRounding.AwayFromZero);

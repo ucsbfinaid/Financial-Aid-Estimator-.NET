@@ -62,7 +62,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         public void CalculateStateTaxAllowance_DependentStudent_Calculated()
         {
             double result = _allowanceCalculator.CalculateStateTaxAllowance(EfcCalculationRole.DependentStudent, UnitedStatesStateOrTerritory.California, 3000);
-            Assert.AreEqual(150, result);
+            Assert.AreEqual(180, result);
         }
 
         [TestMethod]
@@ -76,7 +76,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         public void CalculateStateTaxAllowance_IndependentStudentWithoutDep_Calculated()
         {
             double result = _allowanceCalculator.CalculateStateTaxAllowance(EfcCalculationRole.IndependentStudentWithoutDependents, UnitedStatesStateOrTerritory.California, 3000);
-            Assert.AreEqual(150, result);
+            Assert.AreEqual(180, result);
         }
 
         [TestMethod]
@@ -94,10 +94,17 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         }
 
         [TestMethod]
+        public void CalculateSocialSecurityTaxAllowance_MidRange_Calculated()
+        {
+            double result = _allowanceCalculator.CalculateSocialSecurityTaxAllowance(136000);
+            Assert.AreEqual(9933, result);
+        }
+
+        [TestMethod]
         public void CalculateSocialSecurityTaxAllowance_HighRange_Calculated()
         {
             double result = _allowanceCalculator.CalculateSocialSecurityTaxAllowance(206800);
-            Assert.AreEqual(9825, result);
+            Assert.AreEqual(11021, result);
         }
 
         [TestMethod]
@@ -111,7 +118,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         public void CalculateSocialSecurityTaxAllowance_DecimalValue_Rounded()
         {
             double result = _allowanceCalculator.CalculateSocialSecurityTaxAllowance(206800.56);
-            Assert.AreEqual(9825, result);
+            Assert.AreEqual(11021, result);
         }
 
         [TestMethod]
@@ -127,7 +134,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _allowanceCalculator
                 .CalculateIncomeProtectionAllowance(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, 2, 3);
-            Assert.AreEqual(18380, result);
+            Assert.AreEqual(20510, result);
         }
 
         [TestMethod]
@@ -143,7 +150,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _allowanceCalculator
                 .CalculateIncomeProtectionAllowance(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, 5, 20);
-            Assert.AreEqual(82020, result);
+            Assert.AreEqual(93970, result);
         }
 
         [TestMethod]
@@ -151,7 +158,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _allowanceCalculator
                 .CalculateIncomeProtectionAllowance(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, 10, 20);
-            Assert.AreEqual(67470, result);
+            Assert.AreEqual(77720, result);
         }
 
         [TestMethod]
@@ -159,7 +166,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _allowanceCalculator
                 .CalculateIncomeProtectionAllowance(EfcCalculationRole.IndependentStudentWithDependents, MaritalStatus.MarriedRemarried, 10, 20);
-            Assert.AreEqual(95140, result);
+            Assert.AreEqual(106190, result);
         }
 
         [TestMethod]
@@ -167,7 +174,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _allowanceCalculator
                 .CalculateIncomeProtectionAllowance(EfcCalculationRole.IndependentStudentWithoutDependents, MaritalStatus.MarriedRemarried, 1, 1);
-            Assert.AreEqual(15290, result);
+            Assert.AreEqual(17060, result);
         }
 
         [TestMethod]
@@ -175,7 +182,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _allowanceCalculator
                 .CalculateIncomeProtectionAllowance(EfcCalculationRole.IndependentStudentWithoutDependents, MaritalStatus.SingleSeparatedDivorced, 1, 1);
-            Assert.AreEqual(9540, result);
+            Assert.AreEqual(10640, result);
         }
 
         [TestMethod]
@@ -183,14 +190,14 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         {
             double result = _allowanceCalculator
                 .CalculateIncomeProtectionAllowance(EfcCalculationRole.IndependentStudentWithoutDependents, MaritalStatus.MarriedRemarried, 2, 2);
-            Assert.AreEqual(9540, result);
+            Assert.AreEqual(10640, result);
         }
 
         [TestMethod]
         public void CalculateIncomeProtectionAllowance_DependentStudent_Calculated()
         {
             double result = _allowanceCalculator.CalculateIncomeProtectionAllowance(EfcCalculationRole.DependentStudent, MaritalStatus.MarriedRemarried, 10, 20);
-            Assert.AreEqual(6130, result);
+            Assert.AreEqual(6840, result);
         }
 
         [TestMethod]
@@ -204,7 +211,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
 
             double result = _allowanceCalculator
                 .CalculateEmploymentExpenseAllowance(EfcCalculationRole.Parent, MaritalStatus.MarriedRemarried, parents);
-            Assert.AreEqual(3900, result);
+            Assert.AreEqual(4000, result);
         }
 
         [TestMethod]
@@ -231,7 +238,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
 
             double result = _allowanceCalculator
                 .CalculateEmploymentExpenseAllowance(EfcCalculationRole.Parent, MaritalStatus.SingleSeparatedDivorced, parents);
-            Assert.AreEqual(3900, result);
+            Assert.AreEqual(4000, result);
         }
 
         [TestMethod]
@@ -367,7 +374,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
                 45000,
                 3000);
 
-            Assert.AreEqual(31108, result);
+            Assert.AreEqual(33338, result);
         }
 
         [TestMethod]
@@ -388,7 +395,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
                 35000,
                 4000);
 
-            Assert.AreEqual(17585, result);
+            Assert.AreEqual(19035, result);
         }
 
         [TestMethod]
@@ -410,7 +417,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
                 25000,
                 3000);
 
-            Assert.AreEqual(30430, result);
+            Assert.AreEqual(33220, result);
         }
 
         [TestMethod]
@@ -431,7 +438,7 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
                 10000,
                 1000);
 
-            Assert.AreEqual(8395, result);
+            Assert.AreEqual(9205, result);
         }
     }
 }

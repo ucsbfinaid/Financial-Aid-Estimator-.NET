@@ -35,14 +35,14 @@ namespace Ucsb.Sa.FinAid.AidEstimation.EfcCalculation.Test
         public void CalculateContributionFromAai_Value_Calculated()
         {
             double result = _aaiContributionCalculator.CalculateContributionFromAai(EfcCalculationRole.Parent, 18300);
-            Assert.AreEqual(4116, result);
+            Assert.AreEqual(4065, result);
         }
 
         [TestMethod]
         public void CalculateContributionFromAai_HighValue_Calculated()
         {
             double result = _aaiContributionCalculator.CalculateContributionFromAai(EfcCalculationRole.Parent, 202202);
-            Assert.AreEqual(88870, result);
+            Assert.AreEqual(88163, result);
         }
 
         [TestMethod]

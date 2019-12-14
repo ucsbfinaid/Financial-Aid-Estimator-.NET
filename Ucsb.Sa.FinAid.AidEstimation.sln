@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Constants", "Constants", "{B8D5B662-461C-445F-9E15-F9CDC914846E}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Constants", "Constants", "{
 		Constants\EfcCalculationConstants.1718.xml = Constants\EfcCalculationConstants.1718.xml
 		Constants\EfcCalculationConstants.1819.xml = Constants\EfcCalculationConstants.1819.xml
 		Constants\EfcCalculationConstants.1920.xml = Constants\EfcCalculationConstants.1920.xml
+		Constants\EfcCalculationConstants.2021.xml = Constants\EfcCalculationConstants.2021.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{FA5A9331-4C06-43FA-A8C1-4DEB0AA0D1C7}"
@@ -73,5 +74,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6202CF07-454F-42A6-AC7D-7E3BC8D7D5C3}
 	EndGlobalSection
 EndGlobal
