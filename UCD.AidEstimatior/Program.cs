@@ -1,42 +1,26 @@
-﻿///This file was copied from the Intranet application
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using NLog.Web;
-using Microsoft.AspNetCore;
-using NLog.LayoutRenderers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace Web
+namespace UCD.AidEstimator
 {
     public class Program
     {
         public static void Main(string[] args)
-        {           
-            LayoutRenderer.Register("basdir-drive-letter", (logEvent) => System.Reflection.Assembly.GetEntryAssembly().Location.Substring(0,1));
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
 
-			// NLog: setup the logger first to catch all errors
-			var logger = NLog.LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
-			try
-			{
-				logger.Debug("init main");
-				BuildWebHost(args).Run();
-			}
-			catch (Exception ex)
-			{
-				//NLog: catch setup errors
-				logger.Error(ex, "Stopped program because of exception");
-				throw;
-			}
-			finally
-			{
-				// Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
-				NLog.LogManager.Shutdown();
-			}
-		}
-		public static IWebHost BuildWebHost(string[] args) =>
-		WebHost.CreateDefaultBuilder(args)
-			.UseStartup<Startup>()
-			.UseApplicationInsights()
-			.UseNLog()
-			.Build();
-	}
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
 }
