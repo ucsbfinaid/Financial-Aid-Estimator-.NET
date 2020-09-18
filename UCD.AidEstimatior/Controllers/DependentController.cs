@@ -12,11 +12,15 @@ namespace UCD.AidEstimator.Controllers
 {
     public class DependentController : Controller
     {
-        private AppSettings AppSettings { get; set; }
+        private readonly AppSettings _appSettings;
+        private readonly EfcCalculator _efcCalculator;
+        private readonly CostOfAttendanceEstimator _coaEstimator;
 
-        public DependentController(IOptions<AppSettings> settings)
+        public DependentController(IOptions<AppSettings> settings, EfcCalculator efcCalculator, CostOfAttendanceEstimator coaEstimator)
         {
-            AppSettings = settings.Value;
+            _appSettings = settings.Value;
+            _efcCalculator = efcCalculator;
+            _coaEstimator = coaEstimator;
         }
 
         public IActionResult Index()
@@ -140,17 +144,15 @@ namespace UCD.AidEstimator.Controllers
             else
             {
                 ViewData["Errors"] = "";
-                EfcCalculator calculator = EfcCalculatorConfigurationManager.GetEfcCalculator("1920", AppSettings.EfcCalculationConstants);
-                EfcProfile profile = calculator.GetDependentEfcProfile(args);
-                CostOfAttendanceEstimator coaEstimator = CostOfAttendanceEstimatorConfigurationManager.GetCostOfAttendanceEstimator("1920", AppSettings.AidEstimationConstants);
+                EfcProfile profile = _efcCalculator.GetDependentEfcProfile(args);
                 HousingOption ho = (HousingOption)Enum.Parse(typeof(HousingOption), Housing.ToString());
-                CostOfAttendance coa = coaEstimator.GetCostOfAttendance(EducationLevel.Undergraduate, ho);
+                CostOfAttendance coa = _coaEstimator.GetCostOfAttendance(EducationLevel.Undergraduate, ho);
 
                 double grantAward = 0;
-                double selfHelp = Math.Max(0, AppSettings.SelfHelpConstant - profile.ExpectedFamilyContribution);
-                double maxCosts = profile.ExpectedFamilyContribution + selfHelp + AppSettings.MaxLoanAmount;
+                double selfHelp = Math.Max(0, _appSettings.SelfHelpConstant - profile.ExpectedFamilyContribution);
+                double maxCosts = profile.ExpectedFamilyContribution + selfHelp + _appSettings.MaxLoanAmount;
                 double subCosts = Math.Min(maxCosts, coa.Total);
-                string AY = AppSettings.AidYear;
+                string AY = _appSettings.AidYear;
 
                 if (StateOfResidency == "California")
                 {
@@ -178,7 +180,7 @@ namespace UCD.AidEstimator.Controllers
                 EstimatedAwards.Add("GrantAwards", grantAward.ToString("C0"));
                 EstimatedAwards.Add("SelfHelp", selfHelp.ToString("C0"));
                 EstimatedAwards.Add("ParentLoans", parentLoan.ToString("C0"));
-                EstimatedAwards.Add("GrantAwardsPct", AppSettings.PercentageGrantDependent);
+                EstimatedAwards.Add("GrantAwardsPct", _appSettings.PercentageGrantDependent);
                 EstimatedAwards.Add("NetCost", Math.Max(0, netCosts).ToString("C0"));
                 EstimatedAwards.Add("OutOfStateFee", coa.OutOfStateFees.ToString("C0"));
                 EstimatedAwards.Add("TotalCOA", totalCOA.ToString("C0"));
