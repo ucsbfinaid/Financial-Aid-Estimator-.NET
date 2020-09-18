@@ -1,19 +1,24 @@
-# UCD MVC Version
+# UC Davis Aid Estimator Example
 
-MVC configuration notes.
+This example application was built by UC Davis to demonstrate how the aid estimator
+could be used within an ASP.NET Core MVC application.
 
-1. Be sure you have Asp.Net Core 2.1.6 install. If you want to use a later version, update the NuGet packages to match
+This application also features a number of usability enhancements, including inline, client-side
+validation and dynamic toggling of inputs based on user's responses.
 
-2. After opening the UCD.AidEstimator.sln solution mark the UCD.AidEstimator project as "Startup Project"
+## Running the Application
 
-3. Search for and replace "PLACEHOLDER" text
+To run the example application, ensure that you have **ASP.NET Core 3.1.8** installed.
 
-4. the project is currently set up to use https://localhost for testing and debugging. To use localhost with IIS Express you may need to open Visual Studio "As Administrator". To switch to a different local domain adjust your \Properties\launchSettings.json file.
+Open up the **UCD.AidEstimator.sln** solution **"As Administrator"** and choose the
+**UCD.AidEstimator** project as the "Startup Project". Use **IIS Express** to run and
+debug the application.
 
-5. Add your icon in \wwwroot\images and update the img tag in \Views\Shared\_BasicLayout.cshtml to match
+## Customizing the Application
 
-6. Search for and update the GetGrantAmount() method with your grant calculation process
+To customize this application for use by your institution, take the following steps:
 
-7. Run locally via Debug --> Start Without Debugging
-
-8. Example MSBuild arguments (for IIS Web App Deployment - using a zip file):  /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="SOMELOCATION\WebApp.zip" /p:DeployIisAppPath="MY.DOMAIN.EDU/MYPATH"
+1. Find and replace "PLACEHOLDER" text
+2. Find and replace "OURSCHOOL" text
+3. Add your school's logo in `\wwwroot\images` and update the img tag in `\Views\Shared\_BasicLayout.cshtml` to match
+4. Update `GetGrantAmount()` with your school's grant formula

@@ -1,4 +1,4 @@
-﻿namespace Web
+﻿namespace UCD.AidEstimator
 {
     /// <summary>
     /// References to values stored in the appsettings.json
@@ -9,9 +9,9 @@
 
         public string AidEstimationConstants { get; set; }
 
-        public string PercentageGrantDependant { get; set; }
+        public string PercentageGrantDependent { get; set; }
 
-        public string PercentageGrantIndependant { get; set; }
+        public string PercentageGrantIndependent { get; set; }
 
         public double SelfHelpConstant { get; set; }
 
