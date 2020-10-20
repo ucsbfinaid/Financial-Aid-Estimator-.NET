@@ -2,63 +2,63 @@
 
 <constants>
 
-  <!-- 2020-2021: Table A1 -->
+  <!-- 2021-2022: Table 1 -->
   <constant name="StateTaxAllowanceIncomeThreshold">
     <value>15000</value>
   </constant>
 
-  <!-- 2020-2021: Table A1, first column -->
+  <!-- 2021-2022: Table 1, first column -->
   <constant name="ParentStateTaxAllowancePercents">
     <values>
-      <value id="Other">3</value>
+      <value id="Other">2</value>
       <value id="Alabama">3</value>
       <value id="Alaska">2</value>
-      <value id="AmericanSamoa">3</value>
+      <value id="AmericanSamoa">2</value>
       <value id="Arizona">4</value>
       <value id="Arkansas">4</value>
-      <value id="California">8</value>
-      <value id="CanadaAndCanadianProvinces">3</value>
+      <value id="California">9</value>
+      <value id="CanadaAndCanadianProvinces">2</value>
       <value id="Colorado">4</value>
       <value id="Connecticut">9</value>
       <value id="Delaware">5</value>
       <value id="DistrictOfColumbia">7</value>
-      <value id="FederatedStatesOfMicronesia">3</value>
+      <value id="FederatedStatesOfMicronesia">2</value>
       <value id="Florida">3</value>
       <value id="Georgia">5</value>
-      <value id="Guam">3</value>
+      <value id="Guam">2</value>
       <value id="Hawaii">5</value>
       <value id="Idaho">5</value>
-      <value id="Illinois">5</value>
+      <value id="Illinois">6</value>
       <value id="Indiana">4</value>
       <value id="Iowa">5</value>
       <value id="Kansas">4</value>
       <value id="Kentucky">5</value>
       <value id="Louisiana">3</value>
       <value id="Maine">6</value>
-      <value id="MarshallIslands">3</value>
+      <value id="MarshallIslands">2</value>
       <value id="Maryland">8</value>
       <value id="Massachusetts">7</value>
-      <value id="Mexico">3</value>
-      <value id="Michigan">4</value>
-      <value id="Minnesota">6</value>
+      <value id="Mexico">2</value>
+      <value id="Michigan">5</value>
+      <value id="Minnesota">7</value>
       <value id="Mississippi">3</value>
       <value id="Missouri">5</value>
       <value id="Montana">5</value>
       <value id="Nebraska">5</value>
-      <value id="Nevada">2</value>
+      <value id="Nevada">3</value>
       <value id="NewHampshire">4</value>
       <value id="NewJersey">9</value>
       <value id="NewMexico">3</value>
-      <value id="NewYork">9</value>
+      <value id="NewYork">10</value>
       <value id="NorthCarolina">5</value>
       <value id="NorthDakota">2</value>
-      <value id="NorthernMarianaIslands">3</value>
+      <value id="NorthernMarianaIslands">2</value>
       <value id="Ohio">5</value>
       <value id="Oklahoma">3</value>
       <value id="Oregon">7</value>
-      <value id="Palau">3</value>
+      <value id="Palau">2</value>
       <value id="Pennsylvania">5</value>
-      <value id="PuertoRico">3</value>
+      <value id="PuertoRico">2</value>
       <value id="RhodeIsland">6</value>
       <value id="SouthCarolina">4</value>
       <value id="SouthDakota">2</value>
@@ -66,7 +66,7 @@
       <value id="Texas">3</value>
       <value id="Utah">5</value>
       <value id="Vermont">6</value>
-      <value id="VirginIslands">3</value>
+      <value id="VirginIslands">2</value>
       <value id="Virginia">6</value>
       <value id="Washington">3</value>
       <value id="WestVirginia">3</value>
@@ -75,38 +75,38 @@
     </values>
   </constant>
   
-  <!-- 2020-2021: Table A7 -->
+  <!-- 2021-2022: Table 2 -->
   <constant name="StudentStateTaxAllowancePercents">
     <values>
-      <value id="Other">2</value>
+      <value id="Other">1</value>
       <value id="Alabama">2</value>
       <value id="Alaska">0</value>
-      <value id="AmericanSamoa">2</value>
+      <value id="AmericanSamoa">1</value>
       <value id="Arizona">2</value>
       <value id="Arkansas">3</value>
       <value id="California">6</value>
-      <value id="CanadaAndCanadianProvinces">2</value>
+      <value id="CanadaAndCanadianProvinces">1</value>
       <value id="Colorado">3</value>
       <value id="Connecticut">5</value>
       <value id="Delaware">3</value>
       <value id="DistrictOfColumbia">6</value>
-      <value id="FederatedStatesOfMicronesia">2</value>
+      <value id="FederatedStatesOfMicronesia">1</value>
       <value id="Florida">1</value>
-      <value id="Georgia">3</value>
-      <value id="Guam">2</value>
+      <value id="Georgia">4</value>
+      <value id="Guam">1</value>
       <value id="Hawaii">4</value>
-      <value id="Idaho">3</value>
+      <value id="Idaho">4</value>
       <value id="Illinois">3</value>
       <value id="Indiana">3</value>
       <value id="Iowa">3</value>
-      <value id="Kansas">2</value>
+      <value id="Kansas">3</value>
       <value id="Kentucky">4</value>
       <value id="Louisiana">2</value>
       <value id="Maine">3</value>
-      <value id="MarshallIslands">2</value>
+      <value id="MarshallIslands">1</value>
       <value id="Maryland">6</value>
       <value id="Massachusetts">4</value>
-      <value id="Mexico">2</value>
+      <value id="Mexico">1</value>
       <value id="Michigan">3</value>
       <value id="Minnesota">5</value>
       <value id="Mississippi">2</value>
@@ -120,21 +120,21 @@
       <value id="NewYork">7</value>
       <value id="NorthCarolina">3</value>
       <value id="NorthDakota">1</value>
-      <value id="NorthernMarianaIslands">2</value>
+      <value id="NorthernMarianaIslands">1</value>
       <value id="Ohio">3</value>
       <value id="Oklahoma">2</value>
       <value id="Oregon">5</value>
-      <value id="Palau">2</value>
+      <value id="Palau">1</value>
       <value id="Pennsylvania">3</value>
-      <value id="PuertoRico">2</value>
-      <value id="RhodeIsland">3</value>
+      <value id="PuertoRico">1</value>
+      <value id="RhodeIsland">4</value>
       <value id="SouthCarolina">3</value>
       <value id="SouthDakota">1</value>
       <value id="Tennessee">1</value>
       <value id="Texas">1</value>
-      <value id="Utah">3</value>
+      <value id="Utah">4</value>
       <value id="Vermont">3</value>
-      <value id="VirginIslands">2</value>
+      <value id="VirginIslands">1</value>
       <value id="Virginia">4</value>
       <value id="Washington">1</value>
       <value id="WestVirginia">3</value>
@@ -143,16 +143,16 @@
     </values>
   </constant>
 
-  <!-- 2020-2021: Table A2 -->
+  <!-- 2021-2022: Table 3 -->
   <constant name="SocialSecurityTaxIncomeThresholds">
     <values>
       <value>0</value>
-      <value>128400</value>
+      <value>132900</value>
       <value>200000</value>
     </values>
   </constant>
   
-  <!-- 2020-2021: Table A2 -->
+  <!-- 2021-2022: Table 3 -->
   <constant name="SocialSecurityTaxPercentages">
     <values>
       <value>0.0765</value>
@@ -161,21 +161,21 @@
     </values>
   </constant>
 
-  <!-- 2020-2021: Table A2 -->
+  <!-- 2021-2022: Table 3 -->
   <constant name="SocialSecurityTaxBases">
     <values>
       <value>0</value>
-      <value>9822.60</value>
-      <value>10860.80</value>
+      <value>10166.85</value>
+      <value>11139.80</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="DepStudentIncomeProtectionAllowance">
-    <value>6840</value>
+    <value>6970</value>
   </constant>
 
-  <!-- 2020-2021: Table A3 -->
+  <!-- 2021-2022: Table 4 -->
   <constant name="DepParentIncomeProtectionAllowances">
     <values numberInHousehold="0">
       <value numberInCollege="0">0</value>
@@ -195,47 +195,47 @@
     </values>
     <values numberInHousehold="2">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">19080</value>
-      <value numberInCollege="2">15810</value>
+      <value numberInCollege="1">19440</value>
+      <value numberInCollege="2">16110</value>
       <value numberInCollege="3">0</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="3">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">23760</value>
-      <value numberInCollege="2">20510</value>
-      <value numberInCollege="3">17250</value>
+      <value numberInCollege="1">24200</value>
+      <value numberInCollege="2">20900</value>
+      <value numberInCollege="3">17570</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="4">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">29340</value>
-      <value numberInCollege="2">26080</value>
-      <value numberInCollege="3">22830</value>
-      <value numberInCollege="4">19570</value>
+      <value numberInCollege="1">29890</value>
+      <value numberInCollege="2">26570</value>
+      <value numberInCollege="3">23260</value>
+      <value numberInCollege="4">19930</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="5">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">34620</value>
-      <value numberInCollege="2">31350</value>
-      <value numberInCollege="3">28110</value>
-      <value numberInCollege="4">24840</value>
-      <value numberInCollege="5">21600</value>
+      <value numberInCollege="1">35270</value>
+      <value numberInCollege="2">31940</value>
+      <value numberInCollege="3">28640</value>
+      <value numberInCollege="4">25310</value>
+      <value numberInCollege="5">22000</value>
     </values>
     <values numberInHousehold="6">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">40490</value>
-      <value numberInCollege="2">37230</value>
-      <value numberInCollege="3">33980</value>
-      <value numberInCollege="4">30720</value>
-      <value numberInCollege="5">27470</value>
+      <value numberInCollege="1">41250</value>
+      <value numberInCollege="2">37930</value>
+      <value numberInCollege="3">34620</value>
+      <value numberInCollege="4">31300</value>
+      <value numberInCollege="5">27990</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Table C3 -->
+  <!-- 2021-2022: Table 5 -->
   <constant name="IndWithDepIncomeProtectionAllowances">
     <values numberInHousehold="0">
       <value numberInCollege="0">0</value>
@@ -255,74 +255,74 @@
     </values>
     <values numberInHousehold="2">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">26940</value>
-      <value numberInCollege="2">22340</value>
+      <value numberInCollege="1">27450</value>
+      <value numberInCollege="2">22760</value>
       <value numberInCollege="3">0</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="3">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">33550</value>
-      <value numberInCollege="2">28960</value>
-      <value numberInCollege="3">24360</value>
+      <value numberInCollege="1">34180</value>
+      <value numberInCollege="2">29510</value>
+      <value numberInCollege="3">24810</value>
       <value numberInCollege="4">0</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="4">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">41420</value>
-      <value numberInCollege="2">36830</value>
-      <value numberInCollege="3">32250</value>
-      <value numberInCollege="4">27630</value>
+      <value numberInCollege="1">42200</value>
+      <value numberInCollege="2">37520</value>
+      <value numberInCollege="3">32850</value>
+      <value numberInCollege="4">28150</value>
       <value numberInCollege="5">0</value>
     </values>
     <values numberInHousehold="5">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">48880</value>
-      <value numberInCollege="2">44260</value>
-      <value numberInCollege="3">39680</value>
-      <value numberInCollege="4">35080</value>
-      <value numberInCollege="5">30500</value>
+      <value numberInCollege="1">49800</value>
+      <value numberInCollege="2">45100</value>
+      <value numberInCollege="3">40430</value>
+      <value numberInCollege="4">35750</value>
+      <value numberInCollege="5">31080</value>
     </values>
     <values numberInHousehold="6">
       <value numberInCollege="0">0</value>
-      <value numberInCollege="1">57160</value>
-      <value numberInCollege="2">52560</value>
-      <value numberInCollege="3">47990</value>
-      <value numberInCollege="4">43360</value>
-      <value numberInCollege="5">38790</value>
+      <value numberInCollege="1">58240</value>
+      <value numberInCollege="2">53550</value>
+      <value numberInCollege="3">48900</value>
+      <value numberInCollege="4">44180</value>
+      <value numberInCollege="5">39520</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="IndWithoutDepSingleIncomeProtectionAllowance">
-    <value>10640</value>
+    <value>10840</value>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="IndWithoutDepMarriedIncomeProtectionAllowance">
-    <value>17060</value>
+    <value>17380</value>
   </constant>
 
-  <!-- 2020-2021: Table A3 -->
+  <!-- 2021-2022: Table 4 -->
   <constant name="DepAdditionalFamilyAllowance">
-    <value>4750</value>
+    <value>4660</value>
   </constant>
 
-  <!-- 2020-2021: Table A3 -->
+  <!-- 2021-2022: Table 4 -->
   <constant name="DepAdditionalStudentAllowance">
-    <value>3250</value>
+    <value>3310</value>
   </constant>
 
-  <!-- 2020-2021: Table C3 -->
+  <!-- 2021-2022: Table 5 -->
   <constant name="IndAdditionalFamilyAllowance">
-    <value>6450</value>
+    <value>6580</value>
   </constant>
 
-  <!-- 2020-2021: Table C3 -->
+  <!-- 2021-2022: Table 5 -->
   <constant name="IndAdditionalStudentAllowance">
-    <value>4580</value>
+    <value>4670</value>
   </constant>
 
   <!-- 2020-2021: Worksheet -->
@@ -330,37 +330,37 @@
     <value>0.35</value>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="EmploymentExpenseMaximum">
     <value>4000</value>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="AIAssessmentPercent">
     <value>0.5</value>
   </constant>
   
-  <!-- 2020-2021: Table A4 -->
+  <!-- 2021-2022: Table 6 -->
   <constant name="BusinessFarmNetWorthAdjustmentRanges">
     <values>
       <value>1</value>
-      <value>135000</value>
-      <value>410000</value>
-      <value>680000</value>
+      <value>140000</value>
+      <value>415000</value>
+      <value>695000</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Table A4 -->
+  <!-- 2021-2022: Table 6 -->
   <constant name="BusinessFarmNetWorthAdjustmentBases">
     <values>
       <value>0</value>
-      <value>54000</value>
-      <value>191500</value>
-      <value>353500</value>
+      <value>56000</value>
+      <value>193500</value>
+      <value>361500</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Table A4 -->
+  <!-- 2021-2022: Table 6 -->
   <constant name="BusinessFarmNetWorthAdjustmentPercents">
     <values>
       <value>40</value>
@@ -370,92 +370,82 @@
     </values>
   </constant>
  
-  <!-- 2020-2021: Table A5 -->
+  <!-- 2021-2022: Table 7 -->
   <constant name="AssetProtectionAllowanceLowestAge">
     <value>25</value>
   </constant>
 
-  <!-- 2020-2021: Table A5 -->
+  <!-- 2021-2022: Table 7 -->
   <constant name="MarriedAssetProtectionAllowances">
     <values>
       <value>0</value>
-      <value>300</value>
+      <value>400</value>
       <value>700</value>
-      <value>1000</value>
-      <value>1300</value>
-      <value>1600</value>
-      <value>2000</value>
-      <value>2300</value>
+      <value>1100</value>
+      <value>1500</value>
+      <value>1800</value>
+      <value>2200</value>
       <value>2600</value>
       <value>2900</value>
       <value>3300</value>
-      <value>3600</value>
-      <value>3900</value>
-      <value>4200</value>
-      <value>4600</value>
-      <value>4900</value>
+      <value>3700</value>
+      <value>4000</value>
+      <value>4400</value>
+      <value>4800</value>
       <value>5100</value>
-      <value>5200</value>
-      <value>5300</value>
-      <value>5400</value>
       <value>5500</value>
+      <value>5600</value>
       <value>5700</value>
-      <value>5800</value>
+      <value>5900</value>
       <value>6000</value>
-      <value>6100</value>
+      <value>6200</value>
       <value>6300</value>
-      <value>6400</value>
+      <value>6500</value>
       <value>6600</value>
       <value>6800</value>
-      <value>6900</value>
+      <value>7000</value>
       <value>7100</value>
       <value>7300</value>
       <value>7500</value>
       <value>7700</value>
       <value>7900</value>
-      <value>8200</value>
+      <value>8100</value>
       <value>8400</value>
       <value>8600</value>
-      <value>8900</value>
-      <value>9200</value>
-      <value>9400</value>
+      <value>8800</value>
+      <value>9100</value>
+      <value>9300</value>
+      <value>9600</value>
+      <value>9900</value>
+      <value>10200</value>
+      <value>10500</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Table A5 -->
+  <!-- 2021-2022: Table 7 -->
   <constant name="SingleAssetProtectionAllowances">
     <values>
       <value>0</value>
       <value>100</value>
-      <value>200</value>
       <value>300</value>
-      <value>500</value>
+      <value>400</value>
       <value>600</value>
       <value>700</value>
       <value>800</value>
-      <value>900</value>
       <value>1000</value>
       <value>1100</value>
-      <value>1200</value>
+      <value>1300</value>
       <value>1400</value>
       <value>1500</value>
-      <value>1600</value>
-      <value>1700</value>
-      <value>1700</value>
       <value>1700</value>
       <value>1800</value>
-      <value>1800</value>
-      <value>1900</value>
-      <value>1900</value>
-      <value>1900</value>
       <value>2000</value>
-      <value>2000</value>
-      <value>2100</value>
       <value>2100</value>
       <value>2200</value>
       <value>2200</value>
       <value>2300</value>
       <value>2300</value>
+      <value>2400</value>
       <value>2400</value>
       <value>2500</value>
       <value>2500</value>
@@ -466,54 +456,64 @@
       <value>2900</value>
       <value>2900</value>
       <value>3000</value>
+      <value>3100</value>
+      <value>3100</value>
+      <value>3200</value>
+      <value>3300</value>
+      <value>3400</value>
+      <value>3500</value>
+      <value>3600</value>
+      <value>3700</value>
+      <value>3800</value>
+      <value>3900</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="DepStudentAssetRate">
     <value>0.2</value>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="DepParentAssetRate">
     <value>0.12</value>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="IndWithDepAssetRate">
     <value>0.07</value>
   </constant>
 
-  <!-- 2020-2021: Worksheet -->
+  <!-- 2021-2022: Worksheet -->
   <constant name="IndWithoutDepAssetRate">
     <value>0.2</value>
   </constant>
 
-  <!-- 2020-2021: Table A6 -->
+  <!-- 2021-2022: Table 8 -->
   <constant name="AAIContributionRanges">
     <values>
       <value>-3409</value>
-      <value>17000</value>
-      <value>21400</value>
-      <value>25700</value>
-      <value>30100</value>
-      <value>34500</value>
+      <value>17400</value>
+      <value>21800</value>
+      <value>26200</value>
+      <value>30700</value>
+      <value>35100</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Table A6 -->
+  <!-- 2021-2022: Table 8 -->
   <constant name="AAIContributionBases">
     <values>
       <value>0</value>
-      <value>3740</value>
-      <value>4840</value>
-      <value>6087</value>
-      <value>7583</value>
-      <value>9343</value>
+      <value>3828</value>
+      <value>4928</value>
+      <value>6204</value>
+      <value>7734</value>
+      <value>9494</value>
     </values>
   </constant>
 
-  <!-- 2020-2021: Table A6 -->
+  <!-- 2021-2022: Table 8 -->
   <constant name="AAIContributionPercents">
     <values>
       <value>22</value>
@@ -530,11 +530,11 @@
   </constant>
 
   <constant name="AutoZeroEFCMax">
-    <value>26000</value>
+    <value>27000</value>
   </constant>
 
   <constant name="AltEnrollmentIncomeProtectionAllowance">
-    <value>5280</value>
+    <value>5380</value>
   </constant>
 
 </constants>
