@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<constants>
+
+  <!-- 2022-2023: Table 1 -->
+  <constant name="StateTaxAllowanceIncomeThreshold">
+    <value>15000</value>
+  </constant>
+
+  <!-- 2022-2023: Table 1, first column -->
+  <constant name="ParentStateTaxAllowancePercents">
+    <values>
+      <value id="Other">2</value>
+      <value id="Alabama">3</value>
+      <value id="Alaska">2</value>
+      <value id="AmericanSamoa">2</value>
+      <value id="Arizona">4</value>
+      <value id="Arkansas">4</value>
+      <value id="California">9</value>
+      <value id="CanadaAndCanadianProvinces">2</value>
+      <value id="Colorado">4</value>
+      <value id="Connecticut">9</value>
+      <value id="Delaware">5</value>
+      <value id="DistrictOfColumbia">7</value>
+      <value id="FederatedStatesOfMicronesia">2</value>
+      <value id="Florida">3</value>
+      <value id="Georgia">5</value>
+      <value id="Guam">2</value>
+      <value id="Hawaii">5</value>
+      <value id="Idaho">5</value>
+      <value id="Illinois">6</value>
+      <value id="Indiana">4</value>
+      <value id="Iowa">5</value>
+      <value id="Kansas">4</value>
+      <value id="Kentucky">5</value>
+      <value id="Louisiana">3</value>
+      <value id="Maine">6</value>
+      <value id="MarshallIslands">2</value>
+      <value id="Maryland">8</value>
+      <value id="Massachusetts">7</value>
+      <value id="Mexico">2</value>
+      <value id="Michigan">5</value>
+      <value id="Minnesota">7</value>
+      <value id="Mississippi">3</value>
+      <value id="Missouri">5</value>
+      <value id="Montana">5</value>
+      <value id="Nebraska">5</value>
+      <value id="Nevada">3</value>
+      <value id="NewHampshire">4</value>
+      <value id="NewJersey">9</value>
+      <value id="NewMexico">3</value>
+      <value id="NewYork">10</value>
+      <value id="NorthCarolina">5</value>
+      <value id="NorthDakota">2</value>
+      <value id="NorthernMarianaIslands">2</value>
+      <value id="Ohio">5</value>
+      <value id="Oklahoma">3</value>
+      <value id="Oregon">7</value>
+      <value id="Palau">2</value>
+      <value id="Pennsylvania">5</value>
+      <value id="PuertoRico">2</value>
+      <value id="RhodeIsland">6</value>
+      <value id="SouthCarolina">4</value>
+      <value id="SouthDakota">2</value>
+      <value id="Tennessee">2</value>
+      <value id="Texas">3</value>
+      <value id="Utah">5</value>
+      <value id="Vermont">6</value>
+      <value id="VirginIslands">2</value>
+      <value id="Virginia">6</value>
+      <value id="Washington">3</value>
+      <value id="WestVirginia">3</value>
+      <value id="Wisconsin">6</value>
+      <value id="Wyoming">2</value>
+    </values>
+  </constant>
+  
+  <!-- 2022-2023: Table 2 -->
+  <constant name="StudentStateTaxAllowancePercents">
+    <values>
+      <value id="Other">1</value>
+      <value id="Alabama">2</value>
+      <value id="Alaska">0</value>
+      <value id="AmericanSamoa">1</value>
+      <value id="Arizona">2</value>
+      <value id="Arkansas">3</value>
+      <value id="California">6</value>
+      <value id="CanadaAndCanadianProvinces">1</value>
+      <value id="Colorado">3</value>
+      <value id="Connecticut">5</value>
+      <value id="Delaware">3</value>
+      <value id="DistrictOfColumbia">6</value>
+      <value id="FederatedStatesOfMicronesia">1</value>
+      <value id="Florida">1</value>
+      <value id="Georgia">4</value>
+      <value id="Guam">1</value>
+      <value id="Hawaii">4</value>
+      <value id="Idaho">4</value>
+      <value id="Illinois">3</value>
+      <value id="Indiana">3</value>
+      <value id="Iowa">3</value>
+      <value id="Kansas">3</value>
+      <value id="Kentucky">4</value>
+      <value id="Louisiana">2</value>
+      <value id="Maine">3</value>
+      <value id="MarshallIslands">1</value>
+      <value id="Maryland">6</value>
+      <value id="Massachusetts">4</value>
+      <value id="Mexico">1</value>
+      <value id="Michigan">3</value>
+      <value id="Minnesota">5</value>
+      <value id="Mississippi">2</value>
+      <value id="Missouri">3</value>
+      <value id="Montana">3</value>
+      <value id="Nebraska">3</value>
+      <value id="Nevada">1</value>
+      <value id="NewHampshire">1</value>
+      <value id="NewJersey">5</value>
+      <value id="NewMexico">2</value>
+      <value id="NewYork">7</value>
+      <value id="NorthCarolina">3</value>
+      <value id="NorthDakota">1</value>
+      <value id="NorthernMarianaIslands">1</value>
+      <value id="Ohio">3</value>
+      <value id="Oklahoma">2</value>
+      <value id="Oregon">5</value>
+      <value id="Palau">1</value>
+      <value id="Pennsylvania">3</value>
+      <value id="PuertoRico">1</value>
+      <value id="RhodeIsland">4</value>
+      <value id="SouthCarolina">3</value>
+      <value id="SouthDakota">1</value>
+      <value id="Tennessee">1</value>
+      <value id="Texas">1</value>
+      <value id="Utah">4</value>
+      <value id="Vermont">3</value>
+      <value id="VirginIslands">1</value>
+      <value id="Virginia">4</value>
+      <value id="Washington">1</value>
+      <value id="WestVirginia">3</value>
+      <value id="Wisconsin">4</value>
+      <value id="Wyoming">1</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 3 -->
+  <constant name="SocialSecurityTaxIncomeThresholds">
+    <values>
+      <value>0</value>
+      <value>137700</value>
+      <value>200000</value>
+    </values>
+  </constant>
+  
+  <!-- 2022-2023: Table 3 -->
+  <constant name="SocialSecurityTaxPercentages">
+    <values>
+      <value>0.0765</value>
+      <value>0.0145</value>
+      <value>0.0235</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 3 -->
+  <constant name="SocialSecurityTaxBases">
+    <values>
+      <value>0</value>
+      <value>10534.05</value>
+      <value>11437.40</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="DepStudentIncomeProtectionAllowance">
+    <value>7040</value>
+  </constant>
+
+  <!-- 2022-2023: Table 4 -->
+  <constant name="DepParentIncomeProtectionAllowances">
+    <values numberInHousehold="0">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="1">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="2">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">19630</value>
+      <value numberInCollege="2">16270</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="3">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">24440</value>
+      <value numberInCollege="2">21100</value>
+      <value numberInCollege="3">17740</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="4">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">30190</value>
+      <value numberInCollege="2">26830</value>
+      <value numberInCollege="3">23490</value>
+      <value numberInCollege="4">20130</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="5">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">35620</value>
+      <value numberInCollege="2">32260</value>
+      <value numberInCollege="3">28920</value>
+      <value numberInCollege="4">25560</value>
+      <value numberInCollege="5">22220</value>
+    </values>
+    <values numberInHousehold="6">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">41670</value>
+      <value numberInCollege="2">38310</value>
+      <value numberInCollege="3">34970</value>
+      <value numberInCollege="4">31610</value>
+      <value numberInCollege="5">28270</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 5 -->
+  <constant name="IndWithDepIncomeProtectionAllowances">
+    <values numberInHousehold="0">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="1">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">0</value>
+      <value numberInCollege="2">0</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="2">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">27720</value>
+      <value numberInCollege="2">22980</value>
+      <value numberInCollege="3">0</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="3">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">34520</value>
+      <value numberInCollege="2">29800</value>
+      <value numberInCollege="3">25060</value>
+      <value numberInCollege="4">0</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="4">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">42620</value>
+      <value numberInCollege="2">37900</value>
+      <value numberInCollege="3">33180</value>
+      <value numberInCollege="4">28430</value>
+      <value numberInCollege="5">0</value>
+    </values>
+    <values numberInHousehold="5">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">50300</value>
+      <value numberInCollege="2">45550</value>
+      <value numberInCollege="3">40830</value>
+      <value numberInCollege="4">36100</value>
+      <value numberInCollege="5">31380</value>
+    </values>
+    <values numberInHousehold="6">
+      <value numberInCollege="0">0</value>
+      <value numberInCollege="1">58820</value>
+      <value numberInCollege="2">54090</value>
+      <value numberInCollege="3">49380</value>
+      <value numberInCollege="4">44620</value>
+      <value numberInCollege="5">39910</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="IndWithoutDepSingleIncomeProtectionAllowance">
+    <value>10950</value>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="IndWithoutDepMarriedIncomeProtectionAllowance">
+    <value>17550</value>
+  </constant>
+
+  <!-- 2022-2023: Table 4 -->
+  <constant name="DepAdditionalFamilyAllowance">
+    <value>4700</value>
+  </constant>
+
+  <!-- 2022-2023: Table 4 -->
+  <constant name="DepAdditionalStudentAllowance">
+    <value>3340</value>
+  </constant>
+
+  <!-- 2022-2023: Table 5 -->
+  <constant name="IndAdditionalFamilyAllowance">
+    <value>6640</value>
+  </constant>
+
+  <!-- 2022-2023: Table 5 -->
+  <constant name="IndAdditionalStudentAllowance">
+    <value>4720</value>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="EmploymentExpensePercent">
+    <value>0.35</value>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="EmploymentExpenseMaximum">
+    <value>4000</value>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="AIAssessmentPercent">
+    <value>0.5</value>
+  </constant>
+  
+  <!-- 2022-2023: Table 6 -->
+  <constant name="BusinessFarmNetWorthAdjustmentRanges">
+    <values>
+      <value>1</value>
+      <value>140000</value>
+      <value>420000</value>
+      <value>700000</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 6 -->
+  <constant name="BusinessFarmNetWorthAdjustmentBases">
+    <values>
+      <value>0</value>
+      <value>56000</value>
+      <value>196000</value>
+      <value>364000</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 6 -->
+  <constant name="BusinessFarmNetWorthAdjustmentPercents">
+    <values>
+      <value>40</value>
+      <value>50</value>
+      <value>60</value>
+      <value>100</value>
+    </values>
+  </constant>
+ 
+  <!-- 2022-2023: Table 7 -->
+  <constant name="AssetProtectionAllowanceLowestAge">
+    <value>25</value>
+  </constant>
+
+  <!-- 2022-2023: Table 7 -->
+  <constant name="MarriedAssetProtectionAllowances">
+    <values>
+      <value>0</value>
+      <value>200</value>
+      <value>400</value>
+      <value>600</value>
+      <value>800</value>
+      <value>1000</value>
+      <value>1200</value>
+      <value>1400</value>
+      <value>1700</value>
+      <value>1900</value>
+      <value>2100</value>
+      <value>2300</value>
+      <value>2500</value>
+      <value>2700</value>
+      <value>2900</value>
+      <value>3100</value>
+      <value>3200</value>
+      <value>3200</value>
+      <value>3300</value>
+      <value>3400</value>
+      <value>3500</value>
+      <value>3600</value>
+      <value>3700</value>
+      <value>3700</value>
+      <value>3800</value>
+      <value>3900</value>
+      <value>4000</value>
+      <value>4100</value>
+      <value>4200</value>
+      <value>4400</value>
+      <value>4500</value>
+      <value>4600</value>
+      <value>4700</value>
+      <value>4900</value>
+      <value>5000</value>
+      <value>5100</value>
+      <value>5300</value>
+      <value>5400</value>
+      <value>5600</value>
+      <value>5800</value>
+      <value>5900</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 7 -->
+  <constant name="SingleAssetProtectionAllowances">
+    <values>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="DepStudentAssetRate">
+    <value>0.2</value>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="DepParentAssetRate">
+    <value>0.12</value>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="IndWithDepAssetRate">
+    <value>0.07</value>
+  </constant>
+
+  <!-- 2022-2023: Worksheet -->
+  <constant name="IndWithoutDepAssetRate">
+    <value>0.2</value>
+  </constant>
+
+  <!-- 2022-2023: Table 8 -->
+  <constant name="AAIContributionRanges">
+    <values>
+      <value>-3409</value>
+      <value>17500</value>
+      <value>22000</value>
+      <value>26500</value>
+      <value>31000</value>
+      <value>35500</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 8 -->
+  <constant name="AAIContributionBases">
+    <values>
+      <value>0</value>
+      <value>3850</value>
+      <value>4975</value>
+      <value>6280</value>
+      <value>7810</value>
+      <value>9610</value>
+    </values>
+  </constant>
+
+  <!-- 2022-2023: Table 8 -->
+  <constant name="AAIContributionPercents">
+    <values>
+      <value>22</value>
+      <value>25</value>
+      <value>29</value>
+      <value>34</value>
+      <value>40</value>
+      <value>47</value>
+    </values>
+  </constant>
+
+  <constant name="SimplifiedEFCMax">
+    <value>49999</value>
+  </constant>
+
+  <constant name="AutoZeroEFCMax">
+    <value>27000</value>
+  </constant>
+
+  <constant name="AltEnrollmentIncomeProtectionAllowance">
+    <value>5430</value>
+  </constant>
+
+</constants>
